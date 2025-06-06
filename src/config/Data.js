@@ -44,22 +44,22 @@ export const NAVLINKS = [
   {
     to: "about",
     icon: FaEllipsisV,
-    name: "About",
+    name: "ABOUT",
   },
   {
     to: "experience",
     icon: FaEllipsisV,
-    name: "Experience",
+    name: "SERVICES",
   },
   {
     to: "work",
     icon: FaEllipsisV,
-    name: "Work",
+    name: "WORK PROCESS",
   },
   {
     to: "project",
     icon: FaEllipsisV,
-    name: "Project",
+    name: "NEWS",
   },
 ];
 
@@ -150,16 +150,15 @@ export const ABOUT_DATA = {
   text_small: "Being a frontend developer / frontend engineer.",
   big_heading: "Who am I <span>&</span> how did i get here.",
   text_description:
-    "Hello, i am Prawito . I am from Indonesia who codes for fun, i have been in coding since 2016, when i was studied in Diponegoro University and I am graduated in June 2021. I have been using JavaScripts (Node JS and React Js (Client Side)) for 1.5 year. Now I'm trying to produce a lots of open source project and working as freelancer.",
+    "Our team of experienced attorneys has a diverse range of expe rtise, covering a wide spectrum of legal areas. We specialize in corporate law, family law.",
   skill: [
-    { icon: FaCheckCircle, text: "JavaScript (Node & Client Side)" },
-    { icon: FaCheckCircle, text: "TypeScript, PHP" },
-    { icon: FaCheckCircle, text: "NoSQL (MongoDB & MySQL)" },
-    { icon: FaCheckCircle, text: "SQL (Postgre & Sqlite)" },
+    { icon: FaCheckCircle, text: "Committed to excellence in legal practice." },
     {
       icon: FaCheckCircle,
-      text: "Design (Figma, CorelDraw, AI & Adobe Photoshop)",
+      text: "Act with honesty and uphold ethical principles.",
     },
+    { icon: FaCheckCircle, text: "Road Test Preparation with 98% success" },
+    { icon: FaCheckCircle, text: "Meeting clients' needs is our priority." },
   ],
   card_myArea: [
     {
