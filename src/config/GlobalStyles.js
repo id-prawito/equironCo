@@ -5,7 +5,7 @@ const GlobalStyles = createGlobalStyle`
   :root{
     // Color
     --dark-background: #1A1D29;
-    --light-background: #f0f8ff;
+    --light-background: #EEEEEE;
     --mediumSlateBlue: #6C62E2;
     --dark-components: #7C3AED; // Ungu
     --darkCardComponent : #7C3AED; // Ungu
@@ -23,9 +23,9 @@ const GlobalStyles = createGlobalStyle`
 
   body {
     background-color: ${({ theme: { theme } }) =>
-        theme === themeList.light
-            ? "var(--light-background)"
-            : "var(--dark-background)"};
+      theme === themeList.light
+        ? "var(--light-background)"
+        : "var(--dark-background)"};
   }
   
   html {
@@ -53,7 +53,7 @@ const GlobalStyles = createGlobalStyle`
 
   ::-webkit-scrollbar-track {
     background: ${({ theme: { theme } }) =>
-        theme === themeList.light ? "#f0f8ff" : "#1a1d29"};
+      theme === themeList.light ? "#f0f8ff" : "#1a1d29"};
   }
 
   a {
