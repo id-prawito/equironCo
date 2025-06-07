@@ -413,6 +413,72 @@ export const AboutSite = styled.section`
     }
   }
 
+  .about_count {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 40px;
+    background-color: #003333;
+    border: 1px solid #003333;
+  }
+
+  .stats-container {
+    display: flex;
+    /* justify-content: space-around; */
+    align-items: center;
+    background-color: #b88649; /* Sesuaikan dengan warna di gambar */
+    opacity: 90%;
+    color: white;
+    border-radius: 32px;
+    padding: 8cap 20px;
+    font-family: sans-serif;
+    gap: 30px;
+    /* flex-wrap: wrap; */
+    width: 100%;
+  }
+
+  .stat-item {
+    text-align: center;
+    flex: 1;
+    min-width: 150px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+
+    .content {
+      display: flex;
+      text-align: left;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .icon {
+      font-size: 70px;
+      display: flex;
+      align-items: center;
+    }
+
+    h3 {
+      font-size: 28px;
+      margin: 0;
+    }
+
+    p {
+      font-size: 16px;
+      margin: 0;
+    }
+  }
+
+  .divider {
+    width: 1px;
+    height: 60px;
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+
   .about_tech {
     display: flex;
     justify-content: center;

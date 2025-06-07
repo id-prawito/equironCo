@@ -6,6 +6,12 @@ import { AboutSite } from "./AboutElements";
 import law from "./../../assets/img/law.jpg";
 import law1 from "./../../assets/img/law1.png";
 import law2 from "./../../assets/img/law2.png";
+import {
+  FaBalanceScale,
+  FaStarHalfAlt,
+  FaTrophy,
+  FaUserShield,
+} from "react-icons/fa";
 
 const About = () => {
   const controls = useAnimation();
@@ -93,22 +99,47 @@ const About = () => {
             </div>
           </motion.div>
         </div>
-        <div className="about_tech">
-          <motion.div variants={item_nya} className="tech_heading">
-            Tech Stack
-          </motion.div>
-          <div className="tech_content">
-            {TECH_STACK.map((tech, i) => (
-              <motion.div key={i} variants={item_card} className="pembungkus">
-                <div className="card_background"></div>
-                <div className="card_contentnya">
-                  <img src={tech.tech_img} alt="html_logo" />
-                  <div className="text_tech">{tech.tech_name}</div>
-                </div>
-              </motion.div>
-            ))}
+        <motion.div variants={item_nya} class="stats-container">
+          <div class="stat-item">
+            <i class="icon">
+              <FaBalanceScale />
+            </i>
+            <div className="content">
+              <h3>10k+</h3>
+              <p>Case Done</p>
+            </div>
           </div>
-        </div>
+          <div class="divider"></div>
+          <div class="stat-item">
+            <i class="icon">
+              <FaUserShield />
+            </i>
+            <div className="content">
+              <h3>12k+</h3>
+              <p>Expert Attorneys</p>
+            </div>
+          </div>
+          <div class="divider"></div>
+          <div class="stat-item">
+            <i class="icon">
+              <FaStarHalfAlt />
+            </i>
+            <div className="content">
+              <h3>15k+</h3>
+              <p>Happy Client</p>
+            </div>
+          </div>
+          <div class="divider"></div>
+          <div class="stat-item">
+            <i class="icon">
+              <FaTrophy />
+            </i>
+            <div className="content">
+              <h3>20k+</h3>
+              <p>Award Winning</p>
+            </div>
+          </div>
+        </motion.div>
       </motion.div>
     </AboutSite>
   );

@@ -332,9 +332,9 @@ export const MEDIA_SOSIAL = [
 ];
 
 export const HERO_DATA = {
-  text_small: "Hi, my name is",
-  big_heading: "Prawito.",
-  big_heading2: "I build things for the web.",
+  text_small: "Your Guardian in Law",
+  big_heading: "Experienced.",
+  big_heading2: "Lawyers, Proven, Result",
   description:
     "I'm a software engineer specializing in building (andoccasionally designing) exceptional digital experiences. Currently, I'm focused on exploring and learning about JavaScript programming language and others tech stack for frontend engineer.",
   button: [
