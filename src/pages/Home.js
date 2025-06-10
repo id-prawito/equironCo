@@ -5,6 +5,7 @@ import Contact from "../components/contact";
 import Project from "../components/project";
 import Footer from "../components/footer";
 import Header from "../components/header";
+import Process from "../components/process";
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
       <Hero />
       <About />
       <Project />
+      <Process />
       <Contact />
       <Footer />
     </>

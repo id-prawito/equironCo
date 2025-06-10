@@ -98,7 +98,7 @@ export const ProjectSite = styled.section`
     .custom_card {
       position: relative;
       overflow: hidden;
-      background-color: #f9f9f9;
+      background-color: #f5f5f5;
       border-radius: 24px;
       padding: 32px;
       width: 100%;
