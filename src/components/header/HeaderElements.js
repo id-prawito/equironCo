@@ -10,7 +10,7 @@ export const HeaderSite = styled.header`
   background-color: transparent;
   position: sticky;
   font-size: 1rem;
-  height: 80px;
+  height: 70px;
   z-index: 6;
   top: 0;
   transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -20,6 +20,21 @@ export const HeaderSite = styled.header`
       theme === themeList.light ? "#ffffff" : "rgba(10, 17, 26, 0.9)"};
     height: 70px;
     transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
+
+  .header-text-logo {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+    .text-logo {
+      font-size: 14px;
+      color: ${({ theme: { theme } }) =>
+        theme === themeList.light ? "rgba(10, 17, 26, 0.9)" : "#fff"};
+    }
   }
 `;
 
@@ -33,7 +48,7 @@ export const HeaderContainer = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 5px 50px;
+  padding: 5px 40px;
   width: 100%;
   z-index: 1;
   right: 0px;
@@ -109,7 +124,8 @@ export const HeaderContainer = styled.div`
 
       .logo {
         &__img {
-          height: 35px;
+          height: 38px;
+          width: 38px;
           transition: 0.3s all ease;
 
           &:hover {
