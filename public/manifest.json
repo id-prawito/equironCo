@@ -1,7 +1,8 @@
 {
-  "short_name": "Prawito | v2-id",
-  "name": "Second iteration of my personal website built with React Js.",
-  "icons": [{
+  "short_name": "Equiron And Co.",
+  "name": "Equiron And Co.",
+  "icons": [
+    {
       "src": "favicon.ico",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
