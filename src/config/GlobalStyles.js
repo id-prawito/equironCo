@@ -6,9 +6,9 @@ const GlobalStyles = createGlobalStyle`
     // Color
     --dark-background: #1A1D29;
     --light-background: #EEEEEE;
-    --mediumSlateBlue: #6C62E2;
-    --dark-components: #7C3AED; // Ungu
-    --darkCardComponent : #7C3AED; // Ungu
+    --mediumSlateBlue: #b88649;
+    --dark-components: #b88649; // Ungu
+    --darkCardComponent : #b88649; // Ungu
     --lightCardComponent : #1f2937;
     --light-text-black: #000000;
     --dark-text-white: #FFFFFF; // White
@@ -17,7 +17,7 @@ const GlobalStyles = createGlobalStyle`
     --darkText: #ccd6f6;
     --lightTab : #1f2937;
     --darkTab : #979797;
-    --colorMain : #7c3aed; // Ungu
+    --colorMain : #b88649; // Ungu
     --colorWhite : #ffffff; // White
   }
 

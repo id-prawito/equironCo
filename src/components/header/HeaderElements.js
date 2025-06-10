@@ -10,7 +10,7 @@ export const HeaderSite = styled.header`
   background-color: transparent;
   position: sticky;
   font-size: 1rem;
-  height: 100px;
+  height: 80px;
   z-index: 6;
   top: 0;
   transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
