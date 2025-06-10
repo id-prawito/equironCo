@@ -8,7 +8,7 @@ export const HeroSite = styled.section`
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
-  min-height: 80vh;
+  /* min-height: 80vh; */
   margin: 0px;
   max-width: 100%;
   width: 100%;
