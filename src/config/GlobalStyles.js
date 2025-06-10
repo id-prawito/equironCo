@@ -5,10 +5,10 @@ const GlobalStyles = createGlobalStyle`
   :root{
     // Color
     --dark-background: #1A1D29;
-    --light-background: #f0f8ff;
-    --mediumSlateBlue: #6C62E2;
-    --dark-components: #7C3AED; // Ungu
-    --darkCardComponent : #7C3AED; // Ungu
+    --light-background: #EEEEEE;
+    --mediumSlateBlue: #b88649;
+    --dark-components: #b88649; // Ungu
+    --darkCardComponent : #b88649; // Ungu
     --lightCardComponent : #1f2937;
     --light-text-black: #000000;
     --dark-text-white: #FFFFFF; // White
@@ -17,15 +17,15 @@ const GlobalStyles = createGlobalStyle`
     --darkText: #ccd6f6;
     --lightTab : #1f2937;
     --darkTab : #979797;
-    --colorMain : #7c3aed; // Ungu
+    --colorMain : #b88649; // Ungu
     --colorWhite : #ffffff; // White
   }
 
   body {
     background-color: ${({ theme: { theme } }) =>
-        theme === themeList.light
-            ? "var(--light-background)"
-            : "var(--dark-background)"};
+      theme === themeList.light
+        ? "var(--light-background)"
+        : "var(--dark-background)"};
   }
   
   html {
@@ -53,7 +53,7 @@ const GlobalStyles = createGlobalStyle`
 
   ::-webkit-scrollbar-track {
     background: ${({ theme: { theme } }) =>
-        theme === themeList.light ? "#f0f8ff" : "#1a1d29"};
+      theme === themeList.light ? "#f0f8ff" : "#1a1d29"};
   }
 
   a {

@@ -18,9 +18,9 @@ import scss from "../assets/img/tech_stack/scss.svg";
 import css from "../assets/img/tech_stack/css.svg";
 import php from "../assets/img/tech_stack/php.svg";
 import git from "../assets/img/tech_stack/git.svg";
-import pokedex from "../assets/img/pokedex-id.png";
-import disneyPlus from "../assets/img/disney-plus.png";
-import spkPromethee from "../assets/img/spk-promethee.png";
+import pokedex from "../assets/img/pokedex-id.PNG";
+import disneyPlus from "../assets/img/disney-plus.PNG";
+import spkPromethee from "../assets/img/spk-promethee.PNG";
 import arthamas from "../assets/img/arthamas.jpeg";
 import angularJs from "../assets/img/tech_stack/angular.svg";
 

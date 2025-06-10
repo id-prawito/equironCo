@@ -26,7 +26,6 @@ import {
 } from "./_images";
 import {
   FiExternalLink,
-  FiFile,
   FiGithub,
   FiLinkedin,
   FiPhone,
@@ -38,28 +37,29 @@ import {
   FaRegThumbsUp,
   FaLeaf,
   FaInstagram,
+  FaChalkboardTeacher,
 } from "react-icons/fa";
 
 export const NAVLINKS = [
   {
     to: "about",
     icon: FaEllipsisV,
-    name: "About",
+    name: "ABOUT",
   },
   {
     to: "experience",
     icon: FaEllipsisV,
-    name: "Experience",
+    name: "SERVICES",
   },
   {
     to: "work",
     icon: FaEllipsisV,
-    name: "Work",
+    name: "WORK PROCESS",
   },
   {
     to: "project",
     icon: FaEllipsisV,
-    name: "Project",
+    name: "NEWS",
   },
 ];
 
@@ -150,16 +150,15 @@ export const ABOUT_DATA = {
   text_small: "Being a frontend developer / frontend engineer.",
   big_heading: "Who am I <span>&</span> how did i get here.",
   text_description:
-    "Hello, i am Prawito . I am from Indonesia who codes for fun, i have been in coding since 2016, when i was studied in Diponegoro University and I am graduated in June 2021. I have been using JavaScripts (Node JS and React Js (Client Side)) for 1.5 year. Now I'm trying to produce a lots of open source project and working as freelancer.",
+    "Our team of experienced attorneys has a diverse range of expe rtise, covering a wide spectrum of legal areas. We specialize in corporate law, family law.",
   skill: [
-    { icon: FaCheckCircle, text: "JavaScript (Node & Client Side)" },
-    { icon: FaCheckCircle, text: "TypeScript, PHP" },
-    { icon: FaCheckCircle, text: "NoSQL (MongoDB & MySQL)" },
-    { icon: FaCheckCircle, text: "SQL (Postgre & Sqlite)" },
+    { icon: FaCheckCircle, text: "Committed to excellence in legal practice." },
     {
       icon: FaCheckCircle,
-      text: "Design (Figma, CorelDraw, AI & Adobe Photoshop)",
+      text: "Act with honesty and uphold ethical principles.",
     },
+    { icon: FaCheckCircle, text: "Road Test Preparation with 98% success" },
+    { icon: FaCheckCircle, text: "Meeting clients' needs is our priority." },
   ],
   card_myArea: [
     {
@@ -196,8 +195,8 @@ export const ABOUT_DATA = {
 };
 
 export const CONTACT_DATA = {
-  text_small: "What's Next ?",
-  big_heading: "Get in Touch",
+  text_small: "Have Any Questions?",
+  big_heading: "Get in Touch with Us",
   description:
     "Although I'm not currently looking for any new opportunities, my inbox is always open. Whether you have a question or just want to say hi, I'll try my best to get back to you!",
   icon: FaRegThumbsUp,
@@ -333,21 +332,16 @@ export const MEDIA_SOSIAL = [
 ];
 
 export const HERO_DATA = {
-  text_small: "Hi, my name is",
-  big_heading: "Prawito.",
-  big_heading2: "I build things for the web.",
+  text_small: "Your Guardian in Law",
+  big_heading: "Experienced.",
+  big_heading2: "Lawyers, Proven, Result",
   description:
-    "I'm a software engineer specializing in building (andoccasionally designing) exceptional digital experiences. Currently, I'm focused on exploring and learning about JavaScript programming language and others tech stack for frontend engineer.",
+    "Our team of experienced attorneys has a diverse range of expe rtise, covering a wide spectrum of legal areas. We specialize in corporate law, family law.",
   button: [
     {
-      to: "https://bit.ly/Certificate_Praw",
-      nama_button: "Check My Files",
-      icon: FiFile,
-    },
-    {
-      to: "https://github.com/id-prawito",
-      nama_button: "Github",
-      icon: FiGithub,
+      to: "/contact",
+      nama_button: "Contact Us",
+      icon: FaChalkboardTeacher,
     },
   ],
 };
