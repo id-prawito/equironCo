@@ -9,8 +9,30 @@ export const HeroSite = styled.section`
   align-items: flex-start;
   flex-direction: column;
   min-height: 80vh;
-  padding: 0px;
-  max-width: 1250px;
+  margin: 0px;
+  max-width: 100%;
+  width: 100%;
+  padding: 0px 0px 0px 0px;
+
+  .container_new {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+  }
+
+  .overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(
+      0,
+      0,
+      0,
+      0.4
+    ); /* atau warna lain seperti rgba(80,0,130,0.5) */
+    z-index: 1;
+  }
 
   ${devices.smartphone} {
     padding: 40px 0px;
@@ -36,7 +58,7 @@ export const HeroSite = styled.section`
   p {
     color: ${({ theme: { theme } }) =>
       theme === themeList.light
-        ? "var(--light-text-black)"
+        ? "var(--dark-text-white)"
         : "var(--dark-text-white)"};
     max-width: 540px;
     line-height: 1.8;
@@ -51,6 +73,7 @@ export const HeroSite = styled.section`
     display: flex;
     flex-direction: row;
     gap: 40px;
+    max-width: 1250px;
 
     ${devices.smartphone} {
       padding: 0px 25px;
@@ -64,7 +87,7 @@ export const HeroSite = styled.section`
   .big_heading {
     color: ${({ theme: { theme } }) =>
       theme === themeList.light
-        ? "var(--light-text-black)"
+        ? "var(--dark-text-white)"
         : "var(--dark-text-white)"};
     font-weight: 600;
     font-size: 60px;
@@ -81,7 +104,7 @@ export const HeroSite = styled.section`
 
   .big_heading_one {
     color: ${({ theme: { theme } }) =>
-      theme === themeList.light ? "#6b7280" : "#8892b0"};
+      theme === themeList.light ? "#fff" : "#fff"};
     font-weight: 600;
     font-size: 60px;
     margin: 0px;
@@ -130,10 +153,12 @@ export const HeroSite = styled.section`
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    width: 85%;
     height: 100%;
 
     .image-border-container {
+      width: 100%;
+      height: 100%;
       position: relative;
       display: inline-block;
       border-radius: 0 70px 0 70px;
@@ -176,5 +201,30 @@ export const HeroSite = styled.section`
       background-color: white; // tambahan opsional jika gambar transparan
       transition: opacity 0.5s ease-in-out;
     }
+  }
+
+  .carousel-container {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 20px 0;
+    scroll-behavior: smooth;
+  }
+
+  .carousel-item {
+    flex: 0 0 auto;
+    width: 250px;
+    scroll-snap-align: start;
+  }
+
+  .carousel-img {
+    width: 100%;
+    border-radius: 0 70px 0 70px;
+  }
+
+  .th-hero-bg {
+    inset: 0;
+    z-index: -4;
   }
 `;

@@ -26,7 +26,6 @@ import {
 } from "./_images";
 import {
   FiExternalLink,
-  FiFile,
   FiGithub,
   FiLinkedin,
   FiPhone,
@@ -38,6 +37,7 @@ import {
   FaRegThumbsUp,
   FaLeaf,
   FaInstagram,
+  FaChalkboardTeacher,
 } from "react-icons/fa";
 
 export const NAVLINKS = [
@@ -336,17 +336,12 @@ export const HERO_DATA = {
   big_heading: "Experienced.",
   big_heading2: "Lawyers, Proven, Result",
   description:
-    "I'm a software engineer specializing in building (andoccasionally designing) exceptional digital experiences. Currently, I'm focused on exploring and learning about JavaScript programming language and others tech stack for frontend engineer.",
+    "Our team of experienced attorneys has a diverse range of expe rtise, covering a wide spectrum of legal areas. We specialize in corporate law, family law.",
   button: [
     {
-      to: "https://bit.ly/Certificate_Praw",
-      nama_button: "Check My Files",
-      icon: FiFile,
-    },
-    {
-      to: "https://github.com/id-prawito",
-      nama_button: "Github",
-      icon: FiGithub,
+      to: "/contact",
+      nama_button: "Contact Us",
+      icon: FaChalkboardTeacher,
     },
   ],
 };

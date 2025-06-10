@@ -10,6 +10,7 @@ export const AboutSite = styled.section`
   min-height: 150vh;
   max-width: 1250px;
   padding: 0;
+  position: relative;
 
   ${devices.smartphone} {
     padding: 70px 0px;
@@ -30,12 +31,48 @@ export const AboutSite = styled.section`
     min-height: 0px;
   }
 
+  .shape-mockup {
+    &-about {
+      position: absolute;
+      top: 50px;
+      left: -50px;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    &-about-right {
+      position: absolute;
+      bottom: 50px;
+      right: -50px;
+      z-index: 1;
+      pointer-events: none;
+    }
+  }
+
+  .jump_about {
+    animation: jumpAbout 7s linear infinite;
+  }
+
+  @keyframes jumpAbout {
+    0% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-30px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
   .pembungkus_about {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 80px;
+    position: relative; // supaya absolute-nya mengacu ke sini
+    z-index: 2;
 
     ${devices.smartphone} {
       padding: 20px 25px;

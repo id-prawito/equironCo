@@ -12,6 +12,8 @@ import {
   FaTrophy,
   FaUserShield,
 } from "react-icons/fa";
+import jump from "../../assets/img/law_stack/process-1-shape.png";
+import jump_right from "../../assets/img/law_stack/about1-right-bottom.png";
 
 const About = () => {
   const controls = useAnimation();
@@ -53,6 +55,14 @@ const About = () => {
 
   return (
     <AboutSite ref={ref} id="about">
+      <div className="shape-mockup-about jump_about">
+        <img src={jump} alt="jump" srcSet="" />
+      </div>
+
+      <div className="shape-mockup-about-right jump_about">
+        <img src={jump_right} alt="jump" srcSet="" />
+      </div>
+
       <motion.div
         variants={container}
         initial="hidden"
@@ -88,12 +98,12 @@ const About = () => {
             <div className="cardArea2">
               <div className="images_card_area one">
                 <div className="images_card2">
-                  <img src={law1} alt="" srcset="" />
+                  <img src={law1} alt="" srcSet="" />
                 </div>
               </div>
               <div className="images_card_area two">
                 <div className="images_card2">
-                  <img src={law2} alt="" srcset="" />
+                  <img src={law2} alt="" srcSet="" />
                 </div>
               </div>
             </div>
