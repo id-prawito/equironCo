@@ -15,6 +15,10 @@ export const ProcessSite = styled.section`
     max-width: 100%;
   }
 
+  @media only screen and (min-width: 1024px) and (max-width: 1280px) {
+    max-width: 950px;
+  }
+
   .shape-mockup {
     position: absolute;
     bottom: -50px; // atur sesuai kebutuhan
@@ -44,6 +48,10 @@ export const ProcessSite = styled.section`
     padding: 80px 150px;
     position: relative; // supaya absolute-nya mengacu ke sini
     z-index: 2;
+
+    @media only screen and (min-width: 1024px) and (max-width: 1280px) {
+      padding: 80px 0px;
+    }
 
     ${devices.smartphone} {
       padding: 80px 25px;
@@ -91,6 +99,10 @@ export const ProcessSite = styled.section`
         font-size: 54px;
         line-height: 1.085;
         font-weight: 700;
+
+        @media only screen and (min-width: 1024px) and (max-width: 1280px) {
+          font-size: 50px;
+        }
       }
 
       .process {
@@ -175,8 +187,25 @@ export const ProcessSite = styled.section`
       overflow: hidden;
       transition: transform 0.3s ease-in-out;
 
+      @media only screen and (min-width: 1024px) and (max-width: 1280px) {
+        height: 100%;
+        transform: translateX(-28%);
+        width: 132%;
+      }
+
       &:hover {
         animation: shaked 0.5s ease-in-out;
+
+        @media only screen and (min-width: 1024px) and (max-width: 1280px) {
+          animation: shaked-lg 0.5s ease-in-out;
+        }
+      }
+
+      img {
+        @media only screen and (min-width: 1024px) and (max-width: 1280px) {
+          height: 100%;
+          width: 140%;
+        }
       }
 
       @keyframes shaked {
@@ -194,6 +223,24 @@ export const ProcessSite = styled.section`
         }
         100% {
           transform: translateX(-20%);
+        }
+      }
+
+      @keyframes shaked-lg {
+        0% {
+          transform: translateX(-28%);
+        }
+        25% {
+          transform: translateX(calc(-28% - 5px));
+        }
+        50% {
+          transform: translateX(calc(-28% + 5px));
+        }
+        75% {
+          transform: translateX(calc(-28% - 5px));
+        }
+        100% {
+          transform: translateX(-28%);
         }
       }
     }

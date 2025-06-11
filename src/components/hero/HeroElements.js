@@ -75,6 +75,10 @@ export const HeroSite = styled.section`
     gap: 40px;
     max-width: 1250px;
 
+    @media only screen and (min-width: 1024px) and (max-width: 1280px) {
+      max-width: 950px;
+    }
+
     ${devices.smartphone} {
       padding: 0px 25px;
     }
@@ -156,6 +160,10 @@ export const HeroSite = styled.section`
     width: 85%;
     height: 100%;
 
+    @media only screen and (min-width: 1024px) and (max-width: 1280px) {
+      width: 100%;
+    }
+
     .image-border-container {
       width: 100%;
       height: 100%;
@@ -226,5 +234,9 @@ export const HeroSite = styled.section`
   .th-hero-bg {
     inset: 0;
     z-index: -4;
+
+    @media only screen and (min-width: 1024px) and (max-width: 1280px) {
+      height: 670px;
+    }
   }
 `;
