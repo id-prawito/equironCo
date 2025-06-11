@@ -26,9 +26,8 @@ export const AboutSite = styled.section`
     max-width: 100%;
   }
 
-  ${devices.desktops} {
-    padding: 140px 0px;
-    min-height: 0px;
+  @media only screen and (min-width: 1024px) and (max-width: 1280px) {
+    max-width: 950px;
   }
 
   .shape-mockup {
@@ -224,7 +223,7 @@ export const AboutSite = styled.section`
 
   .content_card_new {
     display: grid;
-    flex: 0 0 60%;
+    flex: 0 0 57%;
     gap: 25px;
     grid-template-columns: 1fr 1fr; // Bagi rata 50% - 50%
     grid-template-areas: "cardArea cardArea2";
@@ -250,11 +249,19 @@ export const AboutSite = styled.section`
       justify-content: center;
     }
 
+    @media only screen and (min-width: 1024px) and (max-width: 1280px) {
+      flex: 0 0 55%;
+    }
+
     .cardArea {
       grid-area: cardArea;
       display: flex;
       flex-direction: column;
       height: 100%;
+
+      @media only screen and (min-width: 1024px) and (max-width: 1280px) {
+        height: 80%;
+      }
 
       .image_wrapper {
         position: relative;
@@ -314,6 +321,10 @@ export const AboutSite = styled.section`
       flex-direction: column;
       height: 100%;
       gap: 20px;
+
+      @media only screen and (min-width: 1024px) and (max-width: 1280px) {
+        height: 80%;
+      }
 
       .images_card_area {
         height: 100%;
@@ -463,16 +474,14 @@ export const AboutSite = styled.section`
 
   .stats-container {
     display: flex;
-    /* justify-content: space-around; */
     align-items: center;
-    background-color: #b88649; /* Sesuaikan dengan warna di gambar */
+    background-color: #b88649;
     opacity: 90%;
     color: white;
     border-radius: 32px;
-    padding: 8cap 20px;
+    padding: 80px;
     font-family: sans-serif;
     gap: 30px;
-    /* flex-wrap: wrap; */
     width: 100%;
   }
 

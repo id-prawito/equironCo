@@ -23,6 +23,11 @@ export const FooterSite = styled.footer`
     gap: 40px; // jarak antar kolom, opsional
     padding: 20px;
 
+    @media only screen and (min-width: 1024px) and (max-width: 1280px) {
+      max-width: 950px;
+      padding: 20px 0px;
+    }
+
     .footer_services {
       display: flex;
       flex-direction: column;
@@ -131,7 +136,6 @@ export const FooterSite = styled.footer`
           display: flex;
           align-items: center;
           justify-content: center;
-          width: 50px;
           height: 50px;
           border-radius: 12px;
           background-color: #1a3331;
@@ -140,6 +144,10 @@ export const FooterSite = styled.footer`
           font-size: 24px;
           transition: transform 0.4s ease, background-color 0.3s ease;
           width: 12%;
+
+          @media only screen and (min-width: 1024px) and (max-width: 1280px) {
+            width: 50px;
+          }
 
           &:hover {
             background-color: rgb(43, 82, 79);
@@ -246,7 +254,7 @@ export const Item = styled.ul`
     &:hover {
       transform: translateY(-5px);
       transition: 0.3s all ease;
-      color: #7227f3;
+      color: #b88649;
     }
   }
 `;

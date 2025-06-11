@@ -9,10 +9,14 @@ export const ProjectSite = styled.section`
   align-items: center;
   min-height: auto;
   padding: 0px;
-  max-width: 1350px;
+  max-width: 1250px;
+
+  @media only screen and (min-width: 1024px) and (max-width: 1280px) {
+    max-width: 950px;
+  }
 
   .project_container {
-    padding: 130px 30px;
+    padding: 100px 0px;
     width: 100%;
 
     ${devices.smartphone} {
@@ -182,7 +186,14 @@ export const ProjectSite = styled.section`
         line-height: 1.5;
         color: #666;
         margin-bottom: 24px;
+        -webkit-transition: color 0.3s ease;
         transition: color 0.3s ease;
+
+        display: -webkit-box;
+        -webkit-line-clamp: 3; /* Batasi ke 4 baris */
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
 
       .read_more {
@@ -433,7 +444,7 @@ export const ProjectSite = styled.section`
       transition: 0.3s all ease;
 
       &:hover {
-        background-color: #7227f3;
+        background-color: #b88649;
         transition: 0.3s all ease;
         transform: scale(1.05);
         color: var(--colorWhite);

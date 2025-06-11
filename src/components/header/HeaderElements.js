@@ -40,7 +40,7 @@ export const HeaderSite = styled.header`
 
 export const NavLinks = styled(Link)`
   &.active {
-    color: #7227f3;
+    color: #b88649;
   }
 `;
 
@@ -92,7 +92,7 @@ export const HeaderContainer = styled.div`
   }
   .navOverlay {
     position: absolute;
-    background: #7227f3;
+    background: #b88649;
     height: 100vh;
     width: 100vw;
     opacity: 0.2;
@@ -177,7 +177,7 @@ export const HeaderContainer = styled.div`
         transition: 0.3s all ease;
 
         &:hover {
-          background-color: #7227f3;
+          background-color: #b88649;
           transform: scale(1.05);
         }
       }
@@ -340,7 +340,7 @@ export const HeaderContainer = styled.div`
         &:hover {
           transform: translateY(-5px);
           transition: 0.3s all ease;
-          color: #7227f3;
+          color: #b88649;
         }
       }
 
@@ -397,7 +397,7 @@ export const HeaderContainer = styled.div`
         &:hover {
           transform: translateY(-5px);
           transition: 0.3s all ease;
-          color: #7227f3;
+          color: #b88649;
         }
       }
 
