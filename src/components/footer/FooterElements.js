@@ -246,7 +246,7 @@ export const Item = styled.ul`
     &:hover {
       transform: translateY(-5px);
       transition: 0.3s all ease;
-      color: #7227f3;
+      color: #b88649;
     }
   }
 `;

@@ -142,7 +142,7 @@ export const HeroSite = styled.section`
       }
 
       &:hover {
-        background-color: #7227f3;
+        background-color: #b88649;
         transition: 0.3s all ease;
         transform: scale(1.05);
       }

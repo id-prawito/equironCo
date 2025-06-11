@@ -463,16 +463,14 @@ export const AboutSite = styled.section`
 
   .stats-container {
     display: flex;
-    /* justify-content: space-around; */
     align-items: center;
-    background-color: #b88649; /* Sesuaikan dengan warna di gambar */
+    background-color: #b88649;
     opacity: 90%;
     color: white;
     border-radius: 32px;
-    padding: 8cap 20px;
+    padding: 80px;
     font-family: sans-serif;
     gap: 30px;
-    /* flex-wrap: wrap; */
     width: 100%;
   }
 
