@@ -168,13 +168,22 @@ export const HeaderContainer = styled.div`
       .resume {
         display: flex;
         align-items: center;
+        justify-content: center;
         background-color: var(--colorMain);
-        border-radius: 6px;
-        padding: 8px 16px;
+        border-radius: 16px;
+        padding: 12px 24px;
         max-height: 100%;
         cursor: pointer;
         color: #ffffff;
         transition: 0.3s all ease;
+        gap: 10px;
+
+        svg {
+          display: flex;
+          height: 100%;
+          justify-content: center;
+          align-items: center;
+        }
 
         &:hover {
           background-color: #b88649;
