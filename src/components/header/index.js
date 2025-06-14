@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { FaChevronUp, FaEllipsisV } from "react-icons/fa";
+import { FaArrowRight, FaChevronUp, FaEllipsisV } from "react-icons/fa";
 import { HeaderContainer, HeaderSite, NavLinks } from "./HeaderElements";
 import { FiMenu, FiX } from "react-icons/fi";
 import { MEDIA_SOSIAL, NAVLINKS } from "../../config/Data";
@@ -146,6 +146,26 @@ const Header = () => {
                     </motion.div>
                   </li>
                 ))}
+
+                <li>
+                  <motion.div variants={item_nya} className="closing">
+                    <div className="color_icon">
+                      <FaEllipsisV />
+                    </div>
+                    <div className="header__item">
+                      <div className="resume">
+                        <a
+                          href={require("../../assets/cv_prawito.pdf")}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          Free Consultation
+                        </a>
+                        <FaArrowRight />
+                      </div>
+                    </div>
+                  </motion.div>
+                </li>
               </ul>
             </nav>
 
@@ -298,7 +318,6 @@ export const Header404 = () => {
                   <div className="text-logo">Equiron and Co.</div>
                 </div>
               </NavLinks>
-              broooo
             </motion.div>
             <motion.div variants={item_nya}>
               <ThemeSwitcher />

@@ -16,7 +16,7 @@ export const ProjectSite = styled.section`
   }
 
   .project_container {
-    padding: 100px 0px;
+    padding: 60px 0px;
     width: 100%;
 
     ${devices.smartphone} {

@@ -58,6 +58,7 @@ export const ContactSite = styled.section`
 
   .hero_container {
     padding: 0 100px;
+    padding-top: 60px;
 
     ${devices.smartphone} {
       padding: 50px 25px;
