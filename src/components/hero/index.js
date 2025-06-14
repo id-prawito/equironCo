@@ -2,7 +2,7 @@ import React from "react";
 import { HERO_DATA } from "../../config/Data";
 import { HeroSite } from "./HeroElements";
 import { motion } from "framer-motion";
-import law1 from "./../../assets/img/law1.png";
+import law1 from "./../../assets/img/law_stack/images_about_2.png";
 import heroBg from "./../../assets/img/law_stack/hero_bg_1_1.jpg";
 import heroOverlay from "./../../assets/img/law_stack/hero1-overlay.png";
 

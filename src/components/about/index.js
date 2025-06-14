@@ -1,19 +1,19 @@
 import React, { useEffect } from "react";
-import { TECH_STACK, ABOUT_DATA } from "../../config/Data";
 import { useInView } from "react-intersection-observer";
 import { useAnimation, motion } from "framer-motion";
 import { AboutSite } from "./AboutElements";
-import law from "./../../assets/img/law.jpg";
-import law1 from "./../../assets/img/law1.png";
-import law2 from "./../../assets/img/law2.png";
+import about_jump_right from "../../assets/img/law_stack/about1-right-bottom.png";
+import about_jump_left from "../../assets/img/law_stack/process-1-shape.png";
+import images_about_1 from "../../assets/img/law_stack/images_about_1.jpg";
+import images_about_2 from "../../assets/img/law_stack/images_about_2.png";
+import images_about_3 from "../../assets/img/law_stack/images_about_3.png";
 import {
   FaBalanceScale,
+  FaCheckCircle,
   FaStarHalfAlt,
-  FaTrophy,
   FaUserShield,
+  FaTrophy,
 } from "react-icons/fa";
-import jump from "../../assets/img/law_stack/process-1-shape.png";
-import jump_right from "../../assets/img/law_stack/about1-right-bottom.png";
 
 const About = () => {
   const controls = useAnimation();
@@ -53,31 +53,51 @@ const About = () => {
     },
   };
 
+  const statsData = [
+    { icon: <FaBalanceScale />, value: "10k+", label: "Case Done" },
+    { icon: <FaUserShield />, value: "12k+", label: "Expert Attorneys" },
+    { icon: <FaStarHalfAlt />, value: "15k+", label: "Happy Clients" },
+    { icon: <FaTrophy />, value: "20k+", label: "Award Winning" },
+  ];
+
+  const skillData = [
+    { icon: FaCheckCircle, text: "Committed to excellence in legal practice." },
+    {
+      icon: FaCheckCircle,
+      text: "Act with honesty and uphold ethical principles.",
+    },
+    { icon: FaCheckCircle, text: "Road Test Preparation with 98% success" },
+    { icon: FaCheckCircle, text: "Meeting clients' needs is our priority." },
+  ];
+
   return (
     <AboutSite ref={ref} id="about">
-      <div className="shape-mockup-about jump_about">
-        <img src={jump} alt="jump" srcSet="" />
+      <div className="shape-mockup-about-left jump_about">
+        <img src={about_jump_left} alt="shape-mockup-about-left" />
       </div>
-
       <div className="shape-mockup-about-right jump_about">
-        <img src={jump_right} alt="jump" srcSet="" />
+        <img src={about_jump_right} alt="shape-mockup-about-right" />
       </div>
 
       <motion.div
         variants={container}
         initial="hidden"
         animate={controls}
-        className="pembungkus_about"
+        className="about-container"
       >
-        <div className="about_content">
-          <motion.div variants={item_nya} className="content_about">
-            <h1>{ABOUT_DATA.text_small}</h1>
-            <div className="big_heading_about">
+        <div className="about-content">
+          <motion.div variants={item_nya} className="about-details">
+            <h1>Being a frontend developer / frontend engineer.</h1>
+            <div className="big-heading-about">
               A Legacy <span>Of</span> Legal Excellence
             </div>
-            <p>{ABOUT_DATA.text_description}</p>
-            <ul className="text_skill">
-              {ABOUT_DATA.skill.map((item, i) => (
+            <p>
+              Our team of experienced attorneys has a diverse range of expe
+              rtise, covering a wide spectrum of legal areas. We specialize in
+              corporate law, family law.
+            </p>
+            <ul className="text-skill">
+              {skillData?.map((item, i) => (
                 <li key={i}>
                   <div className="icon">
                     <item.icon />
@@ -88,67 +108,40 @@ const About = () => {
             </ul>
           </motion.div>
 
-          <motion.div variants={item_nya} className="content_card_new">
-            <div className="cardArea">
-              <div className="image_wrapper">
-                <div className="image_border" />
-                <img src={law} alt="" />
+          <motion.div variants={item_nya} className="content-card-images">
+            <div className="cardImagesArea">
+              <div className="image-wrapper">
+                <div className="image-border" />
+                <img src={images_about_1} alt="images_about_1" />
               </div>
             </div>
-            <div className="cardArea2">
-              <div className="images_card_area one">
-                <div className="images_card2">
-                  <img src={law1} alt="" srcSet="" />
+            <div className="cardImagesArea2">
+              <div className="images-card-area one">
+                <div className="images-card-area-two">
+                  <img src={images_about_2} alt="images_about_2" />
                 </div>
               </div>
-              <div className="images_card_area two">
-                <div className="images_card2">
-                  <img src={law2} alt="" srcSet="" />
+              <div className="images-card-area two">
+                <div className="images-card-area-two">
+                  <img src={images_about_3} alt="images_about_3" />
                 </div>
               </div>
             </div>
           </motion.div>
         </div>
-        <motion.div variants={item_nya} class="stats-container">
-          <div class="stat-item">
-            <i class="icon">
-              <FaBalanceScale />
-            </i>
-            <div className="content">
-              <h3>10k+</h3>
-              <p>Case Done</p>
-            </div>
-          </div>
-          <div class="divider"></div>
-          <div class="stat-item">
-            <i class="icon">
-              <FaUserShield />
-            </i>
-            <div className="content">
-              <h3>12k+</h3>
-              <p>Expert Attorneys</p>
-            </div>
-          </div>
-          <div class="divider"></div>
-          <div class="stat-item">
-            <i class="icon">
-              <FaStarHalfAlt />
-            </i>
-            <div className="content">
-              <h3>15k+</h3>
-              <p>Happy Client</p>
-            </div>
-          </div>
-          <div class="divider"></div>
-          <div class="stat-item">
-            <i class="icon">
-              <FaTrophy />
-            </i>
-            <div className="content">
-              <h3>20k+</h3>
-              <p>Award Winning</p>
-            </div>
-          </div>
+        <motion.div variants={item_nya} className="stats-container">
+          {statsData.map((s, idx) => (
+            <React.Fragment key={idx}>
+              <div className="stat-item">
+                <div className="icon">{s.icon}</div>
+                <div className="content">
+                  <h3>{s.value}</h3>
+                  <p>{s.label}</p>
+                </div>
+              </div>
+              {idx < statsData.length - 1 && <div className="divider" />}
+            </React.Fragment>
+          ))}
         </motion.div>
       </motion.div>
     </AboutSite>

@@ -47,7 +47,7 @@ export const NAVLINKS = [
     name: "ABOUT",
   },
   {
-    to: "experience",
+    to: "services",
     icon: FaEllipsisV,
     name: "SERVICES",
   },
@@ -57,9 +57,19 @@ export const NAVLINKS = [
     name: "WORK PROCESS",
   },
   {
-    to: "project",
+    to: "teams",
     icon: FaEllipsisV,
-    name: "NEWS",
+    name: "TEAMS",
+  },
+  {
+    to: "publications",
+    icon: FaEllipsisV,
+    name: "PUBLICATIONS",
+  },
+  {
+    to: "clients",
+    icon: FaEllipsisV,
+    name: "CLIENTS",
   },
 ];
 
