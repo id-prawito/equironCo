@@ -6,6 +6,9 @@ import Project from "../components/project";
 import Footer from "../components/footer";
 import Header from "../components/header";
 import Process from "../components/process";
+import Teams from "../components/teams";
+import Article from "../components/article";
+import Clients from "../components/clients";
 
 const Home = () => {
   return (
@@ -15,6 +18,9 @@ const Home = () => {
       <About />
       <Project />
       <Process />
+      <Teams />
+      <Article />
+      <Clients />
       <Contact />
       <Footer />
     </>
