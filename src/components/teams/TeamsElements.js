@@ -9,7 +9,7 @@ export const TeamsSite = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 50px 0px;
+  margin: 80px 0px;
 
   .th-hero-bg-teams {
     position: relative;

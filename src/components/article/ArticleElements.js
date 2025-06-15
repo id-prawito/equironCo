@@ -12,42 +12,7 @@ export const ArticleSite = styled.section`
   height: 800px;
   background-color: #f5f5f5;
 
-  .th-hero-bg-teams {
-    position: relative;
-    width: 100%;
-    height: 800px;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    z-index: 0;
-
-    .hero_overlay {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      z-index: 1;
-      pointer-events: none;
-      mix-blend-mode: overlay;
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background-color: #f5f5f5;
-      opacity: 0.8;
-      z-index: 2;
-      pointer-events: none;
-    }
-
-    @media only screen and (min-width: 1024px) and (max-width: 1280px) {
-      height: 670px;
-    }
-  }
-
-  .teams_container {
+  .article-container {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -58,239 +23,7 @@ export const ArticleSite = styled.section`
     padding: 0 1rem;
   }
 
-  .teams_content {
-    width: 100%;
-    padding: 0px 20px;
-  }
-
-  .shape-mockup-teams {
-    position: absolute;
-    left: -50px;
-    top: 0;
-    z-index: 1;
-    pointer-events: none;
-  }
-
-  .shape-mockup-teams-right {
-    position: absolute;
-    right: -50px;
-    bottom: 0;
-    z-index: 1;
-    pointer-events: none;
-  }
-
-  .jump_teams {
-    animation: jumpAbout 7s linear infinite;
-  }
-
-  .lawyer_card {
-    background-color: #21312c;
-    border-radius: 1rem;
-    padding: 1.5rem;
-    text-align: center;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    height: 100%;
-    color: white;
-  }
-
-  .lawyer_img {
-    border-radius: 1rem;
-    width: 100%;
-    height: 16rem;
-    object-fit: cover;
-    margin-bottom: 1rem;
-  }
-
-  .lawyer_name {
-    font-size: 1.25rem;
-    font-weight: 600;
-  }
-
-  .lawyer_title {
-    font-size: 0.875rem;
-    color: #d1d5db;
-  }
-
-  @keyframes jumpAbout {
-    0%,
-    100% {
-      transform: translateY(0px);
-    }
-    50% {
-      transform: translateY(-15px);
-    }
-  }
-
-  .team_card {
-    position: relative;
-    overflow: hidden;
-    background-color: #314e52;
-    border-radius: 24px;
-    transition: 0.4s ease;
-    border-bottom: 6px solid #b68c5a;
-
-    .team_img {
-      overflow: hidden;
-      position: relative;
-      border-radius: 24px 24px 34px 34px;
-      height: 230px;
-      transition: 0.4s;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      .img-hero {
-        border-radius: 24px 24px 34px 34px;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: top;
-        transition: 0.4s;
-        height: 135%;
-        position: absolute;
-        top: 0%;
-      }
-    }
-
-    .team-content {
-      padding: 16px 16px 16px;
-      text-align: center;
-      background: #314e52;
-      border-radius: 0 0 24px 24px;
-      transition: 0.4s;
-      z-index: 1;
-      position: relative;
-
-      .box-title {
-        margin-bottom: 2px;
-        font-size: 20px;
-        color: #fff;
-        font-weight: 600;
-        transition: 0.4s;
-      }
-
-      .desc {
-        font-size: 14px;
-        color: #ccc;
-      }
-    }
-
-    .team-content-hover-wrap {
-      position: absolute;
-      inset: 0;
-      visibility: hidden;
-      opacity: 0;
-      transition: 0.4s ease-in-out;
-      z-index: 10;
-
-      .team-content-hover {
-        width: 100%;
-        height: 100%;
-        position: relative;
-        text-align: center;
-        overflow: hidden;
-
-        &::before {
-          content: "";
-          position: absolute;
-          inset: 0;
-          background-color: #b68c5a;
-          opacity: 0.8;
-          z-index: 1;
-          border-radius: 24px;
-          transition: 0.4s;
-        }
-
-        .team-img {
-          height: 100%;
-          img {
-            border-radius: 24px;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: top;
-            transition: 0.4s;
-          }
-        }
-
-        .hover-inner {
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          z-index: 2;
-          color: white;
-          width: 100%;
-          padding: 0 1rem;
-
-          .box-title {
-            font-size: 20px;
-            color: #fff;
-            font-weight: 600;
-            margin-bottom: 4px;
-          }
-
-          .team-desig {
-            font-size: 14px;
-            color: #fff;
-            margin-bottom: 12px;
-            display: block;
-          }
-
-          .team-social {
-            display: flex;
-            justify-content: center;
-            gap: 16px;
-
-            .th-social a {
-              color: #fff;
-              font-size: 16px;
-              transition: color 0.3s;
-            }
-
-            .th-social a:hover {
-              color: #314e52;
-            }
-          }
-        }
-      }
-    }
-
-    &:hover {
-      .team-content-hover-wrap {
-        visibility: visible;
-        opacity: 1;
-      }
-    }
-  }
-
-  .swiper-button-prev,
-  .swiper-button-next {
-    color: #fff;
-    background-color: rgba(0, 0, 0, 0.5);
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 10;
-  }
-
-  .swiper-button-prev::after,
-  .swiper-button-next::after {
-    font-size: 16px;
-    font-weight: bold;
-  }
-
-  .swiper-pagination {
-    display: none !important;
-  }
-
-  .swiper-slide {
-    max-width: 100%; // ini bisa batasi total
-  }
-
-  .team-content-container {
+  .article-content-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -300,11 +33,12 @@ export const ArticleSite = styled.section`
     max-width: 1350px;
   }
 
-  .teams_desc {
+  .article-desc {
     width: 100%;
     padding: 0px 20px;
+    margin-top: 80px;
 
-    .subtitle {
+    .article-title {
       color: #b68c5a;
       margin-bottom: 25px;
       position: relative;
@@ -316,15 +50,7 @@ export const ArticleSite = styled.section`
       display: block;
     }
 
-    .text-content {
-      margin-top: -0.2em;
-      text-transform: capitalize;
-      font-size: 42px;
-      margin-bottom: 20px;
-      font-weight: 700;
-    }
-
-    .sec-title {
+    .article-subtitle {
       color: #011c1a;
       text-transform: none;
       font-weight: 700;
@@ -333,6 +59,11 @@ export const ArticleSite = styled.section`
       font-size: 54px;
       line-height: 1.185;
     }
+  }
+
+  .article-content {
+    width: 100%;
+    padding: 0px 20px;
   }
 
   .blog-card {
@@ -374,7 +105,7 @@ export const ArticleSite = styled.section`
         margin: -0.4em 0 15px 0;
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
 
         a {
           display: inline-block;
@@ -428,5 +159,61 @@ export const ArticleSite = styled.section`
         }
       }
     }
+  }
+
+  .shape-mockup-article-left {
+    position: absolute;
+    left: -50px;
+    top: 0;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .shape-mockup-article-right {
+    position: absolute;
+    right: -50px;
+    bottom: 0;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .jump-article {
+    animation: jumpArticle 7s linear infinite;
+  }
+
+  @keyframes jumpArticle {
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-15px);
+    }
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+  }
+
+  .swiper-button-prev::after,
+  .swiper-button-next::after {
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .swiper-pagination {
+    display: none !important;
+  }
+
+  .swiper-slide {
+    max-width: 100%; // ini bisa batasi total
   }
 `;

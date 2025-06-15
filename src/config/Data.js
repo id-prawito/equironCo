@@ -62,7 +62,7 @@ export const NAVLINKS = [
     name: "TEAMS",
   },
   {
-    to: "publications",
+    to: "article",
     icon: FaEllipsisV,
     name: "PUBLICATIONS",
   },

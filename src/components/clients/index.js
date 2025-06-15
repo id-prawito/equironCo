@@ -3,7 +3,7 @@ import { useInView } from "react-intersection-observer";
 import { useAnimation, motion } from "framer-motion";
 import jump from "../../assets/img/law_stack/process-1-shape.png";
 import teams_bg from "../../assets/img/law_stack/team-1-bg.jpg";
-import blog_bg from "../../assets/img/law_stack/blog_1_1.jpg";
+import blog_bg from "../../assets/img/law_stack/blog_bg.jpg";
 import shape_lect from "../../assets/img/law_stack/blog-1-shape-left.png";
 import shape_right from "../../assets/img/law_stack/blog-1-shape-right.png";
 import goto_logo from "./../../assets/img/law_stack/goto.png";
