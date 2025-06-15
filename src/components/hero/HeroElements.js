@@ -13,7 +13,7 @@ export const HeroSite = styled.section`
   width: 100%;
   padding: 0px 0px 0px 0px;
 
-  .container_new {
+  .background-container {
     width: 100%;
     display: flex;
     align-items: center;
@@ -21,15 +21,21 @@ export const HeroSite = styled.section`
     position: absolute;
   }
 
+  .background-images-hero {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+
+    ${devices?.tablet} {
+      height: 90vh;
+    }
+  }
+
   .overlay {
     position: absolute;
     inset: 0;
-    background: rgba(
-      0,
-      0,
-      0,
-      0.4
-    ); /* atau warna lain seperti rgba(80,0,130,0.5) */
+    background: rgba(0, 0, 0, 0.4);
     z-index: 1;
   }
 
@@ -38,10 +44,20 @@ export const HeroSite = styled.section`
     min-height: 0px;
   }
 
-  .hero_content {
+  .hero-content {
     display: flex;
     flex-direction: column;
     gap: 20px;
+  }
+
+  .hero-content-images {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    ${devices.tablet} {
+      align-items: center;
+    }
   }
 
   h1 {
@@ -67,27 +83,7 @@ export const HeroSite = styled.section`
     }
   }
 
-  .hero_container {
-    padding: 0 0px;
-    display: flex;
-    flex-direction: row;
-    gap: 40px;
-    max-width: 1250px;
-
-    @media only screen and (min-width: 1024px) and (max-width: 1280px) {
-      max-width: 950px;
-    }
-
-    ${devices.smartphone} {
-      padding: 0px 25px;
-    }
-
-    ${devices.ipads} {
-      padding: 0px 50px;
-    }
-  }
-
-  .big_heading {
+  .big-heading {
     color: ${({ theme: { theme } }) =>
       theme === themeList.light
         ? "var(--dark-text-white)"
@@ -105,7 +101,7 @@ export const HeroSite = styled.section`
     }
   }
 
-  .big_heading_one {
+  .big-heading-one {
     color: ${({ theme: { theme } }) =>
       theme === themeList.light ? "#fff" : "#fff"};
     font-weight: 600;
@@ -121,13 +117,13 @@ export const HeroSite = styled.section`
     }
   }
 
-  .button_hero {
+  .button-hero {
     display: flex;
     flex-direction: row;
     margin-top: 20px;
     gap: 20px;
 
-    .button_my-course {
+    .button-my-course {
       display: flex;
       align-items: center;
       background-color: var(--colorMain);
@@ -139,6 +135,8 @@ export const HeroSite = styled.section`
       color: #ffffff;
       gap: 10px;
       transition: 0.3s all ease;
+      font-weight: 500;
+      border: 2px solid #e37d00;
 
       ${devices.smartphone} {
         font-size: 12px;
@@ -152,14 +150,39 @@ export const HeroSite = styled.section`
     }
   }
 
-  .images_hero {
+  .hero-container {
+    padding: 0 0px;
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    max-width: 1250px;
+
+    ${devices.laptop} {
+      max-width: 950px;
+    }
+
+    ${devices.tablet} {
+      flex-direction: column;
+      max-width: 680px;
+    }
+
+    ${devices.smartphone} {
+      padding: 0px 25px;
+    }
+
+    ${devices.tablet} {
+      padding: 0px 20px;
+    }
+  }
+
+  .images-hero {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 85%;
     height: 100%;
 
-    @media only screen and (min-width: 1024px) and (max-width: 1280px) {
+    ${devices.laptop} {
       width: 100%;
     }
 
@@ -210,31 +233,11 @@ export const HeroSite = styled.section`
     }
   }
 
-  .carousel-container {
-    display: flex;
-    gap: 20px;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    padding: 20px 0;
-    scroll-behavior: smooth;
-  }
-
-  .carousel-item {
-    flex: 0 0 auto;
-    width: 250px;
-    scroll-snap-align: start;
-  }
-
-  .carousel-img {
-    width: 100%;
-    border-radius: 0 70px 0 70px;
-  }
-
   .th-hero-bg {
     inset: 0;
     z-index: -4;
 
-    @media only screen and (min-width: 1024px) and (max-width: 1280px) {
+    ${devices.laptop} {
       height: 670px;
     }
   }

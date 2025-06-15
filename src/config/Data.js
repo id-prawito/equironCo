@@ -47,19 +47,29 @@ export const NAVLINKS = [
     name: "ABOUT",
   },
   {
-    to: "experience",
+    to: "services",
     icon: FaEllipsisV,
     name: "SERVICES",
   },
   {
-    to: "work",
+    to: "process",
     icon: FaEllipsisV,
-    name: "WORK PROCESS",
+    name: "PROCESS",
   },
   {
-    to: "project",
+    to: "teams",
     icon: FaEllipsisV,
-    name: "NEWS",
+    name: "TEAMS",
+  },
+  {
+    to: "article",
+    icon: FaEllipsisV,
+    name: "PUBLICATIONS",
+  },
+  {
+    to: "clients",
+    icon: FaEllipsisV,
+    name: "CLIENTS",
   },
 ];
 
@@ -340,7 +350,7 @@ export const HERO_DATA = {
   button: [
     {
       to: "/contact",
-      nama_button: "Contact Us",
+      nama_button: "CONTACT US",
       icon: FaChalkboardTeacher,
     },
   ],

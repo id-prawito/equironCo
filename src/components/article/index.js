@@ -1,21 +1,16 @@
 import React, { useEffect } from "react";
-import { useInView } from "react-intersection-observer";
-import { useAnimation, motion } from "framer-motion";
-import jump from "../../assets/img/law_stack/process-1-shape.png";
-import teams_bg from "../../assets/img/law_stack/team-1-bg.jpg";
-import blog_bg from "../../assets/img/law_stack/blog_1_1.jpg";
-import shape_lect from "../../assets/img/law_stack/blog-1-shape-left.png";
 import shape_right from "../../assets/img/law_stack/blog-1-shape-right.png";
-import heroOverlay from "./../../assets/img/law_stack/hero1-overlay.png";
-import hero from "./../../assets/img/law_stack/team_1_8.jpg";
-import { ArticleSite } from "./ArticleElements";
-
-import { Swiper, SwiperSlide } from "swiper/react";
+import shape_lect from "../../assets/img/law_stack/blog-1-shape-left.png";
+import { FaCalendarAlt, FaCommentAlt, FaUserAlt } from "react-icons/fa";
+import blog_bg from "../../assets/img/law_stack/blog_bg.jpg";
+import { useInView } from "react-intersection-observer";
 import { Navigation, Pagination } from "swiper/modules";
+import { useAnimation, motion } from "framer-motion";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { ArticleSite } from "./ArticleElements";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { FaCalendarAlt, FaCommentAlt, FaUserAlt } from "react-icons/fa";
 
 const Article = () => {
   const controls = useAnimation();
@@ -46,70 +41,49 @@ const Article = () => {
       opacity: 1,
     },
   };
-  const lawyers = [
+  const articles = [
     {
       name: "Smith Miller",
-      title: "Attorney",
-      image: hero,
+      title: "Steps to Pursue a Career as a Legal Project Manager.",
+      image: blog_bg,
     },
     {
       name: "Samira Dsuza",
-      title: "Attorney",
-      image: hero,
+      title: "Steps to Pursue a Career as a Legal Project Manager.",
+      image: blog_bg,
     },
     {
       name: "Michel Phelps",
-      title: "Chief Justice",
-      image: hero,
+      title: "Steps to Pursue a Career as a Legal Project Manager.",
+      image: blog_bg,
     },
     {
       name: "Sarah Rahma",
-      title: "Attorney",
-      image: hero,
+      title: "Steps to Pursue a Career as a Legal Project Manager.",
+      image: blog_bg,
     },
     {
       name: "Sarah Rahma",
-      title: "Attorney",
-      image: hero,
-    },
-    {
-      name: "Sarah Rahma",
-      title: "Attorney",
-      image: hero,
-    },
-    {
-      name: "Sarah Rahma",
-      title: "Attorney",
-      image: hero,
-    },
-    {
-      name: "Sarah Rahma",
-      title: "Attorney",
-      image: hero,
+      title: "Steps to Pursue a Career as a Legal Project Manager.",
+      image: blog_bg,
     },
   ];
 
   return (
     <ArticleSite id="article">
-      <div className="teams_container">
-        <div className="team-content-container">
-          <motion.div
-            variants={container}
-            initial="hidden"
-            animate={controls}
-            ref={ref}
-            className="teams_desc"
-          >
-            <div className="subtitle">Publications</div>
-            <div className="sec-title">Our Publications & Update</div>
+      <div className="article-container">
+        <motion.div
+          variants={container}
+          initial="hidden"
+          animate={controls}
+          ref={ref}
+          className="article-content-container"
+        >
+          <motion.div variants={item_nya} className="article-desc">
+            <div className="article-title">Publications</div>
+            <div className="article-subtitle">Our Publications & Update</div>
           </motion.div>
-          <motion.div
-            variants={container}
-            initial="hidden"
-            animate={controls}
-            ref={ref}
-            className="teams_content"
-          >
+          <motion.div variants={item_nya} className="article-content">
             <Swiper
               modules={[Navigation, Pagination]}
               slidesPerView={3}
@@ -120,36 +94,35 @@ const Article = () => {
               breakpoints={{
                 0: { slidesPerView: 1 },
                 768: { slidesPerView: 2 },
-                1024: { slidesPerView: 3 },
+                1024: { slidesPerView: 2 },
+                1290: { slidesPerView: 3 },
               }}
             >
-              {lawyers.map((lawyer, index) => (
+              {articles.map((article, index) => (
                 <SwiperSlide key={index}>
-                  <div class="blog-card">
-                    <div class="blog-img">
-                      <a href="blog-details.html">
+                  <div className="blog-card">
+                    <div className="blog-img">
+                      <a href="#">
                         <img
-                          src={blog_bg}
+                          src={article?.image}
                           alt="Blog image about Legal Project Manager"
                         />
                       </a>
                     </div>
-                    <div class="blog-content">
-                      <div class="blog-meta">
-                        <a href="blog.html">
+                    <div className="blog-content">
+                      <div className="blog-meta">
+                        <a href="#">
                           <FaUserAlt /> By Jonson
                         </a>
-                        <a href="blog.html">
+                        <a href="#">
                           <FaCalendarAlt /> 22 Sep, 2025
                         </a>
-                        <a href="blog-details.html">
+                        <a href="#">
                           <FaCommentAlt /> 2 Comments
                         </a>
                       </div>
-                      <h3 class="box-title">
-                        <a href="blog-details.html">
-                          Steps to Pursue a Career as a Legal Project Manager.
-                        </a>
+                      <h3 className="box-title">
+                        <a href="#">{article?.title}</a>
                       </h3>
                     </div>
                   </div>
@@ -157,15 +130,15 @@ const Article = () => {
               ))}
             </Swiper>
           </motion.div>
-        </div>
+        </motion.div>
       </div>
 
-      <div className="shape-mockup-teams jump_teams">
-        <img src={shape_lect} alt="jump" srcSet="" />
+      <div className="shape-mockup-article-left jump-article">
+        <img src={shape_lect} alt="jump" />
       </div>
 
-      <div className="shape-mockup-teams-right jump_teams">
-        <img src={shape_right} alt="jump" srcSet="" />
+      <div className="shape-mockup-article-right jump-article">
+        <img src={shape_right} alt="jump" />
       </div>
     </ArticleSite>
   );

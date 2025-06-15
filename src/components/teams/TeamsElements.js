@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { devices } from "../../assets/scss/_respondTo";
 
 export const TeamsSite = styled.section`
   position: relative;
@@ -9,7 +10,7 @@ export const TeamsSite = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 50px 0px;
+  margin: 80px 0px;
 
   .th-hero-bg-teams {
     position: relative;
@@ -19,17 +20,6 @@ export const TeamsSite = styled.section`
     background-position: center;
     background-repeat: no-repeat;
     z-index: 0;
-
-    .hero_overlay {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      z-index: 1;
-      pointer-events: none;
-      mix-blend-mode: overlay;
-    }
 
     &::after {
       content: "";
@@ -41,80 +31,100 @@ export const TeamsSite = styled.section`
       pointer-events: none;
     }
 
-    @media only screen and (min-width: 1024px) and (max-width: 1280px) {
-      height: 670px;
+    ${devices.tablet} {
+      height: 640px;
+    }
+
+    ${devices.laptop} {
+      height: 500px;
     }
   }
 
-  .teams_container {
+  .teams-container {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 500px; /* atau 100% jika parent-nya jelas */
+    height: 500px;
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 3;
     padding: 0 1rem;
+
+    ${devices.tablet} {
+      padding: 0px;
+      height: 640px;
+    }
   }
 
-  .teams_content {
+  .team-content-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    flex-direction: row;
+    max-width: 1350px;
+
+    ${devices.tablet} {
+      flex-direction: column;
+      max-width: 650px;
+      padding: 80px 20px;
+      justify-content: space-between;
+    }
+
+    ${devices.laptop} {
+      max-width: 950px;
+    }
+  }
+
+  .teams-desc {
+    width: 35%;
+    padding: 0px 20px;
+
+    ${devices.tablet} {
+      width: 100%;
+      padding: 20px 0px;
+    }
+
+    .subtitle {
+      color: #b68c5a;
+      margin-bottom: 25px;
+      position: relative;
+      margin-top: -0.4em;
+      padding-top: 0;
+      letter-spacing: normal;
+      font-size: 20px;
+      text-transform: capitalize;
+      font-weight: 500;
+      display: block;
+    }
+
+    .text-content {
+      margin-top: -0.2em;
+      text-transform: capitalize;
+      font-size: 34px;
+      margin-bottom: 20px;
+      font-weight: 600;
+      line-height: 1.3;
+
+      ${devices.tablet} {
+        margin-bottom: 0px;
+      }
+    }
+  }
+
+  .teams-content {
     max-width: 1200px;
     width: 75%;
-  }
 
-  .shape-mockup-teams {
-    position: absolute;
-    left: -50px;
-    top: 0;
-    z-index: 1;
-    pointer-events: none;
-  }
-
-  .jump_teams {
-    animation: jumpAbout 7s linear infinite;
-  }
-
-  .lawyer_card {
-    background-color: #21312c;
-    border-radius: 1rem;
-    padding: 1.5rem;
-    text-align: center;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    height: 100%;
-    color: white;
-  }
-
-  .lawyer_img {
-    border-radius: 1rem;
-    width: 100%;
-    height: 16rem;
-    object-fit: cover;
-    margin-bottom: 1rem;
-  }
-
-  .lawyer_name {
-    font-size: 1.25rem;
-    font-weight: 600;
-  }
-
-  .lawyer_title {
-    font-size: 0.875rem;
-    color: #d1d5db;
-  }
-
-  @keyframes jumpAbout {
-    0%,
-    100% {
-      transform: translateY(0px);
-    }
-    50% {
-      transform: translateY(-15px);
+    ${devices.tablet} {
+      width: 100%;
     }
   }
 
-  .team_card {
+  .team-card {
     position: relative;
     overflow: hidden;
     background-color: #314e52;
@@ -122,7 +132,7 @@ export const TeamsSite = styled.section`
     transition: 0.4s ease;
     border-bottom: 6px solid #b68c5a;
 
-    .team_img {
+    .team-img {
       overflow: hidden;
       position: relative;
       border-radius: 24px 24px 34px 34px;
@@ -257,6 +267,28 @@ export const TeamsSite = styled.section`
     }
   }
 
+  .shape-mockup-teams {
+    position: absolute;
+    left: -50px;
+    top: 0;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .jump_teams {
+    animation: jumpTeams 7s linear infinite;
+  }
+
+  @keyframes jumpTeams {
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-15px);
+    }
+  }
+
   .swiper-button-prev,
   .swiper-button-next {
     color: #fff;
@@ -281,41 +313,5 @@ export const TeamsSite = styled.section`
 
   .swiper-slide {
     max-width: 250px; // ini bisa batasi total
-  }
-
-  .team-content-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 100%;
-    flex-direction: row;
-    max-width: 1350px;
-  }
-
-  .teams_desc {
-    width: 35%;
-    padding: 0px 20px;
-
-    .subtitle {
-      color: #b68c5a;
-      margin-bottom: 25px;
-      position: relative;
-      margin-top: -0.4em;
-      padding-top: 0;
-      letter-spacing: normal;
-      font-size: 20px;
-      text-transform: capitalize;
-      font-weight: 500;
-      display: block;
-    }
-
-    .text-content {
-      margin-top: -0.2em;
-      text-transform: capitalize;
-      font-size: 42px;
-      margin-bottom: 20px;
-      font-weight: 700;
-    }
   }
 `;

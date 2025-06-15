@@ -1,14 +1,12 @@
 import React, { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
-import { useAnimation, motion } from "framer-motion";
-import jump from "../../assets/img/law_stack/process-1-shape.png";
-import teams_bg from "../../assets/img/law_stack/team-1-bg.jpg";
-import heroOverlay from "./../../assets/img/law_stack/hero1-overlay.png";
-import hero from "./../../assets/img/law_stack/team_1_8.jpg";
-import { TeamsSite } from "./TeamsElements";
-
-import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
+import { useAnimation, motion } from "framer-motion";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { TeamsSite } from "./TeamsElements";
+import teams_jump_left from "../../assets/img/law_stack/process-1-shape.png";
+import team_member_1 from "./../../assets/img/law_stack/team_member_1.jpg";
+import teams_bg from "../../assets/img/law_stack/team-1-bg.jpg";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -46,42 +44,42 @@ const Teams = () => {
     {
       name: "Smith Miller",
       title: "Attorney",
-      image: hero,
+      image: team_member_1,
     },
     {
       name: "Samira Dsuza",
       title: "Attorney",
-      image: hero,
+      image: team_member_1,
     },
     {
       name: "Michel Phelps",
       title: "Chief Justice",
-      image: hero,
+      image: team_member_1,
     },
     {
       name: "Sarah Rahma",
       title: "Attorney",
-      image: hero,
+      image: team_member_1,
     },
     {
       name: "Sarah Rahma",
       title: "Attorney",
-      image: hero,
+      image: team_member_1,
     },
     {
       name: "Sarah Rahma",
       title: "Attorney",
-      image: hero,
+      image: team_member_1,
     },
     {
       name: "Sarah Rahma",
       title: "Attorney",
-      image: hero,
+      image: team_member_1,
     },
     {
       name: "Sarah Rahma",
       title: "Attorney",
-      image: hero,
+      image: team_member_1,
     },
   ];
 
@@ -94,21 +92,21 @@ const Teams = () => {
         }}
       ></div>
 
-      <div className="teams_container">
+      <motion.div
+        variants={container}
+        initial="hidden"
+        animate={controls}
+        ref={ref}
+        className="teams-container"
+      >
         <div className="team-content-container">
-          <div className="teams_desc">
-            <div className="subtitle">Our Attorneys</div>
+          <motion.div variants={item_nya} className="teams-desc">
+            <div className="subtitle">Our Teams</div>
             <div className="text-content">
               Dedicated Lawyers, Proven Results
             </div>
-          </div>
-          <motion.div
-            variants={container}
-            initial="hidden"
-            animate={controls}
-            ref={ref}
-            className="teams_content"
-          >
+          </motion.div>
+          <motion.div variants={item_nya} className="teams-content">
             <Swiper
               modules={[Navigation, Pagination]}
               slidesPerView={5}
@@ -118,26 +116,32 @@ const Teams = () => {
               loop={true}
               breakpoints={{
                 0: { slidesPerView: 1 },
-                768: { slidesPerView: 2 },
-                1024: { slidesPerView: 4 },
+                800: { slidesPerView: 2 },
+                950: { slidesPerView: 3 },
+                1024: { slidesPerView: 3 },
+                1290: { slidesPerView: 4 },
               }}
             >
               {lawyers.map((lawyer, index) => (
                 <SwiperSlide key={index}>
-                  <div className="team_card">
-                    <div className="team_img">
-                      <img src={hero} alt="hero" className="img-hero" />
+                  <div className="team-card">
+                    <div className="team-img">
+                      <img
+                        src={team_member_1}
+                        alt="team_member"
+                        className="img-hero"
+                      />
                     </div>
 
                     <div className="team-content">
-                      <div className="box-title">Nafirdo</div>
+                      <div className="box-title">{lawyer?.name}</div>
                       <div className="desc">Chief Justice</div>
                     </div>
 
                     <div className="team-content-hover-wrap">
                       <div className="team-content-hover">
                         <div className="team-img">
-                          <img src={hero} alt="Team" />
+                          <img src={team_member_1} alt="Team" />
                         </div>
                         <div className="hover-inner">
                           <h3 className="box-title">
@@ -160,10 +164,10 @@ const Teams = () => {
             </Swiper>
           </motion.div>
         </div>
-      </div>
+      </motion.div>
 
       <div className="shape-mockup-teams jump_teams">
-        <img src={jump} alt="jump" srcSet="" />
+        <img src={teams_jump_left} alt="teams_jump_left" />
       </div>
     </TeamsSite>
   );

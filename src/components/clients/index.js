@@ -3,8 +3,8 @@ import { useInView } from "react-intersection-observer";
 import { useAnimation, motion } from "framer-motion";
 import jump from "../../assets/img/law_stack/process-1-shape.png";
 import teams_bg from "../../assets/img/law_stack/team-1-bg.jpg";
-import blog_bg from "../../assets/img/law_stack/blog_1_1.jpg";
-import shape_lect from "../../assets/img/law_stack/blog-1-shape-left.png";
+import blog_bg from "../../assets/img/law_stack/blog_bg.jpg";
+import shape_left from "../../assets/img/law_stack/blog-1-shape-left.png";
 import shape_right from "../../assets/img/law_stack/blog-1-shape-right.png";
 import goto_logo from "./../../assets/img/law_stack/goto.png";
 import omron_logo from "./../../assets/img/law_stack/omron.png";
@@ -86,25 +86,19 @@ const Clients = () => {
 
   return (
     <ClientsSite id="clients">
-      <div className="teams_container">
-        <div className="team-content-container">
-          <motion.div
-            variants={container}
-            initial="hidden"
-            animate={controls}
-            ref={ref}
-            className="teams_desc"
-          >
-            <div className="subtitle">Clients</div>
-            <div className="sec-title">Our Featured Clients</div>
+      <div className="clients-container">
+        <motion.div
+          variants={container}
+          initial="hidden"
+          animate={controls}
+          ref={ref}
+          className="clients-content-container"
+        >
+          <motion.div variants={item_nya} className="clients-desc">
+            <div className="clients-title">Clients</div>
+            <div className="clients-subtitle">Our Featured Clients</div>
           </motion.div>
-          <motion.div
-            variants={container}
-            initial="hidden"
-            animate={controls}
-            ref={ref}
-            className="teams_content"
-          >
+          <motion.div variants={item_nya} className="clients-content">
             <Swiper
               modules={[Navigation, Pagination]}
               slidesPerView={4}
@@ -132,14 +126,14 @@ const Clients = () => {
               ))}
             </Swiper>
           </motion.div>
-        </div>
+        </motion.div>
       </div>
 
-      <div className="shape-mockup-teams jump_teams">
-        <img src={shape_lect} alt="jump" srcSet="" />
+      <div className="shape-mockup-clients-left jump-clients">
+        <img src={shape_left} alt="jump" srcSet="" />
       </div>
 
-      <div className="shape-mockup-teams-right jump_teams">
+      <div className="shape-mockup-clients-right jump-clients">
         <img src={shape_right} alt="jump" srcSet="" />
       </div>
     </ClientsSite>
