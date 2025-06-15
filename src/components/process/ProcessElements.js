@@ -170,7 +170,7 @@ export const ProcessSite = styled.section`
         font-weight: 700;
 
         @media only screen and (min-width: 1024px) and (max-width: 1280px) {
-          font-size: 50px;
+          font-size: 40px;
         }
       }
 

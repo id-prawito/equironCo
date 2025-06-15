@@ -21,6 +21,10 @@ export const ContactSite = styled.section`
     min-height: 0px;
   }
 
+  @media only screen and (min-width: 1024px) and (max-width: 1280px) {
+    max-width: 950px;
+  }
+
   h1 {
     color: var(--colorMain);
     font-weight: 500;
@@ -301,6 +305,10 @@ export const FormContents = styled.div`
     justify-content: flex-start;
     width: 50%;
 
+    @media only screen and (min-width: 1024px) and (max-width: 1280px) {
+      width: 70%;
+    }
+
     .text {
       color: #000;
       font-size: 14px;
@@ -363,6 +371,10 @@ export const FormContents = styled.div`
       display: flex;
       flex-direction: row;
       justify-content: space-between;
+
+      @media only screen and (min-width: 1024px) and (max-width: 1280px) {
+        flex-direction: column;
+      }
 
       .informasi-kantor {
         display: flex;

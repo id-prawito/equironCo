@@ -28,6 +28,7 @@ export const AboutSite = styled.section`
 
   @media only screen and (min-width: 1024px) and (max-width: 1280px) {
     max-width: 950px;
+    min-height: 160vh;
   }
 
   .shape-mockup {

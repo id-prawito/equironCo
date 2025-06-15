@@ -94,7 +94,8 @@ const Article = () => {
               breakpoints={{
                 0: { slidesPerView: 1 },
                 768: { slidesPerView: 2 },
-                1024: { slidesPerView: 3 },
+                1024: { slidesPerView: 2 },
+                1290: { slidesPerView: 3 },
               }}
             >
               {articles.map((article, index) => (

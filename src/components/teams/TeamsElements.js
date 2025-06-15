@@ -31,7 +31,7 @@ export const TeamsSite = styled.section`
     }
 
     @media only screen and (min-width: 1024px) and (max-width: 1280px) {
-      height: 670px;
+      height: 500px;
     }
   }
 
@@ -56,6 +56,10 @@ export const TeamsSite = styled.section`
     width: 100%;
     flex-direction: row;
     max-width: 1350px;
+
+    @media only screen and (min-width: 1024px) and (max-width: 1280px) {
+      max-width: 950px;
+    }
   }
 
   .teams-desc {

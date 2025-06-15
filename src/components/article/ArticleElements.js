@@ -21,6 +21,10 @@ export const ArticleSite = styled.section`
     align-items: center;
     z-index: 3;
     padding: 0 1rem;
+
+    @media only screen and (min-width: 1024px) and (max-width: 1280px) {
+      max-width: 950px;
+    }
   }
 
   .article-content-container {
