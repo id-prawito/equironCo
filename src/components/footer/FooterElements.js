@@ -13,14 +13,14 @@ export const FooterSite = styled.footer`
   height: auto;
   background-color: #021c1a;
 
-  .footer_container {
+  .footer-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr; // 2 kolom sama rata
-    width: 100%; // full width
-    max-width: 1350px; // batas maksimum lebar
-    margin: 0 auto; // tengah secara horizontal
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+    max-width: 1350px;
+    margin: 0 auto;
     align-items: center;
-    gap: 40px; // jarak antar kolom, opsional
+    gap: 40px;
     padding: 20px;
 
     @media only screen and (min-width: 1024px) and (max-width: 1280px) {
@@ -28,7 +28,7 @@ export const FooterSite = styled.footer`
       padding: 20px 0px;
     }
 
-    .footer_services {
+    .footer-services {
       display: flex;
       flex-direction: column;
       gap: 16px;
@@ -71,33 +71,33 @@ export const FooterSite = styled.footer`
       }
     }
 
-    .footer_company {
+    .footer-company {
       display: flex;
       flex-direction: column;
       gap: 10px;
       align-items: center;
 
-      &_logo {
+      &-logo {
         img {
           width: 100px;
           height: 100px;
         }
       }
 
-      &_desc {
+      &-desc {
         font-size: 13px;
         width: 100%;
         line-height: 2;
         color: rgb(145, 145, 145);
       }
 
-      &_social {
+      &-social {
         display: flex;
         flex-direction: row;
         gap: 10px;
         align-items: center;
 
-        .social_icon {
+        .social-icon {
           display: flex;
           align-items: center;
           justify-content: center;
@@ -115,7 +115,7 @@ export const FooterSite = styled.footer`
       }
     }
 
-    .footer_info {
+    .footer-info {
       display: flex;
       flex-direction: column;
       gap: 20px;
@@ -123,7 +123,7 @@ export const FooterSite = styled.footer`
       justify-content: flex-start;
       height: 100%;
 
-      &_card {
+      &-card {
         display: flex;
         border-radius: 8px;
         align-items: flex-start;
@@ -132,7 +132,7 @@ export const FooterSite = styled.footer`
         width: 100%;
         height: 70%;
 
-        .card_icon {
+        .card-icon {
           display: flex;
           align-items: center;
           justify-content: center;
@@ -163,7 +163,7 @@ export const FooterSite = styled.footer`
           }
         }
 
-        .card_info {
+        .card-info {
           display: flex;
           flex-direction: column;
           gap: 10px;
@@ -187,18 +187,6 @@ export const FooterSite = styled.footer`
     }
   }
 
-  .footer_media-social {
-    display: none;
-
-    ${devices.smartphone} {
-      display: initial;
-    }
-
-    ${devices.ipads} {
-      display: initial;
-    }
-  }
-
   .footer_item {
     color: ${({ theme: { theme } }) =>
       theme === themeList.light
@@ -212,49 +200,6 @@ export const FooterSite = styled.footer`
     &:hover {
       color: #6c62e2;
       transition: 0.1s all ease;
-    }
-  }
-
-  .github_stats {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10px;
-
-    span {
-      display: inline-flex;
-      margin: 0px 7px;
-    }
-
-    svg {
-      display: inline-block;
-      margin-right: 5px;
-      height: 14px;
-      width: 14px;
-    }
-  }
-`;
-
-export const Item = styled.ul`
-  color: ${({ theme: { theme } }) =>
-    theme === themeList.light
-      ? "var(--light-text-grey)"
-      : "var(--dark-text-white)"};
-  display: flex;
-  align-items: center;
-  list-style: none;
-  font-size: 20px;
-  padding: 0px;
-  margin: 0px;
-
-  .item_li {
-    transition: 0.3s all ease;
-    padding: 10px;
-
-    &:hover {
-      transform: translateY(-5px);
-      transition: 0.3s all ease;
-      color: #b88649;
     }
   }
 `;
