@@ -21,7 +21,7 @@ export const ContactSite = styled.section`
     min-height: 0px;
   }
 
-  @media only screen and (min-width: 1024px) and (max-width: 1280px) {
+  ${devices.laptop} {
     max-width: 950px;
   }
 
@@ -305,7 +305,7 @@ export const FormContents = styled.div`
     justify-content: flex-start;
     width: 50%;
 
-    @media only screen and (min-width: 1024px) and (max-width: 1280px) {
+    ${devices.laptop} {
       width: 70%;
     }
 
@@ -372,7 +372,7 @@ export const FormContents = styled.div`
       flex-direction: row;
       justify-content: space-between;
 
-      @media only screen and (min-width: 1024px) and (max-width: 1280px) {
+      ${devices.laptop} {
         flex-direction: column;
       }
 

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { devices } from "../../assets/scss/_respondTo";
 
 export const ArticleSite = styled.section`
   position: relative;
@@ -22,7 +23,7 @@ export const ArticleSite = styled.section`
     z-index: 3;
     padding: 0 1rem;
 
-    @media only screen and (min-width: 1024px) and (max-width: 1280px) {
+    ${devices.laptop} {
       max-width: 950px;
     }
   }

@@ -136,7 +136,7 @@ export const HeroSite = styled.section`
     gap: 40px;
     max-width: 1250px;
 
-    @media only screen and (min-width: 1024px) and (max-width: 1280px) {
+    ${devices.laptop} {
       max-width: 950px;
     }
 
@@ -156,7 +156,7 @@ export const HeroSite = styled.section`
     width: 85%;
     height: 100%;
 
-    @media only screen and (min-width: 1024px) and (max-width: 1280px) {
+    ${devices.laptop} {
       width: 100%;
     }
 
@@ -211,7 +211,7 @@ export const HeroSite = styled.section`
     inset: 0;
     z-index: -4;
 
-    @media only screen and (min-width: 1024px) and (max-width: 1280px) {
+    ${devices.laptop} {
       height: 670px;
     }
   }

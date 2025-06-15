@@ -15,7 +15,7 @@ export const ProcessSite = styled.section`
     max-width: 100%;
   }
 
-  @media only screen and (min-width: 1024px) and (max-width: 1280px) {
+  ${devices.laptop} {
     max-width: 950px;
   }
 
@@ -49,7 +49,7 @@ export const ProcessSite = styled.section`
     position: relative;
     z-index: 2;
 
-    @media only screen and (min-width: 1024px) and (max-width: 1280px) {
+    ${devices.laptop} {
       padding: 80px 0px;
     }
 
@@ -88,7 +88,7 @@ export const ProcessSite = styled.section`
       overflow: hidden;
       transition: transform 0.3s ease-in-out;
 
-      @media only screen and (min-width: 1024px) and (max-width: 1280px) {
+      ${devices.laptop} {
         height: 100%;
         transform: translateX(-28%);
         width: 132%;
@@ -97,13 +97,13 @@ export const ProcessSite = styled.section`
       &:hover {
         animation: shaked 0.5s ease-in-out;
 
-        @media only screen and (min-width: 1024px) and (max-width: 1280px) {
+        ${devices.laptop} {
           animation: shaked-lg 0.5s ease-in-out;
         }
       }
 
       img {
-        @media only screen and (min-width: 1024px) and (max-width: 1280px) {
+        ${devices.laptop} {
           height: 100%;
           width: 140%;
         }
@@ -169,7 +169,7 @@ export const ProcessSite = styled.section`
         line-height: 1.085;
         font-weight: 700;
 
-        @media only screen and (min-width: 1024px) and (max-width: 1280px) {
+        ${devices.laptop} {
           font-size: 40px;
         }
       }

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { devices } from "../../assets/scss/_respondTo";
 
 export const TeamsSite = styled.section`
   position: relative;
@@ -30,7 +31,7 @@ export const TeamsSite = styled.section`
       pointer-events: none;
     }
 
-    @media only screen and (min-width: 1024px) and (max-width: 1280px) {
+    ${devices.laptop} {
       height: 500px;
     }
   }
@@ -57,7 +58,7 @@ export const TeamsSite = styled.section`
     flex-direction: row;
     max-width: 1350px;
 
-    @media only screen and (min-width: 1024px) and (max-width: 1280px) {
+    ${devices.laptop} {
       max-width: 950px;
     }
   }

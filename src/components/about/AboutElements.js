@@ -22,11 +22,6 @@ export const AboutSite = styled.section`
   }
 
   ${devices.laptop} {
-    padding: 50px 0px;
-    max-width: 100%;
-  }
-
-  @media only screen and (min-width: 1024px) and (max-width: 1280px) {
     max-width: 950px;
     min-height: 160vh;
   }
@@ -250,7 +245,7 @@ export const AboutSite = styled.section`
       justify-content: center;
     }
 
-    @media only screen and (min-width: 1024px) and (max-width: 1280px) {
+    ${devices.laptop} {
       flex: 0 0 55%;
     }
 
@@ -260,7 +255,7 @@ export const AboutSite = styled.section`
       flex-direction: column;
       height: 100%;
 
-      @media only screen and (min-width: 1024px) and (max-width: 1280px) {
+      ${devices.laptop} {
         height: 80%;
       }
 
@@ -323,7 +318,7 @@ export const AboutSite = styled.section`
       height: 100%;
       gap: 20px;
 
-      @media only screen and (min-width: 1024px) and (max-width: 1280px) {
+      ${devices.laptop} {
         height: 80%;
       }
 

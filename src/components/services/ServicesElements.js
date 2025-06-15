@@ -11,7 +11,7 @@ export const ServicesSite = styled.section`
   padding: 0px;
   max-width: 1250px;
 
-  @media only screen and (min-width: 1024px) and (max-width: 1280px) {
+  ${devices.laptop} {
     max-width: 950px;
   }
 

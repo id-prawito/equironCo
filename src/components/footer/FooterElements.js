@@ -23,7 +23,7 @@ export const FooterSite = styled.footer`
     gap: 40px;
     padding: 20px;
 
-    @media only screen and (min-width: 1024px) and (max-width: 1280px) {
+    ${devices.laptop} {
       max-width: 950px;
       padding: 20px 0px;
     }
@@ -145,7 +145,7 @@ export const FooterSite = styled.footer`
           transition: transform 0.4s ease, background-color 0.3s ease;
           width: 12%;
 
-          @media only screen and (min-width: 1024px) and (max-width: 1280px) {
+          ${devices.laptop} {
             width: 50px;
           }
 
