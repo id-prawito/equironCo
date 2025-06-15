@@ -19,7 +19,7 @@ export const ProcessSite = styled.section`
     max-width: 950px;
   }
 
-  .shape-mockup {
+  .shape-mockup-process-right {
     position: absolute;
     bottom: -50px; // atur sesuai kebutuhan
     right: 0;
@@ -27,11 +27,11 @@ export const ProcessSite = styled.section`
     pointer-events: none;
   }
 
-  .jump {
-    animation: jumpBroo 7s linear infinite;
+  .jump-process {
+    animation: jumpProcces 7s linear infinite;
   }
 
-  @keyframes jumpBroo {
+  @keyframes jumpProcces {
     0% {
       transform: translateY(0);
     }
@@ -43,10 +43,10 @@ export const ProcessSite = styled.section`
     }
   }
 
-  .process_container {
+  .process-container {
     width: 100%;
     padding: 80px 150px;
-    position: relative; // supaya absolute-nya mengacu ke sini
+    position: relative;
     z-index: 2;
 
     @media only screen and (min-width: 1024px) and (max-width: 1280px) {
@@ -70,113 +70,14 @@ export const ProcessSite = styled.section`
     }
   }
 
-  .process_content {
+  .process-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
     flex-direction: row;
     gap: 20px;
     justify-content: space-between;
 
-    &_flow {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      align-items: flex-start;
-      width: 100%;
-      color: #000;
-
-      .text {
-        color: #b68c5a;
-        letter-spacing: normal;
-        font-size: 20px;
-        text-transform: capitalize;
-        font-weight: 500;
-        display: block;
-      }
-
-      .title {
-        color: #011c1a;
-        font-size: 54px;
-        line-height: 1.085;
-        font-weight: 700;
-
-        @media only screen and (min-width: 1024px) and (max-width: 1280px) {
-          font-size: 50px;
-        }
-      }
-
-      .process {
-        display: flex;
-        margin-bottom: 20px;
-        flex-direction: column;
-
-        &_item {
-          display: flex;
-          gap: 25px;
-          margin-bottom: 12px;
-          position: relative;
-
-          ::before {
-            content: "";
-            position: absolute;
-            left: 27px;
-            width: 1px;
-            height: 104%;
-            border-right: 2px dashed #b68c5a;
-            top: 13px;
-            z-index: -1;
-          }
-
-          :last-child::before {
-            display: none;
-          }
-
-          &_icon {
-            height: 60px;
-            width: 60px;
-            line-height: 56px;
-            text-align: center;
-            background: #b68c5a;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            .icon_class {
-              color: #fff;
-              height: 24px;
-              width: 24px;
-              transition: transform 0.5s ease;
-
-              :hover {
-                transform: rotateY(180deg);
-              }
-            }
-          }
-
-          &_content {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-            width: 80%;
-
-            .box_title {
-              font-size: 30px;
-              margin-bottom: 7px;
-              font-weight: 600;
-            }
-
-            .desc {
-              margin: 0 0 18px 0;
-              color: #868686;
-              line-height: 1.75;
-            }
-          }
-        }
-      }
-    }
-
-    &_images {
+    &-images {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -244,51 +145,103 @@ export const ProcessSite = styled.section`
         }
       }
     }
-  }
 
-  .project_content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-
-    .content_judul {
+    &-flow {
       display: flex;
       flex-direction: column;
-      align-items: center;
       gap: 20px;
+      align-items: flex-start;
+      width: 100%;
+      color: #000;
 
-      h1 {
-        color: var(--colorMain);
+      .text {
+        color: #b68c5a;
+        letter-spacing: normal;
+        font-size: 20px;
+        text-transform: capitalize;
         font-weight: 500;
-        font-size: 14px;
+        display: block;
+      }
 
-        ${devices.smartphone} {
-          letter-spacing: 0px;
-        }
+      .title {
+        color: #011c1a;
+        font-size: 54px;
+        line-height: 1.085;
+        font-weight: 700;
 
-        ${devices.ipads} {
-          letter-spacing: 0px;
-        }
-
-        ${devices.tablet} {
-          letter-spacing: 0px;
+        @media only screen and (min-width: 1024px) and (max-width: 1280px) {
+          font-size: 50px;
         }
       }
 
-      .big_heading {
-        font-weight: 600;
-        font-size: 40px;
-        margin: 0px;
+      .process {
+        display: flex;
+        margin-bottom: 20px;
+        flex-direction: column;
 
-        ${devices.smartphone} {
-          font-size: 30px;
+        &-item {
+          display: flex;
+          gap: 25px;
+          margin-bottom: 12px;
+          position: relative;
+
+          ::before {
+            content: "";
+            position: absolute;
+            left: 27px;
+            width: 1px;
+            height: 104%;
+            border-right: 2px dashed #b68c5a;
+            top: 13px;
+            z-index: -1;
+          }
+
+          :last-child::before {
+            display: none;
+          }
+
+          &-icon {
+            height: 60px;
+            width: 60px;
+            line-height: 56px;
+            text-align: center;
+            background: #b68c5a;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .icon-class {
+              color: #fff;
+              height: 24px;
+              width: 24px;
+              transition: transform 0.5s ease;
+
+              :hover {
+                transform: rotateY(180deg);
+              }
+            }
+          }
+
+          &-content {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            width: 80%;
+
+            .box-title {
+              font-size: 30px;
+              margin-bottom: 7px;
+              font-weight: 600;
+            }
+
+            .desc {
+              margin: 0 0 18px 0;
+              color: #868686;
+              line-height: 1.75;
+            }
+          }
         }
-
-        color: ${({ theme: { theme } }) =>
-          theme === themeList.light
-            ? "var(--light-text-black)"
-            : "var(--dark-text-white)"};
       }
     }
   }

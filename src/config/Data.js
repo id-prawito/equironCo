@@ -52,9 +52,9 @@ export const NAVLINKS = [
     name: "SERVICES",
   },
   {
-    to: "work",
+    to: "process",
     icon: FaEllipsisV,
-    name: "WORK PROCESS",
+    name: "PROCESS",
   },
   {
     to: "teams",
