@@ -7,7 +7,7 @@ export const AboutSite = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 150vh;
+  min-height: 130vh;
   max-width: 1250px;
   padding: 0;
   position: relative;
