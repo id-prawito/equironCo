@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import {
   FaAccusoft,
   FaFax,
@@ -10,7 +10,7 @@ import { useInView } from "react-intersection-observer";
 import { useAnimation, motion } from "framer-motion";
 import { CONTACT_DATA } from "../../config/Data";
 import { ButtonContent, ContactSite, FormContents } from "./ContactElements";
-import { FiFacebook, FiPhone } from "react-icons/fi";
+import { FiFacebook, FiPhone, FiX } from "react-icons/fi";
 
 const Contact = () => {
   const controls = useAnimation();
@@ -42,32 +42,107 @@ const Contact = () => {
     },
   };
 
+  const [form, setForm] = useState({
+    name: "",
+    phone: "",
+    email: "",
+    message: "",
+  });
+
+  const [select, setSelect] = useState("");
+  const [berhasil, setBerhasil] = useState(false);
+
+  const whatsappNumber = "6282137925172";
+
+  const set = (name) => {
+    return ({ target: { value } }) => {
+      setForm((oldValues) => ({ ...oldValues, [name]: value }));
+    };
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const text = `LAPORAN PENGADUAN
+
+Informasi Pelapor:
+Nama          : ${form.name}
+No. HP        : ${form.phone}
+Email         : ${form.email}
+Jenis Layanan : ${select}
+
+-------------------------
+
+Detail Pengaduan:
+${form.message}
+
+Pesan ini dikirim melalui formulir pengaduan online.
+Mohon segera ditindaklanjuti oleh tim terkait.
+
+Terima kasih.`;
+
+    console.log(text, e);
+
+    const encodedText = encodeURIComponent(text);
+    const url = `https://wa.me/${whatsappNumber}?text=${encodedText}`;
+
+    window.open(url, "_blank");
+
+    setForm({
+      name: "",
+      phone: "",
+      email: "",
+      message: "",
+    });
+    setSelect("");
+    setBerhasil(true);
+
+    // Setelah 3 detik, set kembali ke false
+    setTimeout(() => {
+      setBerhasil(false);
+    }, 3000);
+  };
+
+  const valueSelect = [
+    {
+      name: "Penyimpanan Dana",
+      value: "penyimpanan_dana",
+    },
+    {
+      name: "Penyaluran Dana",
+      value: "penyaluran_dana",
+    },
+  ];
+
+  const handleSelect = (e) => {
+    setSelect(e.target.value);
+  };
+
   return (
     <ContactSite id="contact">
-      <div className="hero_container">
+      <div className="hero-container">
         <motion.div
           variants={container}
           initial="hidden"
           animate={controls}
           ref={ref}
-          className="contact_content"
+          className="contact-content"
         >
           <motion.h1 variants={item_nya}>{CONTACT_DATA.text_small}</motion.h1>
-          <motion.div variants={item_nya} className="big_heading">
+          <motion.div variants={item_nya} className="big-heading">
             {CONTACT_DATA.big_heading}
           </motion.div>
         </motion.div>
       </div>
 
-      <div className="contact-container-new">
-        <div className="content-form-new">
+      <div className="contact-container">
+        <div className="content-form">
           <FormContents>
             <motion.div
               variants={container}
               initial="hidden"
               animate={controls}
               ref={ref}
-              className="card_form"
+              className="card-form"
             >
               <div className="content">
                 <div className="title-text">Submit Your Inquiry</div>
@@ -75,10 +150,14 @@ const Contact = () => {
                   <b>Keteragan : </b>Kirimkan pesan atau pengaduan kepada kami,
                   senang melayani anda sebagai nasabah kami, Terimakasih.
                 </p>
-                <div className="content_form">
-                  <form className="form_style" onSubmit="" id="form_baru">
+                <div className="content-form">
+                  <form
+                    className="form_style"
+                    onSubmit={handleSubmit}
+                    id="form_baru"
+                  >
                     <div className="inputan">
-                      <div className="form_content_input">
+                      <div className="form-content-input">
                         <div className="text">Request</div>
                         <div
                           className="radio-group"
@@ -109,34 +188,33 @@ const Contact = () => {
                         judul="Nama"
                         placeholder="Nama"
                         type="text"
-                        value=""
-                        onChange=""
+                        value={form.name}
+                        onChange={set("name")}
                       />
                       <FormInput
                         judul="No. Handphone"
                         placeholder="No. Handphone"
                         type="number"
-                        value=""
-                        onChange=""
+                        value={form.phone}
+                        onChange={set("phone")}
                       />
                       <FormInput
                         judul="Email"
                         placeholder="Email"
-                        type="number"
-                        value=""
-                        onChange=""
+                        type="text"
+                        value={form.email}
+                        onChange={set("email")}
                       />
-
                       <FormInputSelectNew
-                        option=""
-                        onChange=""
+                        option={valueSelect}
+                        onChange={handleSelect}
                         placeholder="Jenis Layanan"
-                        value=""
+                        value={select}
                       />
                     </div>
                     <FormTextArea
-                      value=""
-                      onChange=""
+                      value={form.message}
+                      onChange={set("message")}
                       placeholder="Pesan Anda"
                     />
                     <p style={{ fontSize: "12px", borderBottom: "none" }}>
@@ -144,18 +222,17 @@ const Contact = () => {
                       pengaduan akan dikirimkan melalui No. Hp yang di masukan,
                       jadi pastikan No. Hp anda aktif dan benar.
                     </p>
-                    {/* {dataresponse?.success && berhasil ? (
-                        <p className="informasi">
-                          <b>Informasi : </b>
-                          {dataresponse?.message}, silahkan cek pesan WhatsApp
-                          secara berkala.
-                          <button onClick={() => setBerhasil(false)}>
-                            <FiX />
-                          </button>
-                        </p>
-                      ) : (
-                        ""
-                      )} */}
+                    {berhasil ? (
+                      <p className="informasi">
+                        <b>Informasi : </b> silahkan cek pesan WhatsApp secara
+                        berkala.
+                        <button onClick={() => setBerhasil(false)}>
+                          <FiX />
+                        </button>
+                      </p>
+                    ) : (
+                      ""
+                    )}
 
                     <div className="button_flex">
                       <Button
@@ -181,12 +258,12 @@ const Contact = () => {
               initial="hidden"
               animate={controls}
               ref={ref}
-              className="card_form"
+              className="card-form"
             >
               <div className="content">
                 <div className="title-text">Informasi Kontak</div>
-                <div className="content_form">
-                  <div className="contact_item">
+                <div className="content-form">
+                  <div className="contact-item">
                     {MEDIA_SOSIAL?.map((item, i) => (
                       <div key={i} className="item_contactNew">
                         <div className="icon_text">
@@ -209,7 +286,6 @@ const Contact = () => {
                 </div>
 
                 <div className="title-text">Informasi Alamat</div>
-
                 <div className="informasi-text">
                   <div className="text-contant">Kantor Pusat</div>
                   <div className="text-desc">
@@ -283,12 +359,12 @@ export const FormInputSelect = (item) => {
 
 export const FormInput = (item) => {
   return (
-    <div className="form_content_input">
+    <div className="form-content-input">
       <div className="text">{item.judul}</div>
       <input
         name={item.name}
         id={item.judul}
-        className={`form_input ${item.class}`}
+        className={`form-input ${item.class}`}
         type={item.type}
         placeholder={item.placeholder}
         required
@@ -302,7 +378,7 @@ export const FormInput = (item) => {
 
 export const FormTextArea = (item) => {
   return (
-    <div className="form_content_input">
+    <div className="form-content-input">
       <div className="text">Pesan</div>
       <textarea
         placeholder={item.placeholder}
@@ -320,7 +396,7 @@ export const FormTextArea = (item) => {
 
 export const FormInputSelectNew = (item) => {
   return (
-    <div className="form_content_input">
+    <div className="form-content-input">
       <div className="text">{item.placeholder}</div>
       <select
         className="style_selectNew"

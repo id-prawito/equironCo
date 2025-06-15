@@ -99,8 +99,8 @@ const Article = () => {
             >
               {articles.map((article, index) => (
                 <SwiperSlide key={index}>
-                  <div class="blog-card">
-                    <div class="blog-img">
+                  <div className="blog-card">
+                    <div className="blog-img">
                       <a href="#">
                         <img
                           src={article?.image}
@@ -108,8 +108,8 @@ const Article = () => {
                         />
                       </a>
                     </div>
-                    <div class="blog-content">
-                      <div class="blog-meta">
+                    <div className="blog-content">
+                      <div className="blog-meta">
                         <a href="#">
                           <FaUserAlt /> By Jonson
                         </a>
@@ -120,7 +120,7 @@ const Article = () => {
                           <FaCommentAlt /> 2 Comments
                         </a>
                       </div>
-                      <h3 class="box-title">
+                      <h3 className="box-title">
                         <a href="#">{article?.title}</a>
                       </h3>
                     </div>
