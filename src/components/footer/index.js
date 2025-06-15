@@ -61,8 +61,8 @@ const Footer = () => {
             <img src={logoEquiron} alt="law_logo" />
           </div>
           <div className="footer-company-desc">
-            Ensaf is a Saudi Arabian law firm founded in 1982. They offer a wide
-            range of legal services, including corporate law, commercial law.
+            Equiron & Co. is a forward-thinking, full-service law firm dedicated
+            to providing comprehensive legal solutions across various sectors.
           </div>
           <div className="footer-company-social">
             <div className="social-icon">
@@ -91,8 +91,8 @@ const Footer = () => {
             <div className="card-info">
               <div className="text">Location</div>
               <div className="desc">
-                Kantor Pusat : Jl. Raya Pati – Tayu Km. 19. Waturoyo, Kec.
-                Margoyoso, Kabupaten Pati
+                Jalan Pengasinan No. 3 Jatimulya, Bekasi, Jawa Barat 17115,
+                Indonesia
               </div>
             </div>
           </div>
@@ -102,7 +102,7 @@ const Footer = () => {
             </div>
             <div className="card-info">
               <div className="text">Phone</div>
-              <div className="desc">+ 152-6485-5467</div>
+              <div className="desc">+ 152-6485-5468</div>
             </div>
           </div>
           <div className="footer-info-card">
@@ -111,7 +111,7 @@ const Footer = () => {
             </div>
             <div className="card-info">
               <div className="text">Email</div>
-              <div className="desc">info@ensaf.com</div>
+              <div className="desc">info@equiron.com</div>
             </div>
           </div>
         </div>

@@ -34,6 +34,10 @@ export const HeaderSite = styled.header`
       font-size: 14px;
       color: ${({ theme: { theme } }) =>
         theme === themeList.light ? "rgba(10, 17, 26, 0.9)" : "#fff"};
+
+      ${devices.laptop} {
+        display: none;
+      }
     }
   }
 `;
@@ -178,6 +182,10 @@ export const HeaderContainer = styled.div`
         transition: 0.3s all ease;
         gap: 10px;
 
+        ${devices.laptop} {
+          padding: 12px 10px;
+        }
+
         svg {
           display: flex;
           height: 100%;
@@ -229,6 +237,11 @@ export const HeaderContainer = styled.div`
           box-shadow: -1px 4px 10px 3px rgb(0 0 0 / 16%);
           transform: translateX(0);
         }
+
+        ${devices.tablet} {
+          box-shadow: -1px 4px 10px 3px rgb(0 0 0 / 16%);
+          transform: translateX(0);
+        }
       }
 
       nav {
@@ -268,6 +281,24 @@ export const HeaderContainer = styled.div`
           transition: 0.3s ease-in-out transform;
         }
 
+        ${devices.tablet} {
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          background-color: ${({ theme: { theme } }) =>
+            theme === themeList.light ? "#f0f8ff" : "#1a1d29"};
+          max-width: 250px;
+          overflow: hidden;
+          position: fixed;
+          height: 100vh;
+          z-index: 100;
+          width: 90%;
+          right: 0;
+          top: 0;
+          transform: translateX(100%);
+          transition: 0.3s ease-in-out transform;
+        }
+
         ul {
           display: flex;
           flex-direction: row;
@@ -279,6 +310,11 @@ export const HeaderContainer = styled.div`
           }
 
           ${devices.ipads} {
+            flex-direction: column;
+            gap: 20px;
+          }
+
+          ${devices.tablet} {
             flex-direction: column;
             gap: 20px;
           }
@@ -305,6 +341,10 @@ export const HeaderContainer = styled.div`
         }
 
         ${devices.ipads} {
+          display: none;
+        }
+
+        ${devices.tablet} {
           display: none;
         }
       }

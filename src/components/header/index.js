@@ -49,7 +49,7 @@ const Header = () => {
 
   const [isNavOpen, setIsNavOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(
-    window.matchMedia("(max-width: 800px)").matches
+    window.matchMedia("(max-width: 1024px)").matches
   );
 
   useEffect(() => {
@@ -69,7 +69,7 @@ const Header = () => {
 
   useEffect(() => {
     window.addEventListener("resize", () => {
-      setIsMobile(window.matchMedia("(max-width: 800px)").matches);
+      setIsMobile(window.matchMedia("(max-width: 1024px)").matches);
     });
   }, []);
 

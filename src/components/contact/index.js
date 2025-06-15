@@ -289,8 +289,8 @@ Terima kasih.`;
                 <div className="informasi-text">
                   <div className="text-contant">Kantor Pusat</div>
                   <div className="text-desc">
-                    Jl. Raya Pati – Tayu Km. 19. Waturoyo, Kec. Margoyoso,
-                    Kabupaten Pati, Jawa Tengah 59154
+                    Jalan Pengasinan No. 3 Jatimulya, Bekasi, Jawa Barat 17115,
+                    Indonesia
                   </div>
 
                   <div className="text-desc">
@@ -420,28 +420,28 @@ export const FormInputSelectNew = (item) => {
 
 export const MEDIA_SOSIAL = [
   {
-    to: "https://wa.me/085225100893",
+    to: "https://wa.me/085225100894",
     label: "Whatsapp",
     icon: FaWhatsapp,
-    title: "085225100893",
+    title: "085225100894",
   },
   {
-    to: "https://www.instagram.com/bprsarthamasabadi/",
+    to: "#",
     label: "Instagram",
     icon: FaInstagram,
-    title: "Artha Mas Abadi",
+    title: "Equiron And Co.",
   },
   {
-    to: "https://www.facebook.com/Banksyariah.Arthamsabadi/",
+    to: "#",
     label: "Facebook",
     icon: FiFacebook,
-    title: "Artha Mas Abadi",
+    title: "Equiron And Co.",
   },
   {
-    to: "tel:+6282137925173",
+    to: "tel:+6282137925174",
     label: "Telp.",
     icon: FiPhone,
-    title: "(0295) 4150477",
+    title: "(0295) 4150478",
   },
   {
     to: "",
