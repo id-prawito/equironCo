@@ -42,6 +42,10 @@ export const AboutSite = styled.section`
       z-index: 1;
       pointer-events: none;
 
+      ${devices.laptop} {
+        right: 100px;
+      }
+
       ${devices.tablet} {
         right: 100px;
       }
