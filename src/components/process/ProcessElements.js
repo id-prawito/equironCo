@@ -11,12 +11,12 @@ export const ProcessSite = styled.section`
   max-width: 1650px;
   position: relative;
 
-  ${devices.laptop} {
-    max-width: 100%;
+  ${devices.tablet} {
+    padding: 80px 0px;
   }
 
   ${devices.laptop} {
-    max-width: 950px;
+    max-width: 100%;
   }
 
   .shape-mockup-process-right {
@@ -62,20 +62,22 @@ export const ProcessSite = styled.section`
     }
 
     ${devices.tablet} {
-      padding: 80px 100px;
-    }
-
-    ${devices.tablet} {
-      padding: 80px 100px;
+      padding: 80px 20px;
+      max-width: 650px;
     }
   }
 
   .process-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    flex-direction: row;
     gap: 20px;
     justify-content: space-between;
+
+    ${devices.tablet} {
+      display: flex;
+      justify-content: center;
+      flex-direction: column-reverse;
+    }
 
     &-images {
       display: flex;
@@ -88,6 +90,11 @@ export const ProcessSite = styled.section`
       overflow: hidden;
       transition: transform 0.3s ease-in-out;
 
+      ${devices.tablet} {
+        transform: none;
+        width: 100%;
+      }
+
       ${devices.laptop} {
         height: 100%;
         transform: translateX(-28%);
@@ -96,6 +103,10 @@ export const ProcessSite = styled.section`
 
       &:hover {
         animation: shaked 0.5s ease-in-out;
+
+        ${devices.tablet} {
+          animation: none;
+        }
 
         ${devices.laptop} {
           animation: shaked-lg 0.5s ease-in-out;
@@ -178,6 +189,10 @@ export const ProcessSite = styled.section`
         display: flex;
         margin-bottom: 20px;
         flex-direction: column;
+
+        ${devices.tablet} {
+          margin-bottom: 0px;
+        }
 
         &-item {
           display: flex;

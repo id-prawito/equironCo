@@ -23,6 +23,11 @@ export const ClientsSite = styled.section`
     z-index: 3;
     padding: 0 1rem;
 
+    ${devices.tablet} {
+      padding: 50px 20px;
+      max-width: 680px;
+    }
+
     ${devices.laptop} {
       max-width: 950px;
     }
@@ -42,6 +47,10 @@ export const ClientsSite = styled.section`
     width: 100%;
     padding: 0px 20px;
     text-align: center;
+
+    ${devices.tablet} {
+      padding: 0px 0px;
+    }
 
     .clients-title {
       color: #b68c5a;

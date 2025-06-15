@@ -116,7 +116,7 @@ const Teams = () => {
               loop={true}
               breakpoints={{
                 0: { slidesPerView: 1 },
-                768: { slidesPerView: 2 },
+                800: { slidesPerView: 2 },
                 950: { slidesPerView: 3 },
                 1024: { slidesPerView: 3 },
                 1290: { slidesPerView: 4 },

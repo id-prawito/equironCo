@@ -13,6 +13,11 @@ export const FooterSite = styled.footer`
   height: auto;
   background-color: #021c1a;
 
+  ${devices.tablet} {
+    padding: 0px;
+    min-height: 480px;
+  }
+
   .footer-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -22,6 +27,16 @@ export const FooterSite = styled.footer`
     align-items: center;
     gap: 40px;
     padding: 20px;
+
+    ${devices.tablet} {
+      grid-template-areas:
+        "services services"
+        "company info";
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      max-width: 650px;
+      padding: 20px 0;
+    }
 
     ${devices.laptop} {
       max-width: 950px;
@@ -35,6 +50,12 @@ export const FooterSite = styled.footer`
       height: 100%;
       justify-content: flex-start;
 
+      ${devices.tablet} {
+        grid-area: services;
+        align-items: center;
+        margin-bottom: 30px;
+      }
+
       .text {
         font-size: 16px;
         font-weight: bold;
@@ -45,6 +66,10 @@ export const FooterSite = styled.footer`
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
+
+        ${devices.tablet} {
+          gap: 10px;
+        }
 
         .text {
           font-size: 14px;
@@ -62,6 +87,10 @@ export const FooterSite = styled.footer`
             width: 1px;
             background-color: rgb(145, 145, 145);
             margin: 0 20px;
+
+            ${devices.tablet} {
+              content: none;
+            }
           }
 
           &:last-child::after {
@@ -71,11 +100,27 @@ export const FooterSite = styled.footer`
       }
     }
 
+    .test-flex {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      height: 100%;
+      justify-content: flex-start;
+
+      ${devices.tablet} {
+        flex-direction: row;
+      }
+    }
+
     .footer-company {
       display: flex;
       flex-direction: column;
       gap: 10px;
       align-items: center;
+
+      ${devices.tablet} {
+        grid-area: company;
+      }
 
       &-logo {
         img {
@@ -123,6 +168,11 @@ export const FooterSite = styled.footer`
       justify-content: flex-start;
       height: 100%;
 
+      ${devices.tablet} {
+        grid-area: info;
+        justify-content: center;
+      }
+
       &-card {
         display: flex;
         border-radius: 8px;
@@ -130,7 +180,18 @@ export const FooterSite = styled.footer`
         flex-direction: row;
         gap: 20px;
         width: 100%;
-        height: 70%;
+
+        ${devices.laptop} {
+          height: 70%;
+        }
+
+        ${devices.desktops} {
+          height: 70%;
+        }
+
+        ${devices.screen_large} {
+          height: 70%;
+        }
 
         .card-icon {
           display: flex;
@@ -144,6 +205,10 @@ export const FooterSite = styled.footer`
           font-size: 24px;
           transition: transform 0.4s ease, background-color 0.3s ease;
           width: 12%;
+
+          ${devices.tablet} {
+            width: 50px;
+          }
 
           ${devices.laptop} {
             width: 50px;

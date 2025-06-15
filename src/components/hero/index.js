@@ -30,13 +30,9 @@ const Hero = () => {
   return (
     <HeroSite id="home">
       <div
-        className="th-hero-bg background-image"
+        className="th-hero-bg background-images-hero"
         style={{
           backgroundImage: `url(${hero_background})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-          width: "100%",
         }}
       >
         <img src={hero_overlay} alt="Hero overlay"></img>
@@ -72,7 +68,7 @@ const Hero = () => {
             variants={container}
             initial="hidden"
             animate="visible"
-            className="hero-content"
+            className="hero-content-images"
           >
             <motion.div variants={item_nya} className="images-hero">
               <div className="image-border-container">

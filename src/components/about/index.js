@@ -124,14 +124,15 @@ const About = () => {
         <motion.div variants={item_nya} className="stats-container">
           {statsData.map((s, idx) => (
             <React.Fragment key={idx}>
-              <div className="stat-item">
-                <div className="icon">{s.icon}</div>
-                <div className="content">
-                  <h3>{s.value}</h3>
-                  <p>{s.label}</p>
+              <div className="test">
+                <div className="stat-item">
+                  <div className="icon">{s.icon}</div>
+                  <div className="content">
+                    <h3>{s.value}</h3>
+                    <p>{s.label}</p>
+                  </div>
                 </div>
               </div>
-              {idx < statsData.length - 1 && <div className="divider" />}
             </React.Fragment>
           ))}
         </motion.div>

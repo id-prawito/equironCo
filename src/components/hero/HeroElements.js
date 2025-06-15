@@ -21,6 +21,17 @@ export const HeroSite = styled.section`
     position: absolute;
   }
 
+  .background-images-hero {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+
+    ${devices?.tablet} {
+      height: 90vh;
+    }
+  }
+
   .overlay {
     position: absolute;
     inset: 0;
@@ -37,6 +48,16 @@ export const HeroSite = styled.section`
     display: flex;
     flex-direction: column;
     gap: 20px;
+  }
+
+  .hero-content-images {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    ${devices.tablet} {
+      align-items: center;
+    }
   }
 
   h1 {
@@ -140,12 +161,17 @@ export const HeroSite = styled.section`
       max-width: 950px;
     }
 
+    ${devices.tablet} {
+      flex-direction: column;
+      max-width: 680px;
+    }
+
     ${devices.smartphone} {
       padding: 0px 25px;
     }
 
-    ${devices.ipads} {
-      padding: 0px 50px;
+    ${devices.tablet} {
+      padding: 0px 20px;
     }
   }
 

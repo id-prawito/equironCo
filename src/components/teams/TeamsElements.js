@@ -31,6 +31,10 @@ export const TeamsSite = styled.section`
       pointer-events: none;
     }
 
+    ${devices.tablet} {
+      height: 640px;
+    }
+
     ${devices.laptop} {
       height: 500px;
     }
@@ -47,6 +51,11 @@ export const TeamsSite = styled.section`
     align-items: center;
     z-index: 3;
     padding: 0 1rem;
+
+    ${devices.tablet} {
+      padding: 0px;
+      height: 640px;
+    }
   }
 
   .team-content-container {
@@ -58,6 +67,13 @@ export const TeamsSite = styled.section`
     flex-direction: row;
     max-width: 1350px;
 
+    ${devices.tablet} {
+      flex-direction: column;
+      max-width: 650px;
+      padding: 80px 20px;
+      justify-content: space-between;
+    }
+
     ${devices.laptop} {
       max-width: 950px;
     }
@@ -66,6 +82,11 @@ export const TeamsSite = styled.section`
   .teams-desc {
     width: 35%;
     padding: 0px 20px;
+
+    ${devices.tablet} {
+      width: 100%;
+      padding: 20px 0px;
+    }
 
     .subtitle {
       color: #b68c5a;
@@ -87,12 +108,20 @@ export const TeamsSite = styled.section`
       margin-bottom: 20px;
       font-weight: 600;
       line-height: 1.3;
+
+      ${devices.tablet} {
+        margin-bottom: 0px;
+      }
     }
   }
 
   .teams-content {
     max-width: 1200px;
     width: 75%;
+
+    ${devices.tablet} {
+      width: 100%;
+    }
   }
 
   .team-card {

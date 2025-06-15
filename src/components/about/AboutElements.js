@@ -41,6 +41,10 @@ export const AboutSite = styled.section`
       right: -50px;
       z-index: 1;
       pointer-events: none;
+
+      ${devices.tablet} {
+        right: 100px;
+      }
     }
   }
 
@@ -78,11 +82,13 @@ export const AboutSite = styled.section`
     }
 
     ${devices.tablet} {
-      padding: 40px 100px;
+      padding: 80px 20px;
+      max-width: 650px;
+      gap: 24px;
     }
 
     ${devices.laptop} {
-      padding: 40px 100px;
+      padding: 40px 0px;
     }
   }
 
@@ -126,6 +132,7 @@ export const AboutSite = styled.section`
 
     ${devices.tablet} {
       width: 100%;
+      margin-bottom: 40px;
     }
 
     ${devices.laptop} {
@@ -255,6 +262,10 @@ export const AboutSite = styled.section`
       flex-direction: column;
       height: 100%;
 
+      ${devices.tablet} {
+        height: 80%;
+      }
+
       ${devices.laptop} {
         height: 80%;
       }
@@ -317,6 +328,10 @@ export const AboutSite = styled.section`
       flex-direction: column;
       height: 100%;
       gap: 20px;
+
+      ${devices.tablet} {
+        height: 80%;
+      }
 
       ${devices.laptop} {
         height: 80%;
@@ -388,6 +403,7 @@ export const AboutSite = styled.section`
   .stats-container {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     background-color: #b88649;
     opacity: 90%;
     color: white;
@@ -396,6 +412,16 @@ export const AboutSite = styled.section`
     font-family: sans-serif;
     gap: 30px;
     width: 100%;
+
+    ${devices.tablet} {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
 
     .stat-item {
       text-align: center;

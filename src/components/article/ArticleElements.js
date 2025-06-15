@@ -23,8 +23,14 @@ export const ArticleSite = styled.section`
     z-index: 3;
     padding: 0 1rem;
 
+    ${devices.tablet} {
+      max-width: 650px;
+      padding: 80px 20px;
+    }
+
     ${devices.laptop} {
       max-width: 950px;
+      padding: 0px;
     }
   }
 
@@ -42,6 +48,14 @@ export const ArticleSite = styled.section`
     width: 100%;
     padding: 0px 20px;
     margin-top: 80px;
+
+    ${devices.tablet} {
+      padding: 0px;
+    }
+
+    ${devices.laptop} {
+      padding: 0px;
+    }
 
     .article-title {
       color: #b68c5a;
@@ -69,6 +83,14 @@ export const ArticleSite = styled.section`
   .article-content {
     width: 100%;
     padding: 0px 20px;
+
+    ${devices.tablet} {
+      padding: 0px;
+    }
+
+    ${devices.laptop} {
+      padding: 0px;
+    }
   }
 
   .blog-card {
@@ -112,6 +134,10 @@ export const ArticleSite = styled.section`
         align-items: center;
         justify-content: flex-start;
 
+        ${devices.tablet} {
+          justify-content: space-between;
+        }
+
         a {
           display: inline-block;
           font-size: 12px;
@@ -119,6 +145,15 @@ export const ArticleSite = styled.section`
           position: relative;
           margin-right: 26px;
           position: relative;
+
+          ${devices.tablet} {
+            margin-right: 4px;
+            font-size: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2px;
+          }
 
           svg {
             font-size: 10px;
@@ -134,10 +169,18 @@ export const ArticleSite = styled.section`
             width: 1px;
             background: #e0e0e0;
             top: 2px;
+
+            ${devices.tablet} {
+              content: none;
+            }
           }
 
           &:last-child::before {
             content: none;
+
+            ${devices.tablet} {
+              content: none;
+            }
           }
         }
       }
@@ -152,6 +195,11 @@ export const ArticleSite = styled.section`
         color: #011c1a;
         text-transform: none;
         margin: 0 0 15px 0;
+
+        ${devices.tablet} {
+          line-height: 1.2;
+          font-size: 18px;
+        }
 
         a {
           background-image: -webkit-linear-gradient(right, #b68c5a, #b68c5a);

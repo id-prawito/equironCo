@@ -40,17 +40,20 @@ const Footer = () => {
       <div className="footer-container">
         <div className="footer-services">
           <div className="text">Our Services</div>
-          <div className="service">
-            <div className="text">Real Estate Law</div>
-            <div className="text">Personal Injury</div>
-          </div>
-          <div className="service">
-            <div className="text">Corporate Law</div>
-            <div className="text">Criminal Law</div>
-          </div>
-          <div className="service">
-            <div className="text">Health Care</div>
-            <div className="text">Family Law</div>
+
+          <div className="test-flex">
+            <div className="service">
+              <div className="text">Real Estate Law</div>
+              <div className="text">Personal Injury</div>
+            </div>
+            <div className="service">
+              <div className="text">Corporate Law</div>
+              <div className="text">Criminal Law</div>
+            </div>
+            <div className="service">
+              <div className="text">Health Care</div>
+              <div className="text">Family Law</div>
+            </div>
           </div>
         </div>
         <div className="footer-company">

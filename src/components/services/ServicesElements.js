@@ -28,7 +28,8 @@ export const ServicesSite = styled.section`
     }
 
     ${devices.tablet} {
-      padding: 80px 100px;
+      padding: 80px 20px;
+      max-width: 650px;
     }
   }
 
@@ -88,6 +89,11 @@ export const ServicesSite = styled.section`
     width: 100%;
     gap: 15px;
     color: #000000;
+
+    ${devices.tablet} {
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 30px;
+    }
 
     .custom-card {
       position: relative;

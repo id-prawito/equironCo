@@ -21,6 +21,11 @@ export const ContactSite = styled.section`
     min-height: 0px;
   }
 
+  ${devices.tablet} {
+    padding: 50px 20px;
+    max-width: 680px;
+  }
+
   ${devices.laptop} {
     max-width: 950px;
   }
@@ -65,6 +70,10 @@ export const ContactSite = styled.section`
     ${devices.ipads} {
       padding: 50px 50px;
     }
+
+    ${devices.tablet} {
+      padding: 0px 25px;
+    }
   }
 
   .contact-content {
@@ -99,6 +108,11 @@ export const ContactSite = styled.section`
     width: 100%;
     gap: 25px;
     margin-bottom: 50px;
+
+    ${devices.tablet} {
+      display: flex;
+      flex-direction: column;
+    }
   }
 `;
 
