@@ -6,7 +6,6 @@ import teams_bg from "../../assets/img/law_stack/team-1-bg.jpg";
 import blog_bg from "../../assets/img/law_stack/blog_1_1.jpg";
 import shape_lect from "../../assets/img/law_stack/blog-1-shape-left.png";
 import shape_right from "../../assets/img/law_stack/blog-1-shape-right.png";
-import heroOverlay from "./../../assets/img/law_stack/hero1-overlay.png";
 import hero from "./../../assets/img/law_stack/team_1_8.jpg";
 import { ArticleSite } from "./ArticleElements";
 

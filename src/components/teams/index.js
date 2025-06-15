@@ -3,7 +3,6 @@ import { useInView } from "react-intersection-observer";
 import { useAnimation, motion } from "framer-motion";
 import jump from "../../assets/img/law_stack/process-1-shape.png";
 import teams_bg from "../../assets/img/law_stack/team-1-bg.jpg";
-import heroOverlay from "./../../assets/img/law_stack/hero1-overlay.png";
 import hero from "./../../assets/img/law_stack/team_1_8.jpg";
 import { TeamsSite } from "./TeamsElements";
 

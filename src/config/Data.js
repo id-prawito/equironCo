@@ -350,7 +350,7 @@ export const HERO_DATA = {
   button: [
     {
       to: "/contact",
-      nama_button: "Contact Us",
+      nama_button: "CONTACT US",
       icon: FaChalkboardTeacher,
     },
   ],
