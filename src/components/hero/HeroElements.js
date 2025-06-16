@@ -14,11 +14,31 @@ export const HeroSite = styled.section`
   padding: 0px 0px 0px 0px;
 
   .background-container {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     position: absolute;
+
+    ${devices.laptop} {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+    }
+
+    ${devices.desktops} {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+    }
+
+    ${devices.screen_large} {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+    }
   }
 
   .background-images-hero {
@@ -27,8 +47,12 @@ export const HeroSite = styled.section`
     background-repeat: no-repeat;
     width: 100%;
 
-    ${devices?.tablet} {
-      height: 90vh;
+    ${devices?.ipads} {
+      height: 135vh;
+    }
+
+    @media only screen and (min-width: 801px) and (max-width: 1024px) {
+      height: 150vh;
     }
   }
 
@@ -54,6 +78,10 @@ export const HeroSite = styled.section`
     display: flex;
     flex-direction: column;
     gap: 20px;
+
+    ${devices.ipads} {
+      align-items: center;
+    }
 
     ${devices.tablet} {
       align-items: center;
@@ -97,7 +125,7 @@ export const HeroSite = styled.section`
     }
 
     ${devices.ipads} {
-      font-size: 38px;
+      font-size: 34px;
     }
   }
 
@@ -113,7 +141,7 @@ export const HeroSite = styled.section`
     }
 
     ${devices.ipads} {
-      font-size: 40px;
+      font-size: 34px;
     }
   }
 
@@ -157,21 +185,22 @@ export const HeroSite = styled.section`
     gap: 40px;
     max-width: 1250px;
 
-    ${devices.laptop} {
-      max-width: 950px;
-    }
-
-    ${devices.tablet} {
-      flex-direction: column;
-      max-width: 680px;
-    }
-
     ${devices.smartphone} {
       padding: 0px 25px;
     }
 
+    ${devices.ipads} {
+      flex-direction: column;
+      padding: 80px 40px;
+    }
+
     ${devices.tablet} {
-      padding: 0px 20px;
+      flex-direction: column;
+      padding: 80px 100px;
+    }
+
+    ${devices.laptop} {
+      max-width: 950px;
     }
   }
 
@@ -181,6 +210,10 @@ export const HeroSite = styled.section`
     justify-content: center;
     width: 85%;
     height: 100%;
+
+    ${devices.ipads} {
+      width: 80%;
+    }
 
     ${devices.laptop} {
       width: 100%;

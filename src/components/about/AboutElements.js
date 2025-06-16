@@ -42,11 +42,16 @@ export const AboutSite = styled.section`
       z-index: 1;
       pointer-events: none;
 
-      ${devices.laptop} {
+      ${devices.ipads} {
         right: 100px;
+        width: 60%;
       }
 
       ${devices.tablet} {
+        right: 100px;
+      }
+
+      ${devices.laptop} {
         right: 100px;
       }
     }
@@ -82,12 +87,11 @@ export const AboutSite = styled.section`
     }
 
     ${devices.ipads} {
-      padding: 40px 50px;
+      padding: 120px 40px;
     }
 
     ${devices.tablet} {
-      padding: 80px 20px;
-      max-width: 650px;
+      padding: 80px 100px;
       gap: 24px;
     }
 
@@ -132,6 +136,7 @@ export const AboutSite = styled.section`
 
     ${devices.ipads} {
       width: 100%;
+      margin-bottom: 40px;
     }
 
     ${devices.tablet} {
@@ -162,6 +167,10 @@ export const AboutSite = styled.section`
 
       ${devices.smartphone} {
         font-size: 30px;
+      }
+
+      ${devices.ipads} {
+        font-size: 34px;
       }
 
       span {
@@ -240,7 +249,8 @@ export const AboutSite = styled.section`
     }
 
     ${devices.ipads} {
-      width: 100%;
+      justify-content: center;
+      /* width: 100%; */
     }
 
     ${devices.tablet} {
@@ -266,8 +276,12 @@ export const AboutSite = styled.section`
       flex-direction: column;
       height: 100%;
 
+      ${devices.ipads} {
+        height: 100%;
+      }
+
       ${devices.tablet} {
-        height: 80%;
+        height: 100%;
       }
 
       ${devices.laptop} {
@@ -280,6 +294,10 @@ export const AboutSite = styled.section`
         height: 600px;
         border-radius: 80px 0 80px 80px;
         overflow: visible;
+
+        ${devices.ipads} {
+          height: 100%;
+        }
 
         img {
           width: 100%;
@@ -333,8 +351,12 @@ export const AboutSite = styled.section`
       height: 100%;
       gap: 20px;
 
+      ${devices.ipads} {
+        height: 100%;
+      }
+
       ${devices.tablet} {
-        height: 80%;
+        height: 100%;
       }
 
       ${devices.laptop} {
@@ -416,6 +438,16 @@ export const AboutSite = styled.section`
     font-family: sans-serif;
     gap: 30px;
     width: 100%;
+
+    ${devices.ipads} {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 40px 30px;
+    }
 
     ${devices.tablet} {
       display: grid;

@@ -49,10 +49,6 @@ export const ProcessSite = styled.section`
     position: relative;
     z-index: 2;
 
-    ${devices.laptop} {
-      padding: 80px 0px;
-    }
-
     ${devices.smartphone} {
       padding: 80px 25px;
     }
@@ -62,8 +58,12 @@ export const ProcessSite = styled.section`
     }
 
     ${devices.tablet} {
-      padding: 80px 20px;
-      max-width: 650px;
+      padding: 80px 100px;
+    }
+
+    ${devices.laptop} {
+      padding: 80px 0px;
+      max-width: 950px;
     }
   }
 
@@ -72,6 +72,12 @@ export const ProcessSite = styled.section`
     grid-template-columns: 1fr 1fr;
     gap: 20px;
     justify-content: space-between;
+
+    ${devices.ipads} {
+      display: flex;
+      justify-content: center;
+      flex-direction: column-reverse;
+    }
 
     ${devices.tablet} {
       display: flex;
@@ -89,6 +95,11 @@ export const ProcessSite = styled.section`
       border-radius: 24px;
       overflow: hidden;
       transition: transform 0.3s ease-in-out;
+
+      ${devices.ipads} {
+        transform: none;
+        width: 100%;
+      }
 
       ${devices.tablet} {
         transform: none;
@@ -177,8 +188,17 @@ export const ProcessSite = styled.section`
       .title {
         color: #011c1a;
         font-size: 54px;
-        line-height: 1.085;
+        line-height: 1.3;
         font-weight: 700;
+
+        ${devices.ipads} {
+          font-size: 34px;
+          margin-bottom: 20px;
+        }
+
+        ${devices.tablet} {
+          margin-bottom: 20px;
+        }
 
         ${devices.laptop} {
           font-size: 40px;

@@ -13,6 +13,10 @@ export const ArticleSite = styled.section`
   height: 800px;
   background-color: #f5f5f5;
 
+  ${devices.ipads} {
+    height: 120vh;
+  }
+
   .article-container {
     position: absolute;
     width: 100%;
@@ -23,9 +27,12 @@ export const ArticleSite = styled.section`
     z-index: 3;
     padding: 0 1rem;
 
+    ${devices.ipads} {
+      padding: 80px 40px;
+    }
+
     ${devices.tablet} {
-      max-width: 650px;
-      padding: 80px 20px;
+      padding: 80px 100px;
     }
 
     ${devices.laptop} {
@@ -49,6 +56,11 @@ export const ArticleSite = styled.section`
     padding: 0px 20px;
     margin-top: 80px;
 
+    ${devices.ipads} {
+      margin-top: 0px;
+      padding: 0px;
+    }
+
     ${devices.tablet} {
       padding: 0px;
     }
@@ -61,7 +73,6 @@ export const ArticleSite = styled.section`
       color: #b68c5a;
       margin-bottom: 25px;
       position: relative;
-      margin-top: -0.4em;
       padding-top: 0;
       letter-spacing: normal;
       font-size: 20px;
@@ -77,12 +88,21 @@ export const ArticleSite = styled.section`
       margin: 0 0 24px 0;
       font-size: 54px;
       line-height: 1.185;
+
+      ${devices.ipads} {
+        font-size: 34px;
+        line-height: 1.3;
+      }
     }
   }
 
   .article-content {
     width: 100%;
     padding: 0px 20px;
+
+    ${devices.ipads} {
+      padding: 0px;
+    }
 
     ${devices.tablet} {
       padding: 0px;

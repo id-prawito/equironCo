@@ -31,6 +31,10 @@ export const TeamsSite = styled.section`
       pointer-events: none;
     }
 
+    ${devices.ipads} {
+      height: 640px;
+    }
+
     ${devices.tablet} {
       height: 640px;
     }
@@ -52,9 +56,13 @@ export const TeamsSite = styled.section`
     z-index: 3;
     padding: 0 1rem;
 
+    ${devices.ipads} {
+      padding: 80px 40px;
+      height: 100%;
+    }
+
     ${devices.tablet} {
-      padding: 0px;
-      height: 640px;
+      padding: 80px 100px;
     }
   }
 
@@ -67,10 +75,13 @@ export const TeamsSite = styled.section`
     flex-direction: row;
     max-width: 1350px;
 
+    ${devices.ipads} {
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
     ${devices.tablet} {
       flex-direction: column;
-      max-width: 650px;
-      padding: 80px 20px;
       justify-content: space-between;
     }
 
@@ -83,6 +94,11 @@ export const TeamsSite = styled.section`
     width: 35%;
     padding: 0px 20px;
 
+    ${devices.ipads} {
+      width: 100%;
+      padding: 20px 0px;
+    }
+
     ${devices.tablet} {
       width: 100%;
       padding: 20px 0px;
@@ -92,7 +108,6 @@ export const TeamsSite = styled.section`
       color: #b68c5a;
       margin-bottom: 25px;
       position: relative;
-      margin-top: -0.4em;
       padding-top: 0;
       letter-spacing: normal;
       font-size: 20px;
@@ -102,12 +117,15 @@ export const TeamsSite = styled.section`
     }
 
     .text-content {
-      margin-top: -0.2em;
       text-transform: capitalize;
       font-size: 34px;
       margin-bottom: 20px;
       font-weight: 600;
       line-height: 1.3;
+
+      ${devices.ipads} {
+        margin-bottom: 0px;
+      }
 
       ${devices.tablet} {
         margin-bottom: 0px;
@@ -118,6 +136,10 @@ export const TeamsSite = styled.section`
   .teams-content {
     max-width: 1200px;
     width: 75%;
+
+    ${devices.ipads} {
+      width: 100%;
+    }
 
     ${devices.tablet} {
       width: 100%;

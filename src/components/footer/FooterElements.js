@@ -13,6 +13,11 @@ export const FooterSite = styled.footer`
   height: auto;
   background-color: #021c1a;
 
+  ${devices.ipads} {
+    padding: 0px;
+    min-height: 480px;
+  }
+
   ${devices.tablet} {
     padding: 0px;
     min-height: 480px;
@@ -28,14 +33,23 @@ export const FooterSite = styled.footer`
     gap: 40px;
     padding: 20px;
 
+    ${devices.ipads} {
+      grid-template-areas:
+        "services"
+        "company"
+        "info";
+      grid-template-columns: 1fr;
+      gap: 40px;
+      padding: 60px 40px;
+    }
+
     ${devices.tablet} {
       grid-template-areas:
         "services services"
         "company info";
       grid-template-columns: 1fr 1fr;
       gap: 20px;
-      max-width: 650px;
-      padding: 20px 0;
+      padding: 80px 100px;
     }
 
     ${devices.laptop} {
@@ -49,6 +63,12 @@ export const FooterSite = styled.footer`
       gap: 16px;
       height: 100%;
       justify-content: flex-start;
+
+      ${devices.ipads} {
+        grid-area: services;
+        align-items: center;
+        margin-bottom: 30px;
+      }
 
       ${devices.tablet} {
         grid-area: services;
@@ -66,6 +86,10 @@ export const FooterSite = styled.footer`
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
+
+        ${devices.ipads} {
+          gap: 10px;
+        }
 
         ${devices.tablet} {
           gap: 10px;
@@ -88,6 +112,10 @@ export const FooterSite = styled.footer`
             background-color: rgb(145, 145, 145);
             margin: 0 20px;
 
+            ${devices.ipads} {
+              content: none;
+            }
+
             ${devices.tablet} {
               content: none;
             }
@@ -107,6 +135,10 @@ export const FooterSite = styled.footer`
       height: 100%;
       justify-content: flex-start;
 
+      ${devices.ipads} {
+        flex-direction: column;
+      }
+
       ${devices.tablet} {
         flex-direction: row;
       }
@@ -117,6 +149,10 @@ export const FooterSite = styled.footer`
       flex-direction: column;
       gap: 10px;
       align-items: center;
+
+      ${devices.ipads} {
+        grid-area: company;
+      }
 
       ${devices.tablet} {
         grid-area: company;
@@ -168,6 +204,11 @@ export const FooterSite = styled.footer`
       justify-content: flex-start;
       height: 100%;
 
+      ${devices.ipads} {
+        grid-area: info;
+        justify-content: center;
+      }
+
       ${devices.tablet} {
         grid-area: info;
         justify-content: center;
@@ -205,6 +246,10 @@ export const FooterSite = styled.footer`
           font-size: 24px;
           transition: transform 0.4s ease, background-color 0.3s ease;
           width: 12%;
+
+          ${devices.ipads} {
+            width: 50px;
+          }
 
           ${devices.tablet} {
             width: 50px;

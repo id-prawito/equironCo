@@ -13,6 +13,10 @@ export const ClientsSite = styled.section`
   height: 600px;
   background-color: #f5f5f5;
 
+  ${devices.ipads} {
+    padding: 160px 40px;
+  }
+
   .clients-container {
     position: absolute;
     width: 100%;
@@ -23,9 +27,13 @@ export const ClientsSite = styled.section`
     z-index: 3;
     padding: 0 1rem;
 
+    ${devices.ipads} {
+      padding: 160px 40px;
+      height: max-content;
+    }
+
     ${devices.tablet} {
-      padding: 50px 20px;
-      max-width: 680px;
+      padding: 80px 100px;
     }
 
     ${devices.laptop} {
@@ -41,12 +49,20 @@ export const ClientsSite = styled.section`
     width: 100%;
     flex-direction: column;
     max-width: 1350px;
+
+    ${devices.ipads} {
+      justify-content: space-between;
+    }
   }
 
   .clients-desc {
     width: 100%;
     padding: 0px 20px;
     text-align: center;
+
+    ${devices.ipads} {
+      padding: 0px 0px;
+    }
 
     ${devices.tablet} {
       padding: 0px 0px;
@@ -56,7 +72,6 @@ export const ClientsSite = styled.section`
       color: #b68c5a;
       margin-bottom: 25px;
       position: relative;
-      margin-top: -0.4em;
       padding-top: 0;
       letter-spacing: normal;
       font-size: 20px;
@@ -72,12 +87,21 @@ export const ClientsSite = styled.section`
       margin: 0 0 24px 0;
       font-size: 54px;
       line-height: 1.185;
+
+      ${devices.ipads} {
+        line-height: 1.3;
+        font-size: 34px;
+      }
     }
   }
 
   .clients-content {
     width: 100%;
     padding: 0px 20px;
+
+    ${devices.ipads} {
+      padding: 0px;
+    }
   }
 
   .client-card {

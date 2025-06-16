@@ -17,13 +17,13 @@ export const ContactSite = styled.section`
   }
 
   ${devices.ipads} {
+    padding: 80px 40px;
     justify-content: center;
     min-height: 0px;
   }
 
   ${devices.tablet} {
-    padding: 50px 20px;
-    max-width: 680px;
+    padding: 80px 100px;
   }
 
   ${devices.laptop} {
@@ -68,7 +68,7 @@ export const ContactSite = styled.section`
     }
 
     ${devices.ipads} {
-      padding: 50px 50px;
+      padding: 0px 25px;
     }
 
     ${devices.tablet} {
@@ -100,6 +100,11 @@ export const ContactSite = styled.section`
     ${devices.smartphone} {
       font-size: 30px;
     }
+
+    ${devices.ipads} {
+      line-height: 1.3;
+      font-size: 34px;
+    }
   }
 
   .contact-container {
@@ -108,6 +113,12 @@ export const ContactSite = styled.section`
     width: 100%;
     gap: 25px;
     margin-bottom: 50px;
+
+    ${devices.ipads} {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 0px;
+    }
 
     ${devices.tablet} {
       display: flex;
