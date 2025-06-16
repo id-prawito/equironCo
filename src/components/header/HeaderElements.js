@@ -73,6 +73,10 @@ export const HeaderContainer = styled.div`
     height: 100%;
     width: 100%;
     justify-content: center;
+
+    ${devices.smartphone} {
+      gap: 8px;
+    }
   }
 
   .menuIcon,
