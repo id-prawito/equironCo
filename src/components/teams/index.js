@@ -119,7 +119,7 @@ const Teams = () => {
                 800: { slidesPerView: 2 },
                 950: { slidesPerView: 2 },
                 1024: { slidesPerView: 3 },
-                1290: { slidesPerView: 4 },
+                1480: { slidesPerView: 3 },
               }}
             >
               {lawyers.map((lawyer, index) => (

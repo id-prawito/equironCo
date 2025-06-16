@@ -3,7 +3,7 @@ const breakpoints = {
   sm: "480px",
   md: "800px",
   ml: "1024px",
-  lg: "1280px",
+  lg: "1480px",
   xl: "1824px",
 };
 

@@ -24,7 +24,7 @@ export const ServicesSite = styled.section`
     }
 
     ${devices.ipads} {
-      padding: 80px 50px;
+      padding: 80px 40px;
     }
 
     ${devices.tablet} {
@@ -58,6 +58,8 @@ export const ServicesSite = styled.section`
 
         ${devices.ipads} {
           letter-spacing: 0px;
+          width: 100%;
+          text-align: center;
         }
 
         ${devices.tablet} {
@@ -74,6 +76,12 @@ export const ServicesSite = styled.section`
           font-size: 30px;
         }
 
+        ${devices.ipads} {
+          font-size: 34px;
+          line-height: 1.3;
+          text-align: center;
+        }
+
         color: ${({ theme: { theme } }) =>
           theme === themeList.light
             ? "var(--light-text-black)"
@@ -88,6 +96,11 @@ export const ServicesSite = styled.section`
     width: 100%;
     gap: 15px;
     color: #000000;
+
+    ${devices.ipads} {
+      grid-template-columns: repeat(1, 1fr);
+      row-gap: 30px;
+    }
 
     ${devices.tablet} {
       grid-template-columns: repeat(2, 1fr);
