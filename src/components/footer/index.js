@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { FaInstagram, FaRegEnvelope } from "react-icons/fa";
-import { FooterSite, Item } from "./FooterElements";
+import { FooterSite, Item, WaItemSite } from "./FooterElements";
 import axios from "axios";
 import logoEquiron from "../../assets/img/law_stack/logoEquiron.png";
 import {
@@ -116,8 +116,45 @@ const Footer = () => {
           </div>
         </div>
       </div>
+      <WaItemContent />
     </FooterSite>
   );
 };
 
 export default Footer;
+
+export const WaItemContent = () => {
+  const waRef = useRef(null);
+
+  useEffect(() => {
+    const shrinkHeader = () => {
+      if (
+        document.body.scrollTop >= 300 ||
+        document.documentElement.scrollTop >= 300
+      ) {
+        waRef.current.classList.add("active");
+      } else {
+        waRef.current.classList.remove("active");
+      }
+    };
+    window.addEventListener("scroll", shrinkHeader);
+    return () => {
+      window.removeEventListener("scroll", shrinkHeader);
+    };
+  }, []);
+
+  return (
+    <WaItemSite>
+      <div ref={waRef} className="wa_content">
+        <a
+          href="https://wa.me/6287777000919"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div className="wa_text">Hubungi Kami via Whatsapp</div>
+          <div className="wa_icon"></div>
+        </a>
+      </div>
+    </WaItemSite>
+  );
+};

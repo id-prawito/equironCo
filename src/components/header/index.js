@@ -5,7 +5,7 @@ import { FiMenu, FiX } from "react-icons/fi";
 import { MEDIA_SOSIAL, NAVLINKS } from "../../config/Data";
 import logoSite from "../../assets/img/logo_site.png";
 import logoEquiron from "../../assets/img/law_stack/logoEquiron.png";
-import ThemeSwitcher from "../../config/ThemeSwicter";
+import ThemeSwitcher, { ThemeSwitcherFlag } from "../../config/ThemeSwicter";
 import { motion } from "framer-motion";
 
 const Header = () => {
@@ -96,7 +96,10 @@ const Header = () => {
               </NavLinks>
             </motion.div>
             <motion.div variants={item_nya}>
-              <ThemeSwitcher />
+              <div className="button-switcher">
+                <ThemeSwitcher />
+                <ThemeSwitcherFlag />
+              </div>
             </motion.div>
           </div>
           {isMobile && (

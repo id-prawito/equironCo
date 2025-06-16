@@ -4,83 +4,178 @@ import { FiSun, FiMoon } from "react-icons/fi";
 import ThemeContext from "./ThemeContext";
 import themeList from "./themeList";
 import { devices } from "../assets/scss/_respondTo";
+import flagUk from "../assets/img/law_stack/uk-flag.png";
+import flagIndo from "../assets/img/law_stack/indonesia-flag.png";
 
 const ThemeSwitcherStyles = styled.div`
-    padding: 0 10px;
+  padding: 0 10px;
 
-    ${devices.smartphone} {
-        padding: 0px;
-    }
+  ${devices.smartphone} {
+    padding: 0px;
+  }
 
-    label {
-        --gap: 5px;
-        --size: 20px;
-        height: 30px;
-        width: 55px;
-        padding: 0 var(--gap);
-        position: relative;
-        cursor: pointer;
-        border-radius: 50px;
-        background: ${({ theme: { theme } }) =>
-            theme === themeList.light ? "#1a1d29" : "#979797"};
-        z-index: 1;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        .icon {
-            height: var(--size);
-            width: var(--size);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        svg {
-            width: 75%;
-            color: #ffffff;
-        }
+  label {
+    --gap: 5px;
+    --size: 20px;
+    height: 30px;
+    width: 55px;
+    padding: 0 var(--gap);
+    position: relative;
+    cursor: pointer;
+    border-radius: 50px;
+    background: ${({ theme: { theme } }) =>
+      theme === themeList.light ? "#1a1d29" : "#979797"};
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .icon {
+      height: var(--size);
+      width: var(--size);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        height: 15px;
+        width: 15px;
+      }
     }
-    input {
-        width: 0;
-        height: 0;
-        display: none;
-        visibility: hidden;
+    svg {
+      width: 75%;
+      color: #ffffff;
     }
-    label::after {
-        position: absolute;
-        content: "";
-        border-radius: 50%;
-        transform: translateY(-50%);
-        top: 50%;
-        left: var(--gap);
-        height: var(--size);
-        width: var(--size);
-        background-color: var(--dark-components);
-        transition: 0.5s ease left;
-        z-index: -1;
+  }
+  input {
+    width: 0;
+    height: 0;
+    display: none;
+    visibility: hidden;
+  }
+  label::after {
+    position: absolute;
+    content: "";
+    border-radius: 50%;
+    transform: translateY(-50%);
+    top: 50%;
+    left: var(--gap);
+    height: var(--size);
+    width: var(--size);
+    background-color: var(--dark-components);
+    transition: 0.5s ease left;
+    z-index: -1;
+  }
+  input:checked + label::after {
+    left: calc(100% - var(--size) - var(--gap));
+  }
+`;
+
+const ThemeSwitcherStylesFlag = styled.div`
+  padding: 0 10px;
+
+  ${devices.smartphone} {
+    padding: 0px;
+  }
+
+  label {
+    --gap: 5px;
+    --size: 20px;
+    height: 30px;
+    width: 55px;
+    padding: 0 var(--gap);
+    position: relative;
+    cursor: pointer;
+    border-radius: 50px;
+    background: ${({ theme: { theme } }) =>
+      theme === themeList.light ? "#1a1d29" : "#979797"};
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .icon {
+      height: var(--size);
+      width: var(--size);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        height: 15px;
+        width: 15px;
+      }
     }
-    input:checked + label::after {
-        left: calc(100% - var(--size) - var(--gap));
+    svg {
+      width: 75%;
+      color: #ffffff;
     }
+  }
+  input {
+    width: 0;
+    height: 0;
+    display: none;
+    visibility: hidden;
+  }
+  label::after {
+    position: absolute;
+    content: "";
+    border-radius: 50%;
+    transform: translateY(-50%);
+    top: 50%;
+    left: var(--gap);
+    height: var(--size);
+    width: var(--size);
+    background-color: #ffffff;
+    transition: 0.5s ease left;
+    z-index: -1;
+  }
+  input:checked + label::after {
+    left: calc(100% - var(--size) - var(--gap));
+  }
 `;
 
 export default function ThemeSwitcher() {
-    const { theme, toggleTheme } = useContext(ThemeContext);
-    return (
-        <ThemeSwitcherStyles>
-            <input
-                type="checkbox"
-                id="switcher"
-                onChange={toggleTheme}
-                checked={theme === "dark"}
-            />
-            <label htmlFor="switcher">
-                <div className="icon">
-                    <FiSun />
-                </div>
-                <div className="icon">
-                    <FiMoon />
-                </div>
-            </label>
-        </ThemeSwitcherStyles>
-    );
+  const { theme, toggleTheme } = useContext(ThemeContext);
+  return (
+    <ThemeSwitcherStyles>
+      <input
+        type="checkbox"
+        id="switcher"
+        onChange={toggleTheme}
+        checked={theme === "dark"}
+      />
+      <label htmlFor="switcher">
+        <div className="icon">
+          <FiSun />
+        </div>
+        <div className="icon">
+          <FiMoon />
+        </div>
+      </label>
+    </ThemeSwitcherStyles>
+  );
+}
+
+export function ThemeSwitcherFlag() {
+  const { theme, toggleTheme } = useContext(ThemeContext);
+  return (
+    <ThemeSwitcherStylesFlag>
+      <input
+        type="checkbox"
+        id="switcher"
+        onChange={toggleTheme}
+        checked={theme === "dark"}
+      />
+      <label htmlFor="switcher">
+        <div className="icon">
+          <img src={flagUk} alt="" srcset="" />
+          {/* <FiSun /> */}
+        </div>
+        <div className="icon">
+          <img src={flagIndo} alt="" srcset="" />
+
+          {/* <FiMoon /> */}
+        </div>
+      </label>
+    </ThemeSwitcherStylesFlag>
+  );
 }
