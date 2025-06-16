@@ -42,6 +42,11 @@ export const AboutSite = styled.section`
       z-index: 1;
       pointer-events: none;
 
+      ${devices.smartphone} {
+        right: 100px;
+        width: 60%;
+      }
+
       ${devices.ipads} {
         right: 100px;
         width: 60%;
@@ -83,7 +88,7 @@ export const AboutSite = styled.section`
     z-index: 2;
 
     ${devices.smartphone} {
-      padding: 20px 25px;
+      padding: 120px 40px;
     }
 
     ${devices.ipads} {
@@ -132,6 +137,7 @@ export const AboutSite = styled.section`
 
     ${devices.smartphone} {
       width: 100%;
+      margin-bottom: 40px;
     }
 
     ${devices.ipads} {
@@ -246,6 +252,7 @@ export const AboutSite = styled.section`
 
     ${devices.smartphone} {
       width: 100%;
+      justify-content: center;
     }
 
     ${devices.ipads} {
@@ -276,6 +283,10 @@ export const AboutSite = styled.section`
       flex-direction: column;
       height: 100%;
 
+      ${devices.smartphone} {
+        height: 100%;
+      }
+
       ${devices.ipads} {
         height: 100%;
       }
@@ -294,6 +305,10 @@ export const AboutSite = styled.section`
         height: 600px;
         border-radius: 80px 0 80px 80px;
         overflow: visible;
+
+        ${devices.smartphone} {
+          height: 100%;
+        }
 
         ${devices.ipads} {
           height: 100%;
@@ -342,6 +357,11 @@ export const AboutSite = styled.section`
         border: 1px solid #003333;
         z-index: -1;
         box-sizing: border-box;
+
+        ${devices.smartphone} {
+          top: -15px; // geser ke atas
+          left: -15px;
+        }
       }
     }
 
@@ -350,6 +370,10 @@ export const AboutSite = styled.section`
       flex-direction: column;
       height: 100%;
       gap: 20px;
+
+      ${devices.smartphone} {
+        height: 100%;
+      }
 
       ${devices.ipads} {
         height: 100%;
@@ -439,6 +463,16 @@ export const AboutSite = styled.section`
     gap: 30px;
     width: 100%;
 
+    ${devices.smartphone} {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 30px;
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 40px 30px;
+    }
+
     ${devices.ipads} {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -469,6 +503,11 @@ export const AboutSite = styled.section`
       justify-content: center;
       align-items: center;
 
+      ${devices.smartphone} {
+        align-items: center;
+        justify-content: flex-start;
+      }
+
       .content {
         display: flex;
         text-align: left;
@@ -480,6 +519,10 @@ export const AboutSite = styled.section`
         font-size: 70px;
         display: flex;
         align-items: center;
+
+        ${devices.smartphone} {
+          font-size: 40px;
+        }
       }
 
       h3 {

@@ -159,7 +159,7 @@ const Header = () => {
                           target="_blank"
                           rel="noopener noreferrer"
                         >
-                          Free Consultation
+                          FREE KONSULTASI
                         </a>
                         <FaArrowRight />
                       </div>

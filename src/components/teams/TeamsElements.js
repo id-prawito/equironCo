@@ -31,6 +31,10 @@ export const TeamsSite = styled.section`
       pointer-events: none;
     }
 
+    ${devices.smartphone} {
+      height: 640px;
+    }
+
     ${devices.ipads} {
       height: 640px;
     }
@@ -56,6 +60,11 @@ export const TeamsSite = styled.section`
     z-index: 3;
     padding: 0 1rem;
 
+    ${devices.smartphone} {
+      padding: 80px 40px;
+      height: 100%;
+    }
+
     ${devices.ipads} {
       padding: 80px 40px;
       height: 100%;
@@ -75,6 +84,11 @@ export const TeamsSite = styled.section`
     flex-direction: row;
     max-width: 1350px;
 
+    ${devices.smartphone} {
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
     ${devices.ipads} {
       flex-direction: column;
       justify-content: space-between;
@@ -93,6 +107,11 @@ export const TeamsSite = styled.section`
   .teams-desc {
     width: 35%;
     padding: 0px 20px;
+
+    ${devices.smartphone} {
+      width: 100%;
+      padding: 20px 0px;
+    }
 
     ${devices.ipads} {
       width: 100%;
@@ -123,6 +142,10 @@ export const TeamsSite = styled.section`
       font-weight: 600;
       line-height: 1.3;
 
+      ${devices.smartphone} {
+        margin-bottom: 0px;
+      }
+
       ${devices.ipads} {
         margin-bottom: 0px;
       }
@@ -136,6 +159,10 @@ export const TeamsSite = styled.section`
   .teams-content {
     max-width: 1200px;
     width: 75%;
+
+    ${devices.smartphone} {
+      width: 100%;
+    }
 
     ${devices.ipads} {
       width: 100%;

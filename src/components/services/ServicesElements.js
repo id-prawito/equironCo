@@ -54,6 +54,8 @@ export const ServicesSite = styled.section`
 
         ${devices.smartphone} {
           letter-spacing: 0px;
+          width: 100%;
+          text-align: center;
         }
 
         ${devices.ipads} {
@@ -74,6 +76,8 @@ export const ServicesSite = styled.section`
 
         ${devices.smartphone} {
           font-size: 30px;
+          line-height: 1.3;
+          text-align: center;
         }
 
         ${devices.ipads} {
@@ -97,8 +101,18 @@ export const ServicesSite = styled.section`
     gap: 15px;
     color: #000000;
 
-    ${devices.ipads} {
+    ${devices.smartphone} {
       grid-template-columns: repeat(1, 1fr);
+      row-gap: 30px;
+    }
+
+    @media only screen and (min-width: 490px) and (max-width: 600px) {
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 30px;
+    }
+
+    @media only screen and (min-width: 601px) and (max-width: 800px) {
+      grid-template-columns: repeat(2, 1fr);
       row-gap: 30px;
     }
 

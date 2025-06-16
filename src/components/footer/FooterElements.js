@@ -13,6 +13,11 @@ export const FooterSite = styled.footer`
   height: auto;
   background-color: #021c1a;
 
+  ${devices.smartphone} {
+    padding: 0px;
+    min-height: 480px;
+  }
+
   ${devices.ipads} {
     padding: 0px;
     min-height: 480px;
@@ -32,6 +37,16 @@ export const FooterSite = styled.footer`
     align-items: center;
     gap: 40px;
     padding: 20px;
+
+    ${devices.smartphone} {
+      grid-template-areas:
+        "services"
+        "company"
+        "info";
+      grid-template-columns: 1fr;
+      gap: 40px;
+      padding: 60px 40px;
+    }
 
     ${devices.ipads} {
       grid-template-areas:
@@ -63,6 +78,12 @@ export const FooterSite = styled.footer`
       gap: 16px;
       height: 100%;
       justify-content: flex-start;
+
+      ${devices.smartphone} {
+        grid-area: services;
+        align-items: center;
+        margin-bottom: 30px;
+      }
 
       ${devices.ipads} {
         grid-area: services;
@@ -112,6 +133,10 @@ export const FooterSite = styled.footer`
             background-color: rgb(145, 145, 145);
             margin: 0 20px;
 
+            ${devices.smartphone} {
+              content: none;
+            }
+
             ${devices.ipads} {
               content: none;
             }
@@ -135,6 +160,10 @@ export const FooterSite = styled.footer`
       height: 100%;
       justify-content: flex-start;
 
+      ${devices.smartphone} {
+        flex-direction: column;
+      }
+
       ${devices.ipads} {
         flex-direction: column;
       }
@@ -149,6 +178,10 @@ export const FooterSite = styled.footer`
       flex-direction: column;
       gap: 10px;
       align-items: center;
+
+      ${devices.smartphone} {
+        grid-area: company;
+      }
 
       ${devices.ipads} {
         grid-area: company;
@@ -204,6 +237,11 @@ export const FooterSite = styled.footer`
       justify-content: flex-start;
       height: 100%;
 
+      ${devices.smartphone} {
+        grid-area: info;
+        justify-content: center;
+      }
+
       ${devices.ipads} {
         grid-area: info;
         justify-content: center;
@@ -221,6 +259,10 @@ export const FooterSite = styled.footer`
         flex-direction: row;
         gap: 20px;
         width: 100%;
+
+        ${devices.smartphone} {
+          height: 70%;
+        }
 
         ${devices.laptop} {
           height: 70%;
@@ -246,6 +288,10 @@ export const FooterSite = styled.footer`
           font-size: 24px;
           transition: transform 0.4s ease, background-color 0.3s ease;
           width: 12%;
+
+          ${devices.smartphone} {
+            width: 50px;
+          }
 
           ${devices.ipads} {
             width: 50px;
