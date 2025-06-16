@@ -13,6 +13,10 @@ export const ClientsSite = styled.section`
   height: 600px;
   background-color: #f5f5f5;
 
+  ${devices.smartphone} {
+    padding: 160px 40px;
+  }
+
   ${devices.ipads} {
     padding: 160px 40px;
   }
@@ -26,6 +30,11 @@ export const ClientsSite = styled.section`
     align-items: center;
     z-index: 3;
     padding: 0 1rem;
+
+    ${devices.smartphone} {
+      padding: 160px 40px;
+      height: max-content;
+    }
 
     ${devices.ipads} {
       padding: 160px 40px;
@@ -50,6 +59,10 @@ export const ClientsSite = styled.section`
     flex-direction: column;
     max-width: 1350px;
 
+    ${devices.smartphone} {
+      justify-content: space-between;
+    }
+
     ${devices.ipads} {
       justify-content: space-between;
     }
@@ -59,6 +72,10 @@ export const ClientsSite = styled.section`
     width: 100%;
     padding: 0px 20px;
     text-align: center;
+
+    ${devices.smartphone} {
+      padding: 0px 0px;
+    }
 
     ${devices.ipads} {
       padding: 0px 0px;
@@ -88,6 +105,11 @@ export const ClientsSite = styled.section`
       font-size: 54px;
       line-height: 1.185;
 
+      ${devices.smartphone} {
+        line-height: 1.3;
+        font-size: 34px;
+      }
+
       ${devices.ipads} {
         line-height: 1.3;
         font-size: 34px;
@@ -98,6 +120,10 @@ export const ClientsSite = styled.section`
   .clients-content {
     width: 100%;
     padding: 0px 20px;
+
+    ${devices.smartphone} {
+      padding: 0px;
+    }
 
     ${devices.ipads} {
       padding: 0px;

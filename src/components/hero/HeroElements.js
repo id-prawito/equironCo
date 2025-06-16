@@ -47,6 +47,10 @@ export const HeroSite = styled.section`
     background-repeat: no-repeat;
     width: 100%;
 
+    ${devices?.smartphone} {
+      height: 135vh;
+    }
+
     ${devices?.ipads} {
       height: 135vh;
     }
@@ -63,11 +67,6 @@ export const HeroSite = styled.section`
     z-index: 1;
   }
 
-  ${devices.smartphone} {
-    padding: 40px 0px;
-    min-height: 0px;
-  }
-
   .hero-content {
     display: flex;
     flex-direction: column;
@@ -78,6 +77,10 @@ export const HeroSite = styled.section`
     display: flex;
     flex-direction: column;
     gap: 20px;
+
+    ${devices.smartphone} {
+      align-items: center;
+    }
 
     ${devices.ipads} {
       align-items: center;
@@ -121,7 +124,7 @@ export const HeroSite = styled.section`
     margin: 0px;
 
     ${devices.smartphone} {
-      font-size: 38px;
+      font-size: 34px;
     }
 
     ${devices.ipads} {
@@ -137,7 +140,7 @@ export const HeroSite = styled.section`
     margin: 0px;
 
     ${devices.smartphone} {
-      font-size: 40px;
+      font-size: 34px;
     }
 
     ${devices.ipads} {
@@ -186,7 +189,8 @@ export const HeroSite = styled.section`
     max-width: 1250px;
 
     ${devices.smartphone} {
-      padding: 0px 25px;
+      flex-direction: column;
+      padding: 80px 40px;
     }
 
     ${devices.ipads} {
@@ -210,6 +214,10 @@ export const HeroSite = styled.section`
     justify-content: center;
     width: 85%;
     height: 100%;
+
+    ${devices.smartphone} {
+      width: 80%;
+    }
 
     ${devices.ipads} {
       width: 80%;
@@ -269,6 +277,14 @@ export const HeroSite = styled.section`
   .th-hero-bg {
     inset: 0;
     z-index: -4;
+
+    ${devices.smartphone} {
+      height: 780px;
+    }
+
+    ${devices.ipads} {
+      height: 980px;
+    }
 
     ${devices.laptop} {
       height: 670px;

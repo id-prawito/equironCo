@@ -12,6 +12,7 @@ export const ContactSite = styled.section`
   max-width: 1250px;
 
   ${devices.smartphone} {
+    padding: 80px 40px;
     justify-content: center;
     min-height: 0px;
   }
@@ -64,7 +65,7 @@ export const ContactSite = styled.section`
     padding-top: 60px;
 
     ${devices.smartphone} {
-      padding: 50px 25px;
+      padding: 0px 25px;
     }
 
     ${devices.ipads} {
@@ -113,6 +114,12 @@ export const ContactSite = styled.section`
     width: 100%;
     gap: 25px;
     margin-bottom: 50px;
+
+    ${devices.smartphone} {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 0px;
+    }
 
     ${devices.ipads} {
       display: flex;
@@ -193,6 +200,7 @@ export const FormContents = styled.div`
     border-radius: 20px;
     transition: box-shadow 1s;
     margin-right: 30px;
+
     ${devices.smartphone} {
       width: 100% !important;
     }
@@ -330,6 +338,16 @@ export const FormContents = styled.div`
     justify-content: flex-start;
     width: 50%;
 
+    ${devices.smartphone} {
+      width: 80%;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    ${devices.ipads} {
+      width: 80%;
+    }
+
     ${devices.laptop} {
       width: 70%;
     }
@@ -357,6 +375,10 @@ export const FormContents = styled.div`
     gap: 10px;
     align-items: flex-start;
     font-size: 14px;
+
+    ${devices.smartphone} {
+      flex-direction: column;
+    }
 
     :last-child {
       align-items: flex-start;
@@ -396,6 +418,14 @@ export const FormContents = styled.div`
       display: flex;
       flex-direction: row;
       justify-content: space-between;
+
+      ${devices.smartphone} {
+        flex-direction: column;
+      }
+
+      ${devices.ipads} {
+        flex-direction: column;
+      }
 
       ${devices.laptop} {
         flex-direction: column;

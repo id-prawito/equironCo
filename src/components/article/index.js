@@ -93,6 +93,7 @@ const Article = () => {
               loop={true}
               breakpoints={{
                 0: { slidesPerView: 1 },
+                590: { slidesPerView: 2 },
                 768: { slidesPerView: 2 },
                 1024: { slidesPerView: 2 },
                 1290: { slidesPerView: 3 },

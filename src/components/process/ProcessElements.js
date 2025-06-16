@@ -73,6 +73,12 @@ export const ProcessSite = styled.section`
     gap: 20px;
     justify-content: space-between;
 
+    ${devices.smartphone} {
+      display: flex;
+      justify-content: center;
+      flex-direction: column-reverse;
+    }
+
     ${devices.ipads} {
       display: flex;
       justify-content: center;
@@ -96,6 +102,11 @@ export const ProcessSite = styled.section`
       overflow: hidden;
       transition: transform 0.3s ease-in-out;
 
+      ${devices.smartphone} {
+        transform: none;
+        width: 100%;
+      }
+
       ${devices.ipads} {
         transform: none;
         width: 100%;
@@ -114,6 +125,14 @@ export const ProcessSite = styled.section`
 
       &:hover {
         animation: shaked 0.5s ease-in-out;
+
+        ${devices.smartphone} {
+          animation: none;
+        }
+
+        ${devices.ipads} {
+          animation: none;
+        }
 
         ${devices.tablet} {
           animation: none;
@@ -191,6 +210,11 @@ export const ProcessSite = styled.section`
         line-height: 1.3;
         font-weight: 700;
 
+        ${devices.smartphone} {
+          font-size: 34px;
+          margin-bottom: 20px;
+        }
+
         ${devices.ipads} {
           font-size: 34px;
           margin-bottom: 20px;
@@ -209,6 +233,14 @@ export const ProcessSite = styled.section`
         display: flex;
         margin-bottom: 20px;
         flex-direction: column;
+
+        ${devices.smartphone} {
+          margin-bottom: 0px;
+        }
+
+        ${devices.ipads} {
+          margin-bottom: 0px;
+        }
 
         ${devices.tablet} {
           margin-bottom: 0px;

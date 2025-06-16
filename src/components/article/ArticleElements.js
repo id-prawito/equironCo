@@ -13,6 +13,10 @@ export const ArticleSite = styled.section`
   height: 800px;
   background-color: #f5f5f5;
 
+  ${devices.smartphone} {
+    height: 100vh;
+  }
+
   ${devices.ipads} {
     height: 120vh;
   }
@@ -26,6 +30,10 @@ export const ArticleSite = styled.section`
     align-items: center;
     z-index: 3;
     padding: 0 1rem;
+
+    ${devices.smartphone} {
+      padding: 80px 40px;
+    }
 
     ${devices.ipads} {
       padding: 80px 40px;
@@ -55,6 +63,11 @@ export const ArticleSite = styled.section`
     width: 100%;
     padding: 0px 20px;
     margin-top: 80px;
+
+    ${devices.smartphone} {
+      margin-top: 0px;
+      padding: 0px;
+    }
 
     ${devices.ipads} {
       margin-top: 0px;
@@ -89,6 +102,11 @@ export const ArticleSite = styled.section`
       font-size: 54px;
       line-height: 1.185;
 
+      ${devices.smartphone} {
+        font-size: 34px;
+        line-height: 1.3;
+      }
+
       ${devices.ipads} {
         font-size: 34px;
         line-height: 1.3;
@@ -99,6 +117,10 @@ export const ArticleSite = styled.section`
   .article-content {
     width: 100%;
     padding: 0px 20px;
+
+    ${devices.smartphone} {
+      padding: 0px;
+    }
 
     ${devices.ipads} {
       padding: 0px;
@@ -154,6 +176,10 @@ export const ArticleSite = styled.section`
         align-items: center;
         justify-content: flex-start;
 
+        ${devices.smartphone} {
+          justify-content: space-between;
+        }
+
         ${devices.tablet} {
           justify-content: space-between;
         }
@@ -165,6 +191,15 @@ export const ArticleSite = styled.section`
           position: relative;
           margin-right: 26px;
           position: relative;
+
+          ${devices.smartphone} {
+            margin-right: 4px;
+            font-size: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2px;
+          }
 
           ${devices.tablet} {
             margin-right: 4px;
@@ -190,6 +225,14 @@ export const ArticleSite = styled.section`
             background: #e0e0e0;
             top: 2px;
 
+            ${devices.smartphone} {
+              content: none;
+            }
+
+            ${devices.ipads} {
+              content: none;
+            }
+
             ${devices.tablet} {
               content: none;
             }
@@ -197,6 +240,14 @@ export const ArticleSite = styled.section`
 
           &:last-child::before {
             content: none;
+
+            ${devices.smartphone} {
+              content: none;
+            }
+
+            ${devices.ipads} {
+              content: none;
+            }
 
             ${devices.tablet} {
               content: none;
@@ -215,6 +266,16 @@ export const ArticleSite = styled.section`
         color: #011c1a;
         text-transform: none;
         margin: 0 0 15px 0;
+
+        ${devices.smartphone} {
+          line-height: 1.2;
+          font-size: 18px;
+        }
+
+        ${devices.ipads} {
+          line-height: 1.2;
+          font-size: 18px;
+        }
 
         ${devices.tablet} {
           line-height: 1.2;
