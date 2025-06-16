@@ -62,8 +62,7 @@ export const ProcessSite = styled.section`
     }
 
     ${devices.tablet} {
-      padding: 80px 20px;
-      max-width: 650px;
+      padding: 80px 100px;
     }
   }
 
@@ -179,6 +178,10 @@ export const ProcessSite = styled.section`
         font-size: 54px;
         line-height: 1.085;
         font-weight: 700;
+
+        ${devices.tablet} {
+          margin-bottom: 20px;
+        }
 
         ${devices.laptop} {
           font-size: 40px;

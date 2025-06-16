@@ -117,7 +117,7 @@ const Teams = () => {
               breakpoints={{
                 0: { slidesPerView: 1 },
                 800: { slidesPerView: 2 },
-                950: { slidesPerView: 3 },
+                950: { slidesPerView: 2 },
                 1024: { slidesPerView: 3 },
                 1290: { slidesPerView: 4 },
               }}

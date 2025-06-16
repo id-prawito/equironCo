@@ -24,8 +24,7 @@ export const ArticleSite = styled.section`
     padding: 0 1rem;
 
     ${devices.tablet} {
-      max-width: 650px;
-      padding: 80px 20px;
+      padding: 80px 100px;
     }
 
     ${devices.laptop} {

@@ -14,11 +14,31 @@ export const HeroSite = styled.section`
   padding: 0px 0px 0px 0px;
 
   .background-container {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     position: absolute;
+
+    ${devices.laptop} {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+    }
+
+    ${devices.desktops} {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+    }
+
+    ${devices.screen_large} {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+    }
   }
 
   .background-images-hero {
@@ -28,7 +48,7 @@ export const HeroSite = styled.section`
     width: 100%;
 
     ${devices?.tablet} {
-      height: 90vh;
+      height: 150vh;
     }
   }
 
@@ -163,15 +183,11 @@ export const HeroSite = styled.section`
 
     ${devices.tablet} {
       flex-direction: column;
-      max-width: 680px;
+      padding: 80px 100px;
     }
 
     ${devices.smartphone} {
       padding: 0px 25px;
-    }
-
-    ${devices.tablet} {
-      padding: 0px 20px;
     }
   }
 

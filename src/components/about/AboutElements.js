@@ -86,8 +86,7 @@ export const AboutSite = styled.section`
     }
 
     ${devices.tablet} {
-      padding: 80px 20px;
-      max-width: 650px;
+      padding: 80px 100px;
       gap: 24px;
     }
 
@@ -267,7 +266,7 @@ export const AboutSite = styled.section`
       height: 100%;
 
       ${devices.tablet} {
-        height: 80%;
+        height: 100%;
       }
 
       ${devices.laptop} {
@@ -334,7 +333,7 @@ export const AboutSite = styled.section`
       gap: 20px;
 
       ${devices.tablet} {
-        height: 80%;
+        height: 100%;
       }
 
       ${devices.laptop} {

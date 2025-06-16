@@ -34,8 +34,7 @@ export const FooterSite = styled.footer`
         "company info";
       grid-template-columns: 1fr 1fr;
       gap: 20px;
-      max-width: 650px;
-      padding: 20px 0;
+      padding: 80px 100px;
     }
 
     ${devices.laptop} {

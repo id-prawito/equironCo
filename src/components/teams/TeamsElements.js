@@ -53,8 +53,7 @@ export const TeamsSite = styled.section`
     padding: 0 1rem;
 
     ${devices.tablet} {
-      padding: 0px;
-      height: 640px;
+      padding: 80px 100px;
     }
   }
 
@@ -69,8 +68,6 @@ export const TeamsSite = styled.section`
 
     ${devices.tablet} {
       flex-direction: column;
-      max-width: 650px;
-      padding: 80px 20px;
       justify-content: space-between;
     }
 

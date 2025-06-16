@@ -28,8 +28,7 @@ export const ServicesSite = styled.section`
     }
 
     ${devices.tablet} {
-      padding: 80px 20px;
-      max-width: 650px;
+      padding: 80px 100px;
     }
   }
 
