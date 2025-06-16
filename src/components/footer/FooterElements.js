@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { devices } from "../../assets/scss/_respondTo";
 import themeList from "../../config/themeList";
+import whatsapp from "../../assets/img/law_stack/whatsapp.png";
 
 export const FooterSite = styled.footer`
   display: flex;
@@ -356,6 +357,54 @@ export const FooterSite = styled.footer`
     &:hover {
       color: #6c62e2;
       transition: 0.1s all ease;
+    }
+  }
+`;
+
+export const WaItemSite = styled.div`
+  .wa {
+    &_content {
+      position: fixed;
+      background: #1bd741aa;
+      border-radius: 50px;
+      text-align: right;
+      overflow: hidden;
+      bottom: 15px;
+      width: 150px;
+      height: 50px;
+      right: 15px;
+      z-index: 99;
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+
+      a {
+        display: flex;
+        align-items: center;
+        height: 50px;
+        width: 100%;
+      }
+    }
+
+    &_text {
+      display: inline-block;
+      color: ${({ theme: { theme } }) =>
+        theme === themeList.light ? "#fff" : "#000"};
+      letter-spacing: 0.2px;
+      padding-left: 20px;
+      text-align: center;
+      line-height: 1.2;
+      background: 0 0;
+      font-size: 10px;
+      width: 90px;
+    }
+
+    &_icon {
+      display: inline-block;
+      background: url(${whatsapp}) #1bd741 center center no-repeat;
+      background-size: 90%;
+      border-radius: 50px;
+      margin-left: auto;
+      height: 50px;
+      width: 50px;
     }
   }
 `;

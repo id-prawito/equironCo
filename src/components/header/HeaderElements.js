@@ -66,6 +66,15 @@ export const HeaderContainer = styled.div`
     padding: 0px 25px;
   }
 
+  .button-switcher {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+  }
+
   .menuIcon,
   .closeIcon {
     display: flex;

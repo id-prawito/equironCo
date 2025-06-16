@@ -15,6 +15,9 @@ export const ClientsSite = styled.section`
 
   ${devices.smartphone} {
     padding: 160px 40px;
+    align-items: center;
+    justify-content: center;
+    height: 700px;
   }
 
   ${devices.ipads} {
