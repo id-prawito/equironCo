@@ -46,6 +46,10 @@ export const NavLinks = styled(Link)`
   &.active {
     color: #b88649;
   }
+
+  &.active-new {
+    color: #fff;
+  }
 `;
 
 export const HeaderContainer = styled.div`
@@ -141,8 +145,7 @@ export const HeaderContainer = styled.div`
 
       .logo {
         &__img {
-          height: 38px;
-          width: 38px;
+          width: 150px;
           transition: 0.3s all ease;
 
           &:hover {

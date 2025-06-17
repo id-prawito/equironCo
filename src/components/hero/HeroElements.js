@@ -71,6 +71,11 @@ export const HeroSite = styled.section`
     display: flex;
     flex-direction: column;
     gap: 20px;
+
+    h1 {
+      font-weight: 500;
+      font-size: 20px;
+    }
   }
 
   .hero-content-images {

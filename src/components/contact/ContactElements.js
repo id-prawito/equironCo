@@ -82,6 +82,10 @@ export const ContactSite = styled.section`
     flex-direction: column;
     align-items: center;
     gap: 20px;
+
+    h1 {
+      font-size: 20px;
+    }
   }
 
   .big-heading {
@@ -192,10 +196,12 @@ export const FormContents = styled.div`
   .card-form {
     height: max-content;
     background-color: ${({ theme: { theme } }) =>
-      theme === themeList.light ? "#fff" : "var(--mediumColor)"};
+      theme === themeList.light
+        ? "var(--dark-text-white)"
+        : "var(--dark-text-white)"};
     border: 1px solid
       ${({ theme: { theme } }) =>
-        theme === themeList.light ? "#bdbdbd" : "var(--mediumColor)"};
+        theme === themeList.light ? "#bdbdbd" : "#bdbdbd"};
     box-sizing: border-box;
     border-radius: 20px;
     transition: box-shadow 1s;
@@ -233,6 +239,8 @@ export const FormContents = styled.div`
     }
 
     p {
+      color: ${({ theme: { theme } }) =>
+        theme === themeList.light ? "#000" : "#000"};
       text-align: left;
       font-size: 14px;
       line-height: 1.5;
@@ -309,7 +317,7 @@ export const FormContents = styled.div`
 
     border: 1px solid
       ${({ theme: { theme } }) =>
-        theme === themeList.light ? "#bdbdbd" : "var(--mediumColor)"};
+        theme === themeList.light ? "#bdbdbd" : "#bdbdbd"};
     box-sizing: border-box;
     border-radius: 8px;
     color: #00193e;
@@ -500,7 +508,7 @@ export const FormContents = styled.div`
     padding: 12px 20px;
     border: 1px solid
       ${({ theme: { theme } }) =>
-        theme === themeList.light ? "#bdbdbd" : "var(--mediumColor)"};
+        theme === themeList.light ? "#bdbdbd" : "#bdbdbd"};
     box-sizing: border-box;
     border-radius: 8px;
     color: #00193e;
@@ -646,7 +654,7 @@ export const FormContents = styled.div`
 
       border: 1px solid
         ${({ theme: { theme } }) =>
-          theme === themeList.light ? "#bdbdbd" : "var(--mediumColor)"};
+          theme === themeList.light ? "#bdbdbd" : "#bdbdbd"};
       box-sizing: border-box;
       border-radius: 8px;
       color: #00193e;
@@ -732,9 +740,7 @@ export const FormContents = styled.div`
           padding: 0.75rem;
           border: 1px solid
             ${({ theme: { theme } }) =>
-              theme === themeList.light
-                ? "#fff"
-                : "var(--mediumColor)"} !important;
+              theme === themeList.light ? "#fff" : "#fff"} !important;
           font-size: 14px;
           font-weight: 400;
           text-align: center;
@@ -756,7 +762,7 @@ export const FormContents = styled.div`
     td {
       border: 1px solid
         ${({ theme: { theme } }) =>
-          theme === themeList.light ? "#fff" : "var(--mediumColor)"};
+          theme === themeList.light ? "#fff" : "#fff"};
       padding: 0.75rem;
       color: #000;
       line-height: 1.3;

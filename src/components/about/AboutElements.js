@@ -134,6 +134,7 @@ export const AboutSite = styled.section`
     flex: 0 0 40%;
     gap: 20px;
     margin-right: 20px;
+    line-height: 1.4;
 
     ${devices.smartphone} {
       width: 100%;
@@ -160,6 +161,13 @@ export const AboutSite = styled.section`
       font-size: 14px;
       color: ${({ theme: { theme } }) =>
         theme === themeList.light ? "#6b7280" : "#bcbcbc"};
+    }
+
+    .title-equ {
+      color: ${({ theme: { theme } }) =>
+        theme === themeList.light
+          ? "var(--light-text-black)"
+          : "var(--dark-text-white)"};
     }
 
     .big-heading-about {
@@ -210,7 +218,9 @@ export const AboutSite = styled.section`
         span {
           font-weight: 600;
           font-size: 15px;
-          color: rgb(67, 69, 75);
+
+          color: ${({ theme: { theme } }) =>
+            theme === themeList.light ? "var(--lightText)" : "#fff"};
         }
       }
     }

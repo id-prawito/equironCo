@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { devices } from "../../assets/scss/_respondTo";
+import themeList from "../../config/themeList";
 
 export const ArticleSite = styled.section`
   position: relative;
@@ -11,7 +12,10 @@ export const ArticleSite = styled.section`
   justify-content: center;
   align-items: center;
   height: 800px;
-  background-color: #f5f5f5;
+  background-color: ${({ theme: { theme } }) =>
+    theme === themeList.light
+      ? "var(--light-background)"
+      : "var(--dark-background)"};
 
   ${devices.smartphone} {
     height: 100vh;
@@ -91,10 +95,14 @@ export const ArticleSite = styled.section`
       font-size: 20px;
       text-transform: capitalize;
       display: block;
+      font-weight: 500;
     }
 
     .article-subtitle {
-      color: #011c1a;
+      color: ${({ theme: { theme } }) =>
+        theme === themeList.light
+          ? "var(--light-text-black)"
+          : "var(--dark-text-white)"};
       text-transform: none;
       font-weight: 700;
       line-height: 1.4;

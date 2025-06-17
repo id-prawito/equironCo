@@ -48,7 +48,9 @@ export const ServicesSite = styled.section`
         line-height: 1.8;
         font-weight: 400;
         font-size: 14px;
-        color: #6b7280;
+        color: ${({ theme: { theme } }) =>
+          theme === themeList.light ? "#6b7280" : "#bcbcbc"};
+
         width: 80%;
         text-align: center;
 
@@ -73,6 +75,10 @@ export const ServicesSite = styled.section`
         font-weight: 600;
         font-size: 40px;
         margin: 0px;
+        color: ${({ theme: { theme } }) =>
+          theme === themeList.light
+            ? "var(--light-text-black)"
+            : "var(--dark-text-white)"};
 
         ${devices.smartphone} {
           font-size: 30px;
@@ -85,11 +91,6 @@ export const ServicesSite = styled.section`
           line-height: 1.3;
           text-align: center;
         }
-
-        color: ${({ theme: { theme } }) =>
-          theme === themeList.light
-            ? "var(--light-text-black)"
-            : "var(--dark-text-white)"};
       }
     }
   }
@@ -98,7 +99,7 @@ export const ServicesSite = styled.section`
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     width: 100%;
-    gap: 15px;
+    gap: 24px 15px;
     color: #000000;
 
     ${devices.smartphone} {

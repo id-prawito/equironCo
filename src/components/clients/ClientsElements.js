@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { devices } from "../../assets/scss/_respondTo";
+import themeList from "../../config/themeList";
 
 export const ClientsSite = styled.section`
   position: relative;
@@ -11,13 +12,16 @@ export const ClientsSite = styled.section`
   justify-content: center;
   align-items: center;
   height: 600px;
-  background-color: #f5f5f5;
+  background-color: ${({ theme: { theme } }) =>
+    theme === themeList.light
+      ? "var(--light-background)"
+      : "var(--dark-background)"};
 
   ${devices.smartphone} {
     padding: 160px 40px;
     align-items: center;
     justify-content: center;
-    height: 700px;
+    /* height: 700px; */
   }
 
   ${devices.ipads} {
@@ -75,6 +79,7 @@ export const ClientsSite = styled.section`
     width: 100%;
     padding: 0px 20px;
     text-align: center;
+    font-weight: 500;
 
     ${devices.smartphone} {
       padding: 0px 0px;
@@ -100,7 +105,10 @@ export const ClientsSite = styled.section`
     }
 
     .clients-subtitle {
-      color: #011c1a;
+      color: ${({ theme: { theme } }) =>
+        theme === themeList.light
+          ? "var(--light-text-black)"
+          : "var(--dark-text-white)"};
       text-transform: none;
       font-weight: 700;
       line-height: 1.4;
@@ -140,18 +148,25 @@ export const ClientsSite = styled.section`
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 180px;
-    border-radius: 24px;
+    height: 200px;
+    border-radius: 16px;
     overflow: hidden;
+    border: 1px solid #000;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 15px;
+    border: 1px solid #fafafa;
+    background-color: #f0f0f0;
 
     .content-img {
       display: flex;
       justify-content: center;
       align-items: center;
+      width: 100%;
+      height: 100%;
 
       img {
-        width: 100%;
-        height: 100%;
+        max-width: 80%;
+        max-height: 80%;
+        object-fit: contain;
       }
     }
   }

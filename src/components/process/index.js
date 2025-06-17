@@ -63,10 +63,16 @@ const Process = () => {
                   <FaRegHandshake className="icon-class" />
                 </div>
                 <div className="process-item-content">
-                  <div className="box-title">Initial Consultation</div>
+                  <div className="box-title">Consultations</div>
                   <div className="desc">
-                    Our experienced lawyers thoroughly analyze the facts of each
-                    case. They then apply the relevant laws to provide clear.
+                    The consultation begins with a client inquiry. We schedule a
+                    meeting, either online or in-person. During the session, we
+                    identify legal issues and gather relevant documents. After
+                    analysis, we provide legal advice and possible solutions. If
+                    needed, follow-up consultations are arranged.
+                    Confidentiality is guaranteed throughout. We ensure clarity,
+                    professionalism, and support every step of the way to
+                    resolve legal matters effectively.
                   </div>
                 </div>
               </motion.div>
@@ -75,22 +81,17 @@ const Process = () => {
                   <FaRegNewspaper className="icon-class" />
                 </div>
                 <div className="process-item-content">
-                  <div className="box-title">Case Evaluation</div>
+                  <div className="box-title">Executions</div>
                   <div className="desc">
-                    We prioritize understanding your concerns and aligning with
-                    your goals. Your satisfaction is our top priority.
-                  </div>
-                </div>
-              </motion.div>
-              <motion.div variants={item_nya} className="process-item">
-                <div className="process-item-icon">
-                  <FaPeopleArrows className="icon-class" />
-                </div>
-                <div className="process-item-content">
-                  <div className="box-title">Legal Strategy</div>
-                  <div className="desc">
-                    We develop a customized plan to protect your rights and
-                    achieve the best possible outcome.
+                    After consultation, we draft necessary legal documents and
+                    agreements. Upon client approval, we proceed with filing,
+                    negotiation, or representation. We coordinate with relevant
+                    authorities or parties to ensure proper execution.
+                    Throughout the process, we provide updates and clarify each
+                    step. Final outcomes are reviewed with the client. Our goal
+                    is to deliver effective, timely, and compliant results that
+                    reflect the agreed legal strategy and protect the client’s
+                    interests.
                   </div>
                 </div>
               </motion.div>

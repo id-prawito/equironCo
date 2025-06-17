@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { FaInstagram, FaRegEnvelope } from "react-icons/fa";
 import { FooterSite, Item, WaItemSite } from "./FooterElements";
 import axios from "axios";
-import logoEquiron from "../../assets/img/law_stack/logoEquiron.png";
+import logoEquironWhite from "../../assets/img/law_stack/logo_white.png";
 import {
   FiFacebook,
   FiLinkedin,
@@ -35,6 +35,39 @@ const Footer = () => {
     getList();
   }, []);
 
+  const valueSelect = [
+    [
+      { name: "Merger and Acquisitions", value: "Merger and Acquisitions" },
+      { name: "Banking and Finance", value: "Banking and Finance" },
+    ],
+    [
+      { name: "Land and Property", value: "Land and Property" },
+      { name: "Project Development", value: "Project Development" },
+    ],
+    [
+      {
+        name: "Technology, Media & Telecom",
+        value: "Technology, Media & Telecom",
+      },
+      {
+        name: "Corporate Compliance Services",
+        value: "Corporate Compliance Services",
+      },
+    ],
+    [
+      {
+        name: "Food & Beverage, Anti-Trust & Competition Law",
+        value: "Food & Beverage, Anti-Trust & Competition Law",
+      },
+      { name: "Start-Up Company", value: "Start-Up Company" },
+    ],
+    [
+      { name: "Criminal Law", value: "Criminal Law" },
+      { name: "Civil Law", value: "Civil Law" },
+    ],
+    [{ name: "Coal & Nickel Mining", value: "Coal & Nickel Mining" }],
+  ];
+
   return (
     <FooterSite>
       <div className="footer-container">
@@ -42,23 +75,20 @@ const Footer = () => {
           <div className="text">Our Services</div>
 
           <div className="test-flex">
-            <div className="service">
-              <div className="text">Real Estate Law</div>
-              <div className="text">Personal Injury</div>
-            </div>
-            <div className="service">
-              <div className="text">Corporate Law</div>
-              <div className="text">Criminal Law</div>
-            </div>
-            <div className="service">
-              <div className="text">Health Care</div>
-              <div className="text">Family Law</div>
-            </div>
+            {valueSelect.map((group, index) => (
+              <div className="service" key={index}>
+                {group.map((item, subIndex) => (
+                  <div className="text" key={subIndex}>
+                    {item.name}
+                  </div>
+                ))}
+              </div>
+            ))}
           </div>
         </div>
         <div className="footer-company">
           <div className="footer-company-logo">
-            <img src={logoEquiron} alt="law_logo" />
+            <img src={logoEquironWhite} alt="law_logo" />
           </div>
           <div className="footer-company-desc">
             Equiron & Co. is a forward-thinking, full-service law firm dedicated
@@ -102,7 +132,7 @@ const Footer = () => {
             </div>
             <div className="card-info">
               <div className="text">Phone</div>
-              <div className="desc">+ 152-6485-5468</div>
+              <div className="desc">+62 8777-7000-919</div>
             </div>
           </div>
           <div className="footer-info-card">
@@ -111,7 +141,7 @@ const Footer = () => {
             </div>
             <div className="card-info">
               <div className="text">Email</div>
-              <div className="desc">info@equiron.com</div>
+              <div className="desc">equironandco@gmail.com</div>
             </div>
           </div>
         </div>

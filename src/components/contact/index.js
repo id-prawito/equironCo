@@ -10,7 +10,7 @@ import { useInView } from "react-intersection-observer";
 import { useAnimation, motion } from "framer-motion";
 import { CONTACT_DATA } from "../../config/Data";
 import { ButtonContent, ContactSite, FormContents } from "./ContactElements";
-import { FiFacebook, FiPhone, FiX } from "react-icons/fi";
+import { FiFacebook, FiPhone, FiVoicemail, FiX } from "react-icons/fi";
 
 const Contact = () => {
   const controls = useAnimation();
@@ -52,7 +52,7 @@ const Contact = () => {
   const [select, setSelect] = useState("");
   const [berhasil, setBerhasil] = useState(false);
 
-  const whatsappNumber = "6282137925172";
+  const whatsappNumber = "6287777000919";
 
   const set = (name) => {
     return ({ target: { value } }) => {
@@ -62,20 +62,20 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const text = `LAPORAN PENGADUAN
+    const text = `LAPORAN KONSULTASI
 
 Informasi Pelapor:
 Nama          : ${form.name}
 No. HP        : ${form.phone}
 Email         : ${form.email}
-Jenis Layanan : ${select}
+Area Praktek : ${select}
 
 -------------------------
 
-Detail Pengaduan:
+Detail Konsultasi:
 ${form.message}
 
-Pesan ini dikirim melalui formulir pengaduan online.
+Pesan ini dikirim melalui formulir konsultasi online.
 Mohon segera ditindaklanjuti oleh tim terkait.
 
 Terima kasih.`;
@@ -104,12 +104,48 @@ Terima kasih.`;
 
   const valueSelect = [
     {
-      name: "Penyimpanan Dana",
-      value: "penyimpanan_dana",
+      name: "Merger and Acquisitions",
+      value: "Merger and Acquisitions",
     },
     {
-      name: "Penyaluran Dana",
-      value: "penyaluran_dana",
+      name: "Banking and Finance",
+      value: "Banking and Finance",
+    },
+    {
+      name: "Land and Property",
+      value: "Land and Property",
+    },
+    {
+      name: "Project Development",
+      value: "Project Development",
+    },
+    {
+      name: "Technology, Media & Telecom",
+      value: "Technology, Media & Telecom",
+    },
+    {
+      name: "Corporate Compliance Services",
+      value: "Corporate Compliance Services",
+    },
+    {
+      name: "Food & Beverage, Anti-Trust & Competition Law",
+      value: "Food & Beverage, Anti-Trust & Competition Law",
+    },
+    {
+      name: "Start-Up Company",
+      value: "Start-Up Company",
+    },
+    {
+      name: "Criminal Law",
+      value: "Criminal Law",
+    },
+    {
+      name: "Civil Law",
+      value: "Civil Law",
+    },
+    {
+      name: "Coal & Nickel Mining",
+      value: "Coal & Nickel Mining",
     },
   ];
 
@@ -147,8 +183,8 @@ Terima kasih.`;
               <div className="content">
                 <div className="title-text">Submit Your Inquiry</div>
                 <p>
-                  <b>Keteragan : </b>Kirimkan pesan atau pengaduan kepada kami,
-                  senang melayani anda sebagai nasabah kami, Terimakasih.
+                  <b>Keteragan : </b>Kirimkan pesan atau konsultasi kepada kami,
+                  senang melayani anda sebagai client kami, Terimakasih.
                 </p>
                 <div className="content-form">
                   <form
@@ -170,7 +206,7 @@ Terima kasih.`;
                               value="Laki-laki"
                               onChange={() => {}}
                             />
-                            Laki-laki
+                            Individual
                           </div>
                           <div className="text">
                             <input
@@ -179,7 +215,7 @@ Terima kasih.`;
                               value="Perempuan"
                               onChange={() => {}}
                             />
-                            Perempuan
+                            Non Individual
                           </div>
                         </div>
                       </div>
@@ -208,7 +244,7 @@ Terima kasih.`;
                       <FormInputSelectNew
                         option={valueSelect}
                         onChange={handleSelect}
-                        placeholder="Jenis Layanan"
+                        placeholder="Area Praktek"
                         value={select}
                       />
                     </div>
@@ -218,8 +254,8 @@ Terima kasih.`;
                       placeholder="Pesan Anda"
                     />
                     <p style={{ fontSize: "12px", borderBottom: "none" }}>
-                      <b>Catatan Lain : </b> Pesan balasan daripada form
-                      pengaduan akan dikirimkan melalui No. Hp yang di masukan,
+                      <b>Catatan Lain : </b> Pesan balasan daripada pesan
+                      konsultasi akan dikirimkan melalui No. Hp yang di masukan,
                       jadi pastikan No. Hp anda aktif dan benar.
                     </p>
                     {berhasil ? (
@@ -238,7 +274,7 @@ Terima kasih.`;
                       <Button
                         id="form_baru"
                         icon={FaAccusoft}
-                        label="Kirim Pesan Pengaduan"
+                        label="Kirim Pesan Konsultasi"
                         style={{ fontSize: "12px" }}
                       >
                         Hitung
@@ -296,15 +332,25 @@ Terima kasih.`;
                   <div className="text-desc">
                     <div className="informasi-kantor">
                       Email :
-                      <div className="style-email"> equiron@gmail.com</div>
+                      <div className="style-email">
+                        <a href="mailto:equironandco@gmail.com">
+                          equiron@gmail.com
+                        </a>
+                      </div>
                     </div>
                     <div className="informasi-kantor">
                       No. Handphone :
-                      <div className="style-email"> +62831765782572</div>
+                      <div className="style-email">
+                        <a href="https://wa.me/6287777000919">6287777000919</a>
+                      </div>
                     </div>
                   </div>
 
-                  <div className="maps">Buka Maps</div>
+                  <div className="maps">
+                    <a href="https://maps.app.goo.gl/QnPgB2Svhveq7kpJ8">
+                      Buka Maps
+                    </a>
+                  </div>
                 </div>
               </div>
             </motion.div>
@@ -420,33 +466,27 @@ export const FormInputSelectNew = (item) => {
 
 export const MEDIA_SOSIAL = [
   {
-    to: "https://wa.me/085225100894",
+    to: "https://wa.me/6287777000919",
     label: "Whatsapp",
     icon: FaWhatsapp,
-    title: "085225100894",
+    title: "6287777000919",
   },
   {
-    to: "#",
+    to: "https://www.instagram.com/equironandco/",
     label: "Instagram",
     icon: FaInstagram,
     title: "Equiron And Co.",
   },
   {
-    to: "#",
-    label: "Facebook",
-    icon: FiFacebook,
-    title: "Equiron And Co.",
-  },
-  {
-    to: "tel:+6282137925174",
+    to: "tel:+6287777000919",
     label: "Telp.",
     icon: FiPhone,
-    title: "(0295) 4150478",
+    title: "+6287777000919",
   },
   {
-    to: "",
-    label: "Fax",
-    icon: FaFax,
-    title: "4150400",
+    to: "mailto:equironandco@gmail.com",
+    label: "Email",
+    icon: FiVoicemail,
+    title: "equironandco@gmail.com",
   },
 ];
