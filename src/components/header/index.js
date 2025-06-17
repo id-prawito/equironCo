@@ -1,12 +1,16 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import { FaArrowRight, FaChevronUp, FaEllipsisV } from "react-icons/fa";
 import { HeaderContainer, HeaderSite, NavLinks } from "./HeaderElements";
 import { FiMenu, FiX } from "react-icons/fi";
 import { MEDIA_SOSIAL, NAVLINKS } from "../../config/Data";
 import logoSite from "../../assets/img/logo_site.png";
+import logoEquironHeaderBlack from "../../assets/img/law_stack/header_logo_black.png";
+import logoEquironHeaderWhite from "../../assets/img/law_stack/header_logo_white.png";
 import logoEquiron from "../../assets/img/law_stack/logoEquiron.png";
 import ThemeSwitcher, { ThemeSwitcherFlag } from "../../config/ThemeSwicter";
 import { motion } from "framer-motion";
+import themeList from "../../config/themeList";
+import ThemeContext from "../../config/ThemeContext";
 
 const Header = () => {
   const headerRef = useRef(null);
@@ -73,6 +77,8 @@ const Header = () => {
     });
   }, []);
 
+  const { theme } = useContext(ThemeContext);
+
   return (
     <HeaderSite ref={headerRef}>
       <HeaderContainer>
@@ -88,10 +94,13 @@ const Header = () => {
                 <div className="header-text-logo">
                   <img
                     alt="logo_header"
-                    src={logoEquiron}
+                    src={
+                      theme === themeList.light
+                        ? logoEquironHeaderBlack
+                        : logoEquironHeaderWhite
+                    }
                     className="logo__img"
                   />
-                  <div className="text-logo">Equiron and Co.</div>
                 </div>
               </NavLinks>
             </motion.div>

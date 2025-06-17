@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { FaInstagram, FaRegEnvelope } from "react-icons/fa";
 import { FooterSite, Item, WaItemSite } from "./FooterElements";
 import axios from "axios";
-import logoEquiron from "../../assets/img/law_stack/logoEquiron.png";
+import logoEquironWhite from "../../assets/img/law_stack/logo_white.png";
 import {
   FiFacebook,
   FiLinkedin,
@@ -88,7 +88,7 @@ const Footer = () => {
         </div>
         <div className="footer-company">
           <div className="footer-company-logo">
-            <img src={logoEquiron} alt="law_logo" />
+            <img src={logoEquironWhite} alt="law_logo" />
           </div>
           <div className="footer-company-desc">
             Equiron & Co. is a forward-thinking, full-service law firm dedicated

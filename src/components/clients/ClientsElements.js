@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { devices } from "../../assets/scss/_respondTo";
+import themeList from "../../config/themeList";
 
 export const ClientsSite = styled.section`
   position: relative;
@@ -11,7 +12,10 @@ export const ClientsSite = styled.section`
   justify-content: center;
   align-items: center;
   height: 600px;
-  background-color: #f5f5f5;
+  background-color: ${({ theme: { theme } }) =>
+    theme === themeList.light
+      ? "var(--light-background)"
+      : "var(--dark-background)"};
 
   ${devices.smartphone} {
     padding: 160px 40px;
@@ -75,6 +79,7 @@ export const ClientsSite = styled.section`
     width: 100%;
     padding: 0px 20px;
     text-align: center;
+    font-weight: 500;
 
     ${devices.smartphone} {
       padding: 0px 0px;
@@ -100,7 +105,10 @@ export const ClientsSite = styled.section`
     }
 
     .clients-subtitle {
-      color: #011c1a;
+      color: ${({ theme: { theme } }) =>
+        theme === themeList.light
+          ? "var(--light-text-black)"
+          : "var(--dark-text-white)"};
       text-transform: none;
       font-weight: 700;
       line-height: 1.4;

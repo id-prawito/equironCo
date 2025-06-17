@@ -163,6 +163,13 @@ export const AboutSite = styled.section`
         theme === themeList.light ? "#6b7280" : "#bcbcbc"};
     }
 
+    .title-equ {
+      color: ${({ theme: { theme } }) =>
+        theme === themeList.light
+          ? "var(--light-text-black)"
+          : "var(--dark-text-white)"};
+    }
+
     .big-heading-about {
       color: ${({ theme: { theme } }) =>
         theme === themeList.light
@@ -211,7 +218,9 @@ export const AboutSite = styled.section`
         span {
           font-weight: 600;
           font-size: 15px;
-          color: rgb(67, 69, 75);
+
+          color: ${({ theme: { theme } }) =>
+            theme === themeList.light ? "var(--lightText)" : "#fff"};
         }
       }
     }

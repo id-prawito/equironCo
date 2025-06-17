@@ -93,13 +93,13 @@ const About = () => {
               A Legacy <span>Of</span> Legal Excellence
             </div>
             <p>
-              <b style={{ color: "#000" }}>Equiron & Co.</b> is a
-              forward-thinking, full-service law firm dedicated to providing
-              comprehensive legal solutions across various sectors. Founded with
-              a vision to become a trusted legal partner, we serve individuals,
-              businesses, and organizations with professionalism and integrity.
-              Our core values—Trust, Commitment, and Accessibility—are at the
-              heart of everything we do.
+              <b className="title-equ">Equiron & Co.</b> is a forward-thinking,
+              full-service law firm dedicated to providing comprehensive legal
+              solutions across various sectors. Founded with a vision to become
+              a trusted legal partner, we serve individuals, businesses, and
+              organizations with professionalism and integrity. Our core
+              values—Trust, Commitment, and Accessibility—are at the heart of
+              everything we do.
             </p>
             <ul className="text-skill">
               {skillData?.map((item, i) => (

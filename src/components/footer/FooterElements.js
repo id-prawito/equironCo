@@ -118,15 +118,19 @@ export const FooterSite = styled.footer`
         }
 
         .text {
-          font-size: 14px;
-          font-weight: 500;
-          color: rgb(145, 145, 145);
+          font-size: 12px;
+          font-weight: 400;
           position: relative;
           text-align: left;
           max-width: 200px;
           overflow: hidden;
           text-overflow: ellipsis;
           white-space: nowrap;
+
+          color: ${({ theme: { theme } }) =>
+            theme === themeList.light
+              ? "rgb(145, 145, 145)"
+              : "var(--dark-text-white)"};
 
           &::after {
             content: "";
@@ -198,9 +202,12 @@ export const FooterSite = styled.footer`
       }
 
       &-logo {
+        width: 130px;
+        /* height: 100px; */
+
         img {
-          width: 100px;
-          height: 100px;
+          width: 100%;
+          height: 100%;
         }
       }
 
@@ -208,7 +215,11 @@ export const FooterSite = styled.footer`
         font-size: 13px;
         width: 100%;
         line-height: 2;
-        color: rgb(145, 145, 145);
+
+        color: ${({ theme: { theme } }) =>
+          theme === themeList.light
+            ? "rgb(145, 145, 145)"
+            : "var(--dark-text-white)"};
       }
 
       &-social {

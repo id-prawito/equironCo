@@ -205,7 +205,10 @@ export const ProcessSite = styled.section`
       }
 
       .title {
-        color: #011c1a;
+        color: ${({ theme: { theme } }) =>
+          theme === themeList.light
+            ? "var(--light-text-black)"
+            : "var(--dark-text-white)"};
         font-size: 54px;
         line-height: 1.3;
         font-weight: 700;
@@ -300,12 +303,19 @@ export const ProcessSite = styled.section`
               font-size: 30px;
               margin-bottom: 7px;
               font-weight: 600;
+
+              color: ${({ theme: { theme } }) =>
+                theme === themeList.light
+                  ? "var(--light-text-black)"
+                  : "var(--dark-text-white)"};
             }
 
             .desc {
               margin: 0 0 18px 0;
-              color: #868686;
+              color: ${({ theme: { theme } }) =>
+                theme === themeList.light ? "#6b7280" : "#bcbcbc"};
               line-height: 1.75;
+              font-size: 14px;
             }
           }
         }
