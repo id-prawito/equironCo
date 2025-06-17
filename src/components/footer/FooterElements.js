@@ -123,12 +123,16 @@ export const FooterSite = styled.footer`
           color: rgb(145, 145, 145);
           position: relative;
           text-align: left;
+          max-width: 200px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
 
           &::after {
             content: "";
             position: absolute;
             top: 0;
-            right: 0;
+            right: -20px;
             height: 100%;
             width: 1px;
             background-color: rgb(145, 145, 145);
@@ -170,7 +174,8 @@ export const FooterSite = styled.footer`
       }
 
       ${devices.tablet} {
-        flex-direction: row;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
       }
     }
 

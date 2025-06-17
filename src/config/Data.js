@@ -349,7 +349,7 @@ export const HERO_DATA = {
     "Our team of experienced attorneys has a diverse range of expe rtise, covering a wide spectrum of legal areas. We specialize in corporate law, family law.",
   button: [
     {
-      to: "/contact",
+      to: "https://wa.me/6287777000919",
       nama_button: "CONTACT US",
       icon: FaChalkboardTeacher,
     },

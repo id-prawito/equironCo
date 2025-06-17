@@ -157,13 +157,16 @@ const Header = () => {
                     </div>
                     <div className="header__item">
                       <div className="resume">
-                        <a
-                          href={require("../../assets/cv_prawito.pdf")}
-                          target="_blank"
-                          rel="noopener noreferrer"
+                        <NavLinks
+                          to="contact"
+                          smooth={true}
+                          duration={500}
+                          activeClass="active-new"
+                          spy={true}
+                          offset={-80}
                         >
                           FREE KONSULTASI
-                        </a>
+                        </NavLinks>
                         <FaArrowRight />
                       </div>
                     </div>

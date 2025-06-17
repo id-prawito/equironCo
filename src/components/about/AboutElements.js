@@ -134,6 +134,7 @@ export const AboutSite = styled.section`
     flex: 0 0 40%;
     gap: 20px;
     margin-right: 20px;
+    line-height: 1.4;
 
     ${devices.smartphone} {
       width: 100%;

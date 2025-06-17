@@ -98,7 +98,7 @@ export const ServicesSite = styled.section`
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     width: 100%;
-    gap: 15px;
+    gap: 24px 15px;
     color: #000000;
 
     ${devices.smartphone} {

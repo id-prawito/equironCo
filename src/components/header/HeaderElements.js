@@ -46,6 +46,10 @@ export const NavLinks = styled(Link)`
   &.active {
     color: #b88649;
   }
+
+  &.active-new {
+    color: #fff;
+  }
 `;
 
 export const HeaderContainer = styled.div`

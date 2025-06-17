@@ -53,13 +53,19 @@ const About = () => {
   ];
 
   const skillData = [
-    { icon: FaCheckCircle, text: "Committed to excellence in legal practice." },
     {
       icon: FaCheckCircle,
-      text: "Act with honesty and uphold ethical principles.",
+      text: "Trust is the foundation of our client relationships.",
     },
-    { icon: FaCheckCircle, text: "Road Test Preparation with 98% success" },
-    { icon: FaCheckCircle, text: "Meeting clients' needs is our priority." },
+    {
+      icon: FaCheckCircle,
+      text: "Client-Centered Approach, Excellence and Proactivity",
+    },
+    {
+      icon: FaCheckCircle,
+      text: "Accessibility is central to our philosophy.",
+    },
+    { icon: FaCheckCircle, text: "Partners in Your Success" },
   ];
 
   return (
@@ -79,14 +85,21 @@ const About = () => {
       >
         <div className="about-content">
           <motion.div variants={item_nya} className="about-details">
-            <h1>Being a frontend developer / frontend engineer.</h1>
+            <h1>
+              Our core values—Trust, Commitment, and Accessibility—are at the
+              heart of everything we do.
+            </h1>
             <div className="big-heading-about">
               A Legacy <span>Of</span> Legal Excellence
             </div>
             <p>
-              Our team of experienced attorneys has a diverse range of expe
-              rtise, covering a wide spectrum of legal areas. We specialize in
-              corporate law, family law.
+              <b style={{ color: "#000" }}>Equiron & Co.</b> is a
+              forward-thinking, full-service law firm dedicated to providing
+              comprehensive legal solutions across various sectors. Founded with
+              a vision to become a trusted legal partner, we serve individuals,
+              businesses, and organizations with professionalism and integrity.
+              Our core values—Trust, Commitment, and Accessibility—are at the
+              heart of everything we do.
             </p>
             <ul className="text-skill">
               {skillData?.map((item, i) => (

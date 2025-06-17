@@ -17,7 +17,7 @@ export const ClientsSite = styled.section`
     padding: 160px 40px;
     align-items: center;
     justify-content: center;
-    height: 700px;
+    /* height: 700px; */
   }
 
   ${devices.ipads} {
@@ -140,18 +140,25 @@ export const ClientsSite = styled.section`
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 180px;
-    border-radius: 24px;
+    height: 200px;
+    border-radius: 16px;
     overflow: hidden;
+    border: 1px solid #000;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 15px;
+    border: 1px solid #fafafa;
+    background-color: #f0f0f0;
 
     .content-img {
       display: flex;
       justify-content: center;
       align-items: center;
+      width: 100%;
+      height: 100%;
 
       img {
-        width: 100%;
-        height: 100%;
+        max-width: 80%;
+        max-height: 80%;
+        object-fit: contain;
       }
     }
   }
