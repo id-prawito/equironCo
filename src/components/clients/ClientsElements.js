@@ -165,10 +165,15 @@ export const ClientsSite = styled.section`
 
   .shape-mockup-clients-left {
     position: absolute;
-    left: -50px;
+    left: 0;
     top: 0;
     z-index: 1;
     pointer-events: none;
+    opacity: 0.5;
+
+    ${devices.smartphone} {
+      width: 40%;
+    }
   }
 
   .shape-mockup-clients-right {
@@ -177,6 +182,11 @@ export const ClientsSite = styled.section`
     bottom: 0;
     z-index: 1;
     pointer-events: none;
+    opacity: 0.5;
+
+    ${devices.smartphone} {
+      width: 40%;
+    }
   }
 
   .jump-clients {
