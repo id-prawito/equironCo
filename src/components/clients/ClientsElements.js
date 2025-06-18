@@ -5,23 +5,17 @@ import themeList from "../../config/themeList";
 export const ClientsSite = styled.section`
   position: relative;
   width: 100%;
-  overflow: hidden;
-  padding: 0px;
   max-width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 600px;
   background-color: ${({ theme: { theme } }) =>
-    theme === themeList.light
-      ? "var(--light-background)"
-      : "var(--dark-background)"};
+    theme === themeList.light ? "#fff" : "var(--dark-background)"};
 
   ${devices.smartphone} {
-    padding: 160px 40px;
     align-items: center;
     justify-content: center;
-    /* height: 700px; */
   }
 
   ${devices.ipads} {
@@ -29,14 +23,12 @@ export const ClientsSite = styled.section`
   }
 
   .clients-container {
-    position: absolute;
-    width: 100%;
-    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    height: 100%;
     z-index: 3;
-    padding: 0 1rem;
 
     ${devices.smartphone} {
       padding: 160px 40px;
@@ -149,12 +141,12 @@ export const ClientsSite = styled.section`
     align-items: center;
     width: 100%;
     height: 200px;
-    border-radius: 16px;
+    border-radius: 24px;
     overflow: hidden;
     border: 1px solid #000;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 15px;
     border: 1px solid #fafafa;
-    background-color: #f0f0f0;
+    background-color: #f8f8f8;
 
     .content-img {
       display: flex;
@@ -181,7 +173,7 @@ export const ClientsSite = styled.section`
 
   .shape-mockup-clients-right {
     position: absolute;
-    right: -50px;
+    right: 0;
     bottom: 0;
     z-index: 1;
     pointer-events: none;
