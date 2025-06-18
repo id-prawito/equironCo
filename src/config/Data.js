@@ -59,6 +59,12 @@ import {
   service_card_1_3,
   service_card_1_4,
   service_card_1_5,
+  team_member_1,
+  team_member_2,
+  team_member_3,
+  team_member_4,
+  teams_bg,
+  teams_jump_left,
 } from "./_equironImages";
 
 export const NAVLINKS = [
@@ -232,7 +238,7 @@ export const SERVICES_DATA_EQUIRON = {
 };
 
 export const PROCESS_DATA_EQUIRON = {
-  shape_mockup_data: [
+  process_shape_mockup_data: [
     {
       tech_img: process_jump_right,
       tech_name: "process_jump_right",
@@ -256,6 +262,91 @@ export const PROCESS_DATA_EQUIRON = {
       title: "Executions",
       desc: `After consultation, we draft necessary legal documents and agreements. Upon client approval, we proceed with filing, negotiation, or representation. We coordinate with relevant authorities or parties to ensure proper execution. Throughout the process, we provide updates and clarify each step. Final outcomes are reviewed with the client. Our goal is to deliver effective, timely, and compliant results that reflect the agreed legal strategy and protect the client’s interests.`,
       icon: FaRegNewspaper,
+    },
+  ],
+};
+
+export const TEAMS_DATA_EQUIRON = {
+  teams_bg_images: {
+    title: teams_bg,
+    alt: "teams_bg",
+  },
+  teams_text: "Our Teams",
+  teams_title: "Dedicated Lawyers, Proven Results",
+  teams_members: [
+    {
+      name: "Smith Miller",
+      title: "Attorney",
+      image: team_member_1,
+      socials: [
+        { icon: FaInstagram, url: "https://instagram.com/smithmiller" },
+        { icon: FiTwitter, url: "https://twitter.com/smithmiller" },
+        { icon: FiLinkedin, url: "https://linkedin.com/in/smithmiller" },
+        { icon: FiPhone, url: "tel:+628111111111" },
+      ],
+    },
+    {
+      name: "Samira Dsuza",
+      title: "Senior Partner",
+      image: team_member_2,
+      socials: [
+        { icon: FaInstagram, url: "https://instagram.com/samira" },
+        { icon: FiTwitter, url: "https://twitter.com/samira" },
+        { icon: FiLinkedin, url: "https://linkedin.com/in/samira" },
+        { icon: FiPhone, url: "tel:+628122222222" },
+      ],
+    },
+    {
+      name: "Michel Phelps",
+      title: "Chief Justice",
+      image: team_member_3,
+      socials: [
+        { icon: FaInstagram, url: "https://instagram.com/phelps" },
+        { icon: FiTwitter, url: "https://twitter.com/phelps" },
+        { icon: FiLinkedin, url: "https://linkedin.com/in/phelps" },
+        { icon: FiPhone, url: "tel:+628133333333" },
+      ],
+    },
+    {
+      name: "Sarah Rahma",
+      title: "Legal Advisor",
+      image: team_member_4,
+      socials: [
+        { icon: FaInstagram, url: "https://instagram.com/sarahrahma" },
+        { icon: FiTwitter, url: "https://twitter.com/sarahrahma" },
+        { icon: FiLinkedin, url: "https://linkedin.com/in/sarahrahma" },
+        { icon: FiPhone, url: "tel:+628144444444" },
+      ],
+    },
+    {
+      name: "Smith Miller",
+      title: "Attorney",
+      image: team_member_1,
+      socials: [
+        { icon: FaInstagram, url: "https://instagram.com/smithmiller" },
+        { icon: FiTwitter, url: "https://twitter.com/smithmiller" },
+        { icon: FiLinkedin, url: "https://linkedin.com/in/smithmiller" },
+        { icon: FiPhone, url: "tel:+628111111111" },
+      ],
+    },
+    {
+      name: "Samira Dsuza",
+      title: "Senior Partner",
+      image: team_member_2,
+      socials: [
+        { icon: FaInstagram, url: "https://instagram.com/samira" },
+        { icon: FiTwitter, url: "https://twitter.com/samira" },
+        { icon: FiLinkedin, url: "https://linkedin.com/in/samira" },
+        { icon: FiPhone, url: "tel:+628122222222" },
+      ],
+    },
+  ],
+  teams_shape_mockup_data: [
+    {
+      tech_img: teams_jump_left,
+      tech_name: "shape-mockup-teams",
+      alt: "teams_jump_left",
+      class: "right",
     },
   ],
 };

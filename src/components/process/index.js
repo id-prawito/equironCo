@@ -36,7 +36,7 @@ const Process = () => {
 
   return (
     <ProcessSite id="process">
-      {PROCESS_DATA_EQUIRON?.shape_mockup_data?.map((item, index) => (
+      {PROCESS_DATA_EQUIRON?.process_shape_mockup_data?.map((item, index) => (
         <div
           key={index}
           className={`shape-mockup-process-${item.class} jump-process`}

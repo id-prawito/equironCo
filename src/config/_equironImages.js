@@ -10,6 +10,12 @@ import service_card_1_4 from "../assets/img/law_stack/services/service_card_1_4.
 import service_card_1_5 from "../assets/img/law_stack/services/service_card_1_5.svg";
 import process_jump_right from "../assets/img/law_stack/process-1-shape.png";
 import process_one from "../assets/img/law_stack/process-1.jpg";
+import teams_bg from "../assets/img/law_stack/team-1-bg.jpg";
+import team_member_1 from "../assets/img/law_stack/teams/team_member_1.jpg";
+import team_member_2 from "../assets/img/law_stack/teams/team_member_2.jpg";
+import team_member_3 from "../assets/img/law_stack/teams/team_member_3.jpg";
+import team_member_4 from "../assets/img/law_stack/teams/team_member_4.jpg";
+import teams_jump_left from "../assets/img/law_stack/process-1-shape.png";
 
 export {
   about_jump_right,
@@ -24,4 +30,10 @@ export {
   service_card_1_5,
   process_jump_right,
   process_one,
+  teams_bg,
+  team_member_1,
+  team_member_2,
+  team_member_3,
+  team_member_4,
+  teams_jump_left,
 };
