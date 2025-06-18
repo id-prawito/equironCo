@@ -52,14 +52,28 @@ import {
 import {
   about_jump_left,
   about_jump_right,
+  aimtopindo_logo,
+  chakra_giri_logo,
+  citra_harapan_jaya_permai_logo,
+  clients_shape_left,
+  clients_shape_right,
+  clm_logo,
+  dana_paint_logo,
+  gaharu_pelayaran_logo,
   images_about_1,
   images_about_2,
   images_about_3,
+  indo_berkat_logo,
+  lliadi_logo,
+  mitra_galperti_logo,
+  pbe_logo,
   process_jump_right,
   process_one,
+  pssi_logo,
   publication_image,
   publications_shape_left,
   publications_shape_right,
+  semesta_energi_service_logo,
   service_card_1_1,
   service_card_1_2,
   service_card_1_3,
@@ -71,6 +85,8 @@ import {
   team_member_4,
   teams_bg,
   teams_jump_left,
+  tridaya_esa_pakarti_logo,
+  warna_warni_logo,
 } from "./_equironImages";
 
 export const NAVLINKS = [
@@ -433,6 +449,98 @@ export const PUBLICATIONS_DATA_EQUIRON = {
       tech_img: publications_shape_left,
       tech_name: "publications_shape_left",
       alt: "publications-shape-right",
+      class: "left",
+    },
+  ],
+};
+
+export const CLIENTS_DATA_EQUIRON = {
+  clients_text: "Clients",
+  clients_title: "Our Featured Clients",
+
+  clients_data_client: [
+    {
+      name: "AIMTOPINDO",
+      title: "aimtopindo_logo",
+      image: aimtopindo_logo,
+    },
+    {
+      name: "Chakra Giri",
+      title: "chakra_giri_logo",
+      image: chakra_giri_logo,
+    },
+    {
+      name: "Citra Harapan Jaya Permai",
+      title: "citra_harapan_jaya_permai_logo",
+      image: citra_harapan_jaya_permai_logo,
+    },
+    {
+      name: "CLM",
+      title: "clm_logo",
+      image: clm_logo,
+    },
+    {
+      name: "Dana Paint",
+      title: "dana_paint_logo",
+      image: dana_paint_logo,
+    },
+    {
+      name: "PSSI",
+      title: "pssi_logo",
+      image: pssi_logo,
+    },
+    {
+      name: "Gaharu Pelayaran",
+      title: "gaharu_pelayaran_logo",
+      image: gaharu_pelayaran_logo,
+    },
+    {
+      name: "Lliadi",
+      title: "lliadi_logo",
+      image: lliadi_logo,
+    },
+    {
+      name: "Indo Berkat",
+      title: "indo_berkat_logo",
+      image: indo_berkat_logo,
+    },
+    {
+      name: "Mitra Galperti",
+      title: "mitra_galperti_logo",
+      image: mitra_galperti_logo,
+    },
+    {
+      name: "PBE",
+      title: "pbe_logo",
+      image: pbe_logo,
+    },
+    {
+      name: "Semesta Energi Service",
+      title: "semesta_energi_service_logo",
+      image: semesta_energi_service_logo,
+    },
+    {
+      name: "Tridaya Esa Pakarti",
+      title: "tridaya_esa_pakarti_logo",
+      image: tridaya_esa_pakarti_logo,
+    },
+    {
+      name: "Warna Warni",
+      title: "warna_warni_logo",
+      image: warna_warni_logo,
+    },
+  ],
+  clients_shape_mockup_data: [
+    {
+      tech_img: clients_shape_right,
+      tech_name: "clients_shape_right",
+      alt: "clients-shape-right",
+      class: "right",
+    },
+    {
+      tech_img: clients_shape_left,
+      tech_name: "clients_shape_left",
+      alt: "clients-shape-left",
       class: "left",
     },
   ],

@@ -19,6 +19,23 @@ import teams_jump_left from "../assets/img/law_stack/process-1-shape.png";
 import publication_image from "../assets/img/law_stack/blog_bg.jpg";
 import publications_shape_right from "../assets/img/law_stack/blog-1-shape-right.png";
 import publications_shape_left from "../assets/img/law_stack/blog-1-shape-left.png";
+import clients_shape_left from "../assets/img/law_stack/blog-1-shape-left.png";
+import clients_shape_right from "../assets/img/law_stack/blog-1-shape-right.png";
+
+import aimtopindo_logo from "./../assets/img/law_stack/clients/aimtopindo_logo.png";
+import chakra_giri_logo from "./../assets/img/law_stack/clients/chakra-giri_logo.png";
+import citra_harapan_jaya_permai_logo from "./../assets/img/law_stack/clients/citra-harapan-jaya-permai_logo.png";
+import clm_logo from "./../assets/img/law_stack/clients/clm_logo.png";
+import dana_paint_logo from "./../assets/img/law_stack/clients/dana-paint_logo.png";
+import pssi_logo from "./../assets/img/law_stack/clients/pssi_logo.png";
+import gaharu_pelayaran_logo from "./../assets/img/law_stack/clients/gaharu-pelayaran_logo.png";
+import lliadi_logo from "./../assets/img/law_stack/clients/Illiadi_logo.png";
+import indo_berkat_logo from "./../assets/img/law_stack/clients/indo-berkat_logo.png";
+import mitra_galperti_logo from "./../assets/img/law_stack/clients/mitra galperti_logo.webp";
+import pbe_logo from "./../assets/img/law_stack/clients/pbe_logo.png";
+import semesta_energi_service_logo from "./../assets/img/law_stack/clients/semesta-energi-service_logo.png";
+import tridaya_esa_pakarti_logo from "./../assets/img/law_stack/clients/tridaya-esa-pakarti_logo.png";
+import warna_warni_logo from "./../assets/img/law_stack/clients/warna-warni_logo.png";
 
 export {
   about_jump_right,
@@ -42,4 +59,20 @@ export {
   publication_image,
   publications_shape_right,
   publications_shape_left,
+  clients_shape_left,
+  clients_shape_right,
+  aimtopindo_logo,
+  chakra_giri_logo,
+  citra_harapan_jaya_permai_logo,
+  clm_logo,
+  dana_paint_logo,
+  pssi_logo,
+  gaharu_pelayaran_logo,
+  lliadi_logo,
+  indo_berkat_logo,
+  mitra_galperti_logo,
+  pbe_logo,
+  semesta_energi_service_logo,
+  tridaya_esa_pakarti_logo,
+  warna_warni_logo,
 };
