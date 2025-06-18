@@ -16,6 +16,9 @@ import team_member_2 from "../assets/img/law_stack/teams/team_member_2.jpg";
 import team_member_3 from "../assets/img/law_stack/teams/team_member_3.jpg";
 import team_member_4 from "../assets/img/law_stack/teams/team_member_4.jpg";
 import teams_jump_left from "../assets/img/law_stack/process-1-shape.png";
+import publication_image from "../assets/img/law_stack/blog_bg.jpg";
+import publications_shape_right from "../assets/img/law_stack/blog-1-shape-right.png";
+import publications_shape_left from "../assets/img/law_stack/blog-1-shape-left.png";
 
 export {
   about_jump_right,
@@ -36,4 +39,7 @@ export {
   team_member_3,
   team_member_4,
   teams_jump_left,
+  publication_image,
+  publications_shape_right,
+  publications_shape_left,
 };

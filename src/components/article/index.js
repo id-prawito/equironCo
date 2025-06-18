@@ -1,16 +1,13 @@
 import React, { useEffect } from "react";
-import shape_right from "../../assets/img/law_stack/blog-1-shape-right.png";
-import shape_lect from "../../assets/img/law_stack/blog-1-shape-left.png";
-import { FaCalendarAlt, FaCommentAlt, FaUserAlt } from "react-icons/fa";
-import blog_bg from "../../assets/img/law_stack/blog_bg.jpg";
+import { PUBLICATIONS_DATA_EQUIRON } from "../../config/Data";
 import { useInView } from "react-intersection-observer";
 import { Navigation, Pagination } from "swiper/modules";
 import { useAnimation, motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { ArticleSite } from "./ArticleElements";
-import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import "swiper/css";
 
 const Article = () => {
   const controls = useAnimation();
@@ -41,33 +38,6 @@ const Article = () => {
       opacity: 1,
     },
   };
-  const articles = [
-    {
-      name: "Smith Miller",
-      title: "Steps to Pursue a Career as a Legal Project Manager.",
-      image: blog_bg,
-    },
-    {
-      name: "Samira Dsuza",
-      title: "Steps to Pursue a Career as a Legal Project Manager.",
-      image: blog_bg,
-    },
-    {
-      name: "Michel Phelps",
-      title: "Steps to Pursue a Career as a Legal Project Manager.",
-      image: blog_bg,
-    },
-    {
-      name: "Sarah Rahma",
-      title: "Steps to Pursue a Career as a Legal Project Manager.",
-      image: blog_bg,
-    },
-    {
-      name: "Sarah Rahma",
-      title: "Steps to Pursue a Career as a Legal Project Manager.",
-      image: blog_bg,
-    },
-  ];
 
   return (
     <ArticleSite id="article">
@@ -80,8 +50,12 @@ const Article = () => {
           className="article-content-container"
         >
           <motion.div variants={item_nya} className="article-desc">
-            <div className="article-title">Publications</div>
-            <div className="article-subtitle">Our Publications & Update</div>
+            <div className="article-title">
+              {PUBLICATIONS_DATA_EQUIRON?.publications_text}
+            </div>
+            <div className="article-subtitle">
+              {PUBLICATIONS_DATA_EQUIRON?.publications_title}
+            </div>
           </motion.div>
           <motion.div variants={item_nya} className="article-content">
             <Swiper
@@ -99,45 +73,56 @@ const Article = () => {
                 1290: { slidesPerView: 3 },
               }}
             >
-              {articles.map((article, index) => (
-                <SwiperSlide key={index}>
-                  <div className="blog-card">
-                    <div className="blog-img">
-                      <a href="/">
-                        <img src={article?.image} alt={article?.title}></img>
-                      </a>
-                    </div>
-                    <div className="blog-content">
-                      <div className="blog-meta">
-                        <a href="/">
-                          <FaUserAlt /> By Jonson
-                        </a>
-                        <a href="/">
-                          <FaCalendarAlt /> 22 Sep, 2025
-                        </a>
-                        <a href="/">
-                          <FaCommentAlt /> 2 Comments
-                        </a>
+              {PUBLICATIONS_DATA_EQUIRON?.publications_articles?.map(
+                (article, index) => {
+                  const {
+                    user: UserIcon,
+                    calendar: CalendarIcon,
+                    comment: CommentIcon,
+                  } = article.icons;
+                  return (
+                    <SwiperSlide key={index}>
+                      <div className="blog-card">
+                        <div className="blog-img">
+                          <a href="/">
+                            <img src={article.image} alt={article.title} />
+                          </a>
+                        </div>
+                        <div className="blog-content">
+                          <div className="blog-meta">
+                            <a href="/">
+                              <UserIcon /> By {article.author.split(" ")[0]}
+                            </a>
+                            <a href="/">
+                              <CalendarIcon /> {article.date}
+                            </a>
+                            <a href="/">
+                              <CommentIcon /> {article.comments}
+                            </a>
+                          </div>
+                          <h3 className="box-title">
+                            <a href="/">{article.title}</a>
+                          </h3>
+                        </div>
                       </div>
-                      <h3 className="box-title">
-                        <a href="/">{article?.title}</a>
-                      </h3>
-                    </div>
-                  </div>
-                </SwiperSlide>
-              ))}
+                    </SwiperSlide>
+                  );
+                }
+              )}
             </Swiper>
           </motion.div>
         </motion.div>
       </div>
-
-      <div className="shape-mockup-article-left jump-article">
-        <img src={shape_lect} alt="jump" />
-      </div>
-
-      <div className="shape-mockup-article-right jump-article">
-        <img src={shape_right} alt="jump" />
-      </div>
+      {PUBLICATIONS_DATA_EQUIRON?.publications_shape_mockup_data?.map(
+        (item, index) => (
+          <div
+            key={index}
+            className={`shape-mockup-article-${item.class} jump_about`}
+          >
+            <img src={item.tech_img} alt={item.alt} />
+          </div>
+        )
+      )}
     </ArticleSite>
   );
 };

@@ -36,7 +36,7 @@ const About = () => {
 
   return (
     <AboutSite ref={ref} id="about">
-      {ABOUT_DATA_EQUIRON?.shape_mockup_data?.map((item, index) => (
+      {ABOUT_DATA_EQUIRON?.about_shape_mockup_data?.map((item, index) => (
         <div
           key={index}
           className={`shape-mockup-about-${item.class} jump_about`}

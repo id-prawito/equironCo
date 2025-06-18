@@ -44,6 +44,9 @@ import {
   FaTrophy,
   FaRegHandshake,
   FaRegNewspaper,
+  FaCommentAlt,
+  FaCalendarAlt,
+  FaUserAlt,
 } from "react-icons/fa";
 
 import {
@@ -54,6 +57,9 @@ import {
   images_about_3,
   process_jump_right,
   process_one,
+  publication_image,
+  publications_shape_left,
+  publications_shape_right,
   service_card_1_1,
   service_card_1_2,
   service_card_1_3,
@@ -101,7 +107,7 @@ export const NAVLINKS = [
 ];
 
 export const ABOUT_DATA_EQUIRON = {
-  shape_mockup_data: [
+  about_shape_mockup_data: [
     {
       tech_img: about_jump_right,
       tech_name: "about_jump_right",
@@ -351,6 +357,87 @@ export const TEAMS_DATA_EQUIRON = {
   ],
 };
 
+export const PUBLICATIONS_DATA_EQUIRON = {
+  publications_text: "Publications",
+  publications_title: "Our Publications & Update",
+  publications_articles: [
+    {
+      author: "Smith Miller",
+      title: "Steps to Pursue a Career as a Legal Project Manager.",
+      image: publication_image,
+      date: "22 Sep, 2025",
+      comments: "2 Comments",
+      icons: {
+        user: FaUserAlt,
+        calendar: FaCalendarAlt,
+        comment: FaCommentAlt,
+      },
+    },
+    {
+      author: "Samira",
+      title: "Top 10 Legal Tech Trends in 2025.",
+      image: publication_image,
+      date: "18 Sep, 2025",
+      comments: "4 Comments",
+      icons: {
+        user: FaUserAlt,
+        calendar: FaCalendarAlt,
+        comment: FaCommentAlt,
+      },
+    },
+    {
+      author: "Michel",
+      title: "How Legal Frameworks Shape Business Success.",
+      image: publication_image,
+      date: "14 Sep, 2025",
+      comments: "5 Comments",
+      icons: {
+        user: FaUserAlt,
+        calendar: FaCalendarAlt,
+        comment: FaCommentAlt,
+      },
+    },
+    {
+      author: "Sarah",
+      title: "Understanding Contract Law in Modern Business.",
+      image: publication_image,
+      date: "10 Sep, 2025",
+      comments: "8 Comments",
+      icons: {
+        user: FaUserAlt,
+        calendar: FaCalendarAlt,
+        comment: FaCommentAlt,
+      },
+    },
+    {
+      author: "David",
+      title: "The Importance of Due Diligence in Legal Practice.",
+      image: publication_image,
+      date: "05 Sep, 2025",
+      comments: "3 Comments",
+      icons: {
+        user: FaUserAlt,
+        calendar: FaCalendarAlt,
+        comment: FaCommentAlt,
+      },
+    },
+  ],
+  publications_shape_mockup_data: [
+    {
+      tech_img: publications_shape_right,
+      tech_name: "publications_shape_right",
+      alt: "publications-shape-right",
+      class: "right",
+    },
+    {
+      tech_img: publications_shape_left,
+      tech_name: "publications_shape_left",
+      alt: "publications-shape-right",
+      class: "left",
+    },
+  ],
+};
+
 export const TECH_STACK = [
   {
     tech_img: html5,
@@ -433,54 +520,6 @@ export const TECH_STACK = [
     tech_name: "Vue JS",
   },
 ];
-
-export const ABOUT_DATA = {
-  text_small: "Being a frontend developer / frontend engineer.",
-  big_heading: "Who am I <span>&</span> how did i get here.",
-  text_description:
-    "Our team of experienced attorneys has a diverse range of expe rtise, covering a wide spectrum of legal areas. We specialize in corporate law, family law.",
-  skill: [
-    { icon: FaCheckCircle, text: "Committed to excellence in legal practice." },
-    {
-      icon: FaCheckCircle,
-      text: "Act with honesty and uphold ethical principles.",
-    },
-    { icon: FaCheckCircle, text: "Road Test Preparation with 98% success" },
-    { icon: FaCheckCircle, text: "Meeting clients' needs is our priority." },
-  ],
-  card_myArea: [
-    {
-      backgroundColor: "#3d6270",
-      images: reactJs,
-      alt: "React JS",
-      years: "(0.8 Years)",
-      description: "Technology that is my main focus to explore.",
-    },
-    {
-      backgroundColor: "#939caa",
-      images: mySQL,
-      alt: "MySQL",
-      years: "(1.8 Years)",
-      description: "Database technology I learned first.",
-    },
-  ],
-  card_myArea2: [
-    {
-      backgroundColor: "#25397e",
-      images: figma,
-      alt: "Figma",
-      years: "(0.8 Years)",
-      description: "I use it to create a user interface.",
-    },
-    {
-      backgroundColor: "#354164",
-      images: nodeJS,
-      alt: "Node JS",
-      years: "(0.5 Years)",
-      description: "I learned because it deals with Javascript.",
-    },
-  ],
-};
 
 export const CONTACT_DATA = {
   text_small: "Have Any Questions?",
