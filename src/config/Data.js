@@ -50,6 +50,11 @@ import {
   images_about_1,
   images_about_2,
   images_about_3,
+  service_card_1_1,
+  service_card_1_2,
+  service_card_1_3,
+  service_card_1_4,
+  service_card_1_5,
 } from "./_equironImages";
 
 export const NAVLINKS = [
@@ -134,6 +139,91 @@ export const ABOUT_DATA_EQUIRON = {
     { icon: <FaUserShield />, value: "12k+", label: "Expert Attorneys" },
     { icon: <FaStarHalfAlt />, value: "15k+", label: "Happy Clients" },
     { icon: <FaTrophy />, value: "20k+", label: "Award Winning" },
+  ],
+};
+
+export const SERVICES_DATA_EQUIRON = {
+  service_big_heading: "Legal Services We Offer",
+  service_desc:
+    "At Equiron & Co., we provide forward-thinking and comprehensive legal services tailored to meet the demands of today’s dynamic legal landscape. Guided by our core values—Trust, Commitment, and Accessibility—we deliver clear, strategic legal counsel across a broad spectrum of practice areas. Whether serving individuals, corporations, or institutions, our experienced team takes a client-first approach, ensuring each solution is crafted with precision, integrity, and a deep understanding of your unique needs. With Equiron & Co. by your side, you can face legal complexities with clarity and confidence.",
+  service_data_services: [
+    {
+      icon: service_card_1_1,
+      cornerIcon: service_card_1_1,
+      cardTitle: "Merger and Acquisitions",
+      cardDesc:
+        "Strategic legal guidance for seamless mergers, acquisitions, and business transitions.",
+    },
+    {
+      icon: service_card_1_2,
+      cornerIcon: service_card_1_2,
+      cardTitle: "Banking and Finance",
+      cardDesc:
+        "Reliable counsel on financial regulations, lending structures, and transactional compliance.",
+    },
+    {
+      icon: service_card_1_3,
+      cornerIcon: service_card_1_3,
+      cardTitle: "Land and Property",
+      cardDesc:
+        "Comprehensive support on real estate transactions, land use, and asset protection.",
+    },
+    {
+      icon: service_card_1_4,
+      cornerIcon: service_card_1_4,
+      cardTitle: "Project Development",
+      cardDesc:
+        "Legal support from planning to execution, ensuring regulatory and commercial alignment.",
+    },
+    {
+      icon: service_card_1_5,
+      cornerIcon: service_card_1_5,
+      cardTitle: "Technology, Media & Telecom",
+      cardDesc:
+        "Insightful legal solutions for innovation-driven sectors in a fast-evolving digital world.",
+    },
+    {
+      icon: service_card_1_1,
+      cornerIcon: service_card_1_1,
+      cardTitle: "Corporate Compliance Services",
+      cardDesc:
+        "Helping businesses meet governance standards with clarity and confidence.",
+    },
+    {
+      icon: service_card_1_2,
+      cornerIcon: service_card_1_2,
+      cardTitle: "Food & Beverage, Anti-Trust & Competition Law",
+      cardDesc:
+        "Navigating industry regulations while protecting your competitive edge.",
+    },
+    {
+      icon: service_card_1_3,
+      cornerIcon: service_card_1_3,
+      cardTitle: "Start-Up Company",
+      cardDesc:
+        "Tailored legal frameworks to support sustainable growth from early stages.",
+    },
+    {
+      icon: service_card_1_4,
+      cornerIcon: service_card_1_4,
+      cardTitle: "Criminal Law",
+      cardDesc:
+        "Trusted representation and defense with integrity, discretion, and expertise.",
+    },
+    {
+      icon: service_card_1_5,
+      cornerIcon: service_card_1_5,
+      cardTitle: "Civil Law",
+      cardDesc:
+        "Resolving personal and commercial disputes with fairness and efficiency.",
+    },
+    {
+      icon: service_card_1_1,
+      cornerIcon: service_card_1_1,
+      cardTitle: "Coal & Nickel Mining",
+      cardDesc:
+        "Legal insight into mining operations, licensing, and environmental compliance.",
+    },
   ],
 };
 

@@ -178,9 +178,10 @@ export const ServicesSite = styled.section`
 
       .corner-icon {
         position: absolute;
-        top: 16px;
-        right: 16px;
+        top: 0px;
+        right: -25px;
         z-index: 1;
+        opacity: 0.3;
 
         img {
           width: 110px;
