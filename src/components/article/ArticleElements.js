@@ -5,20 +5,17 @@ import themeList from "../../config/themeList";
 export const ArticleSite = styled.section`
   position: relative;
   width: 100%;
-  overflow: hidden;
-  padding: 0px;
   max-width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 800px;
   background-color: ${({ theme: { theme } }) =>
-    theme === themeList.light
-      ? "var(--light-background)"
-      : "var(--dark-background)"};
+    theme === themeList.light ? "#fff" : "var(--dark-background)"};
 
   ${devices.smartphone} {
-    height: 100vh;
+    align-items: center;
+    justify-content: center;
   }
 
   ${devices.ipads} {
@@ -26,17 +23,16 @@ export const ArticleSite = styled.section`
   }
 
   .article-container {
-    position: absolute;
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 3;
-    padding: 0 1rem;
 
     ${devices.smartphone} {
       padding: 80px 40px;
+      height: max-content;
     }
 
     ${devices.ipads} {
@@ -305,18 +301,28 @@ export const ArticleSite = styled.section`
 
   .shape-mockup-article-left {
     position: absolute;
-    left: -50px;
+    left: 0;
     top: 0;
     z-index: 1;
     pointer-events: none;
+    opacity: 0.5;
+
+    ${devices.smartphone} {
+      width: 40%;
+    }
   }
 
   .shape-mockup-article-right {
     position: absolute;
-    right: -50px;
+    right: 0;
     bottom: 0;
     z-index: 1;
     pointer-events: none;
+    opacity: 0.5;
+
+    ${devices.smartphone} {
+      width: 40%;
+    }
   }
 
   .jump-article {
