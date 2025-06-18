@@ -249,58 +249,55 @@ Terima kasih.`;
                 <div className="title-text">Informasi Kontak</div>
                 <div className="content-form">
                   <div className="contact-item">
-                    {MEDIA_SOSIAL?.map((item, i) => (
-                      <div key={i} className="item_contactNew">
-                        <div className="icon_text">
-                          <item.icon />
-                          {item?.label}
+                    {CONTACT_DATA_EQUIRON?.contact_media_sosial?.map(
+                      (item, i) => (
+                        <div key={i} className="item_contactNew">
+                          <div className="icon_text">
+                            <item.icon />
+                            {item?.label}
+                          </div>
+                          <div
+                            className="label"
+                            style={{ textDecoration: "underline" }}
+                          >
+                            {item?.to ? (
+                              <a href={item?.to}>{item?.title}</a>
+                            ) : (
+                              item?.title
+                            )}
+                          </div>
                         </div>
-                        <div
-                          className="label"
-                          style={{ textDecoration: "underline" }}
-                        >
-                          {item?.to ? (
-                            <a href={item?.to}>{item?.title}</a>
-                          ) : (
-                            item?.title
-                          )}
-                        </div>
-                      </div>
-                    ))}
+                      )
+                    )}
                   </div>
                 </div>
 
-                <div className="title-text">Informasi Alamat</div>
-                <div className="informasi-text">
-                  <div className="text-contant">Kantor Pusat</div>
-                  <div className="text-desc">
-                    Jalan Pengasinan No. 3 Jatimulya, Bekasi, Jawa Barat 17115,
-                    Indonesia
-                  </div>
-
-                  <div className="text-desc">
-                    <div className="informasi-kantor">
-                      Email :
-                      <div className="style-email">
-                        <a href="mailto:equironandco@gmail.com">
-                          equiron@gmail.com
-                        </a>
-                      </div>
-                    </div>
-                    <div className="informasi-kantor">
-                      No. Handphone :
-                      <div className="style-email">
-                        <a href="https://wa.me/6287777000919">6287777000919</a>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="maps">
-                    <a href="https://maps.app.goo.gl/QnPgB2Svhveq7kpJ8">
-                      Buka Maps
-                    </a>
-                  </div>
+                <div className="title-text">
+                  {CONTACT_DATA_EQUIRON?.contact_title_address}
                 </div>
+                {CONTACT_DATA_EQUIRON?.contact_title_address_data?.map(
+                  (branch, i) => (
+                    <div className="informasi-text" key={i}>
+                      <div className="text-contant">{branch.title}</div>
+                      <div className="text-desc">{branch.address}</div>
+
+                      <div className="text-desc">
+                        {branch.information.map((info, index) => (
+                          <div className="informasi-kantor" key={index}>
+                            {info.label}
+                            <div className="style-email">
+                              <a href={info.href}>{info.value}</a>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+
+                      <div className="maps">
+                        <a href={branch?.maps?.href}>{branch?.maps?.text}</a>
+                      </div>
+                    </div>
+                  )
+                )}
               </div>
             </motion.div>
           </FormContents>

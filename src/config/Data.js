@@ -27,7 +27,9 @@ import {
 import {
   FiExternalLink,
   FiGithub,
+  FiInstagram,
   FiLinkedin,
+  FiMail,
   FiPhone,
   FiTwitter,
 } from "react-icons/fi";
@@ -47,6 +49,7 @@ import {
   FaCommentAlt,
   FaCalendarAlt,
   FaUserAlt,
+  FaWhatsapp,
 } from "react-icons/fa";
 
 import {
@@ -647,6 +650,56 @@ export const CONTACT_DATA_EQUIRON = {
   contact_success_info:
     "Informasi : silahkan cek pesan WhatsApp secara berkala.",
   contact_button: "Kirim Pesan Konsultasi",
+  contact_media_sosial: [
+    {
+      icon: FaWhatsapp,
+      label: "Whatsapp",
+      title: "6287777000919",
+      to: "https://wa.me/6287777000919",
+    },
+    {
+      icon: FiPhone,
+      label: "Telepon",
+      title: "+6287777000919",
+      to: "https://wa.me/6287777000919",
+    },
+    {
+      icon: FiMail,
+      label: "Email",
+      title: "equiron@gmail.com",
+      to: "mailto:equironandco@gmail.com",
+    },
+    {
+      icon: FiInstagram,
+      label: "Instagram",
+      title: "@equironlegal",
+      to: "https://instagram.com/equironlegal",
+    },
+  ],
+  contact_title_address: "Informasi Alamat",
+  contact_title_address_data: [
+    {
+      title: "Kantor Cabang",
+      address:
+        "Jalan Pengasinan No. 3 Jatimulya, Bekasi, Jawa Barat 17115, Indonesia",
+      information: [
+        {
+          label: "Email :",
+          value: "equiron@gmail.com",
+          href: "mailto:equironandco@gmail.com",
+        },
+        {
+          label: "No. Handphone :",
+          value: "6287777000919",
+          href: "https://wa.me/6287777000919",
+        },
+      ],
+      maps: {
+        href: "https://maps.app.goo.gl/QnPgB2Svhveq7kpJ8",
+        text: "Buka Maps",
+      },
+    },
+  ],
 };
 
 export const TECH_STACK = [
