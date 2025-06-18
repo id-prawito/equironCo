@@ -1,19 +1,8 @@
 import React, { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
+import { ABOUT_DATA_EQUIRON } from "../../config/Data";
 import { useAnimation, motion } from "framer-motion";
 import { AboutSite } from "./AboutElements";
-import about_jump_right from "../../assets/img/law_stack/about1-right-bottom.png";
-import about_jump_left from "../../assets/img/law_stack/process-1-shape.png";
-import images_about_1 from "../../assets/img/law_stack/images_about_1.jpg";
-import images_about_2 from "../../assets/img/law_stack/images_about_2.png";
-import images_about_3 from "../../assets/img/law_stack/images_about_3.png";
-import {
-  FaBalanceScale,
-  FaCheckCircle,
-  FaStarHalfAlt,
-  FaUserShield,
-  FaTrophy,
-} from "react-icons/fa";
 
 const About = () => {
   const controls = useAnimation();
@@ -45,37 +34,16 @@ const About = () => {
     },
   };
 
-  const statsData = [
-    { icon: <FaBalanceScale />, value: "10k+", label: "Case Done" },
-    { icon: <FaUserShield />, value: "12k+", label: "Expert Attorneys" },
-    { icon: <FaStarHalfAlt />, value: "15k+", label: "Happy Clients" },
-    { icon: <FaTrophy />, value: "20k+", label: "Award Winning" },
-  ];
-
-  const skillData = [
-    {
-      icon: FaCheckCircle,
-      text: "Trust is the foundation of our client relationships.",
-    },
-    {
-      icon: FaCheckCircle,
-      text: "Client-Centered Approach, Excellence and Proactivity",
-    },
-    {
-      icon: FaCheckCircle,
-      text: "Accessibility is central to our philosophy.",
-    },
-    { icon: FaCheckCircle, text: "Partners in Your Success" },
-  ];
-
   return (
     <AboutSite ref={ref} id="about">
-      <div className="shape-mockup-about-left jump_about">
-        <img src={about_jump_left} alt="shape-mockup-about-left" />
-      </div>
-      <div className="shape-mockup-about-right jump_about">
-        <img src={about_jump_right} alt="shape-mockup-about-right" />
-      </div>
+      {ABOUT_DATA_EQUIRON?.shape_mockup_data?.map((item, index) => (
+        <div
+          key={index}
+          className={`shape-mockup-about-${item.class} jump_about`}
+        >
+          <img src={item.tech_img} alt={item.alt} />
+        </div>
+      ))}
 
       <motion.div
         variants={container}
@@ -85,24 +53,19 @@ const About = () => {
       >
         <div className="about-content">
           <motion.div variants={item_nya} className="about-details">
-            <h1>
-              Our core values—Trust, Commitment, and Accessibility—are at the
-              heart of everything we do.
-            </h1>
-            <div className="big-heading-about">
-              A Legacy <span>Of</span> Legal Excellence
-            </div>
+            <h1>{ABOUT_DATA_EQUIRON?.about_title}</h1>
+            <div
+              className="big-heading-about"
+              dangerouslySetInnerHTML={{
+                __html: ABOUT_DATA_EQUIRON?.about_heading,
+              }}
+            ></div>
             <p>
-              <b className="title-equ">Equiron & Co.</b> is a forward-thinking,
-              full-service law firm dedicated to providing comprehensive legal
-              solutions across various sectors. Founded with a vision to become
-              a trusted legal partner, we serve individuals, businesses, and
-              organizations with professionalism and integrity. Our core
-              values—Trust, Commitment, and Accessibility—are at the heart of
-              everything we do.
+              <b className="title-equ">Equiron & Co. </b>{" "}
+              {ABOUT_DATA_EQUIRON?.about_desc}
             </p>
             <ul className="text-skill">
-              {skillData?.map((item, i) => (
+              {ABOUT_DATA_EQUIRON?.about_skill_data?.map((item, i) => (
                 <li key={i}>
                   <div className="icon">
                     <item.icon />
@@ -117,25 +80,34 @@ const About = () => {
             <div className="cardImagesArea">
               <div className="image-wrapper">
                 <div className="image-border" />
-                <img src={images_about_1} alt="images_about_1" />
+                <img
+                  src={ABOUT_DATA_EQUIRON?.about_images_one?.title}
+                  alt={ABOUT_DATA_EQUIRON?.about_images_one?.alt}
+                />
               </div>
             </div>
             <div className="cardImagesArea2">
               <div className="images-card-area one">
                 <div className="images-card-area-two">
-                  <img src={images_about_2} alt="images_about_2" />
+                  <img
+                    src={ABOUT_DATA_EQUIRON?.about_images_two?.title}
+                    alt={ABOUT_DATA_EQUIRON?.about_images_two?.alt}
+                  />
                 </div>
               </div>
               <div className="images-card-area two">
                 <div className="images-card-area-two">
-                  <img src={images_about_3} alt="images_about_3" />
+                  <img
+                    src={ABOUT_DATA_EQUIRON?.about_images_three?.title}
+                    alt={ABOUT_DATA_EQUIRON?.about_images_three?.alt}
+                  />
                 </div>
               </div>
             </div>
           </motion.div>
         </div>
         <motion.div variants={item_nya} className="stats-container">
-          {statsData.map((s, idx) => (
+          {ABOUT_DATA_EQUIRON?.about_stats_data?.map((s, idx) => (
             <React.Fragment key={idx}>
               <div className="test">
                 <div className="stat-item">

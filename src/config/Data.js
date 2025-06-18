@@ -38,7 +38,19 @@ import {
   FaLeaf,
   FaInstagram,
   FaChalkboardTeacher,
+  FaBalanceScale,
+  FaUserShield,
+  FaStarHalfAlt,
+  FaTrophy,
 } from "react-icons/fa";
+
+import {
+  about_jump_left,
+  about_jump_right,
+  images_about_1,
+  images_about_2,
+  images_about_3,
+} from "./_equironImages";
 
 export const NAVLINKS = [
   {
@@ -72,6 +84,58 @@ export const NAVLINKS = [
     name: "CLIENTS",
   },
 ];
+
+export const ABOUT_DATA_EQUIRON = {
+  shape_mockup_data: [
+    {
+      tech_img: about_jump_right,
+      tech_name: "about_jump_right",
+      alt: "shape-mockup-about-right",
+      class: "right",
+    },
+    {
+      tech_img: about_jump_left,
+      tech_name: "about_jump_left",
+      alt: "shape-mockup-about-left",
+      class: "left",
+    },
+  ],
+  about_title:
+    "Our core values—Trust, Commitment, and Accessibility—are at the heart of everything we do.",
+  about_heading: "A Legacy <span>Of</span> Legal Excellence",
+  about_desc:
+    "is a forward-thinking, full-service law firm dedicated to providing comprehensive legal solutions across various sectors. Founded with a vision to become a trusted legal partner, we serve individuals, businesses, and organizations with professionalism and integrity. Our core values—Trust, Commitment, and Accessibility—are at the heart of everything we do.",
+  about_skill_data: [
+    {
+      icon: FaCheckCircle,
+      text: "Trust is the foundation of our client relationships.",
+    },
+    {
+      icon: FaCheckCircle,
+      text: "Client-Centered Approach, Excellence and Proactivity",
+    },
+    {
+      icon: FaCheckCircle,
+      text: "Accessibility is central to our philosophy.",
+    },
+    { icon: FaCheckCircle, text: "Partners in Your Success" },
+  ],
+  about_images_one: {
+    title: images_about_1,
+    alt: "images_about_1",
+  },
+  about_images_two: {
+    title: images_about_2,
+    alt: "images_about_1",
+  },
+  about_images_three: { title: images_about_3, alt: "images_about_1" },
+  about_stats_data: [
+    { icon: <FaBalanceScale />, value: "10k+", label: "Case Done" },
+    { icon: <FaUserShield />, value: "12k+", label: "Expert Attorneys" },
+    { icon: <FaStarHalfAlt />, value: "15k+", label: "Happy Clients" },
+    { icon: <FaTrophy />, value: "20k+", label: "Award Winning" },
+  ],
+};
 
 export const TECH_STACK = [
   {
