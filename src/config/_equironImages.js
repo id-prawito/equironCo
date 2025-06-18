@@ -8,6 +8,8 @@ import service_card_1_2 from "../assets/img/law_stack/services/service_card_1_2.
 import service_card_1_3 from "../assets/img/law_stack/services/service_card_1_3.svg";
 import service_card_1_4 from "../assets/img/law_stack/services/service_card_1_4.svg";
 import service_card_1_5 from "../assets/img/law_stack/services/service_card_1_5.svg";
+import process_jump_right from "../assets/img/law_stack/process-1-shape.png";
+import process_one from "../assets/img/law_stack/process-1.jpg";
 
 export {
   about_jump_right,
@@ -20,4 +22,6 @@ export {
   service_card_1_3,
   service_card_1_4,
   service_card_1_5,
+  process_jump_right,
+  process_one,
 };

@@ -1,10 +1,8 @@
 import React, { useEffect } from "react";
-import { FaRegHandshake, FaRegNewspaper } from "react-icons/fa";
-import process_jump_right from "../../assets/img/law_stack/process-1-shape.png";
-import process_one from "../../assets/img/law_stack/process-1.jpg";
 import { useInView } from "react-intersection-observer";
 import { useAnimation, motion } from "framer-motion";
 import { ProcessSite } from "./ProcessElements";
+import { PROCESS_DATA_EQUIRON } from "../../config/Data";
 
 const Process = () => {
   const controls = useAnimation();
@@ -38,9 +36,14 @@ const Process = () => {
 
   return (
     <ProcessSite id="process">
-      <div className="shape-mockup-process-right jump-process">
-        <img src={process_jump_right} alt="process_jump_right" />
-      </div>
+      {PROCESS_DATA_EQUIRON?.shape_mockup_data?.map((item, index) => (
+        <div
+          key={index}
+          className={`shape-mockup-process-${item.class} jump-process`}
+        >
+          <img src={item.tech_img} alt={item.alt} />
+        </div>
+      ))}
       <motion.div
         variants={container}
         initial="hidden"
@@ -50,51 +53,33 @@ const Process = () => {
       >
         <div className="process-content">
           <div className="process-content-images">
-            <img src={process_one} alt="process_one" />
+            <img
+              src={PROCESS_DATA_EQUIRON?.process_one_images?.title}
+              alt={PROCESS_DATA_EQUIRON?.process_one_images?.alt}
+            />
           </div>
           <div className="process-content-flow">
-            <div className="text">Work Process</div>
-            <div className="title">
-              Navigating the Law: Your Assurance of Peace
-            </div>
+            <div className="text">{PROCESS_DATA_EQUIRON?.process_text}</div>
+            <div className="title">{PROCESS_DATA_EQUIRON?.process_title}</div>
             <div className="process">
-              <motion.div variants={item_nya} className="process-item">
-                <div className="process-item-icon">
-                  <FaRegHandshake className="icon-class" />
-                </div>
-                <div className="process-item-content">
-                  <div className="box-title">Consultations</div>
-                  <div className="desc">
-                    The consultation begins with a client inquiry. We schedule a
-                    meeting, either online or in-person. During the session, we
-                    identify legal issues and gather relevant documents. After
-                    analysis, we provide legal advice and possible solutions. If
-                    needed, follow-up consultations are arranged.
-                    Confidentiality is guaranteed throughout. We ensure clarity,
-                    professionalism, and support every step of the way to
-                    resolve legal matters effectively.
-                  </div>
-                </div>
-              </motion.div>
-              <motion.div variants={item_nya} className="process-item">
-                <div className="process-item-icon">
-                  <FaRegNewspaper className="icon-class" />
-                </div>
-                <div className="process-item-content">
-                  <div className="box-title">Executions</div>
-                  <div className="desc">
-                    After consultation, we draft necessary legal documents and
-                    agreements. Upon client approval, we proceed with filing,
-                    negotiation, or representation. We coordinate with relevant
-                    authorities or parties to ensure proper execution.
-                    Throughout the process, we provide updates and clarify each
-                    step. Final outcomes are reviewed with the client. Our goal
-                    is to deliver effective, timely, and compliant results that
-                    reflect the agreed legal strategy and protect the client’s
-                    interests.
-                  </div>
-                </div>
-              </motion.div>
+              {PROCESS_DATA_EQUIRON?.process_data_works.map((item, index) => {
+                const Icon = item.icon;
+                return (
+                  <motion.div
+                    key={index}
+                    variants={item_nya}
+                    className="process-item"
+                  >
+                    <div className="process-item-icon">
+                      <Icon className="icon-class" />
+                    </div>
+                    <div className="process-item-content">
+                      <div className="box-title">{item.title}</div>
+                      <div className="desc">{item.desc}</div>
+                    </div>
+                  </motion.div>
+                );
+              })}
             </div>
           </div>
         </div>

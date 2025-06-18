@@ -42,6 +42,8 @@ import {
   FaUserShield,
   FaStarHalfAlt,
   FaTrophy,
+  FaRegHandshake,
+  FaRegNewspaper,
 } from "react-icons/fa";
 
 import {
@@ -50,6 +52,8 @@ import {
   images_about_1,
   images_about_2,
   images_about_3,
+  process_jump_right,
+  process_one,
   service_card_1_1,
   service_card_1_2,
   service_card_1_3,
@@ -223,6 +227,35 @@ export const SERVICES_DATA_EQUIRON = {
       cardTitle: "Coal & Nickel Mining",
       cardDesc:
         "Legal insight into mining operations, licensing, and environmental compliance.",
+    },
+  ],
+};
+
+export const PROCESS_DATA_EQUIRON = {
+  shape_mockup_data: [
+    {
+      tech_img: process_jump_right,
+      tech_name: "process_jump_right",
+      alt: "process_jump_right",
+      class: "right",
+    },
+  ],
+  process_one_images: {
+    title: process_one,
+    alt: "process_one",
+  },
+  process_text: "Work Process",
+  process_title: "Navigating the Law: Your Assurance of Peace",
+  process_data_works: [
+    {
+      title: "Consultations",
+      desc: `The consultation begins with a client inquiry. We schedule a meeting, either online or in-person. During the session, we identify legal issues and gather relevant documents. After analysis, we provide legal advice and possible solutions. If needed, follow-up consultations are arranged. Confidentiality is guaranteed throughout. We ensure clarity, professionalism, and support every step of the way to resolve legal matters effectively.`,
+      icon: FaRegHandshake,
+    },
+    {
+      title: "Executions",
+      desc: `After consultation, we draft necessary legal documents and agreements. Upon client approval, we proceed with filing, negotiation, or representation. We coordinate with relevant authorities or parties to ensure proper execution. Throughout the process, we provide updates and clarify each step. Final outcomes are reviewed with the client. Our goal is to deliver effective, timely, and compliant results that reflect the agreed legal strategy and protect the client’s interests.`,
+      icon: FaRegNewspaper,
     },
   ],
 };
