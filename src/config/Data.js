@@ -546,6 +546,109 @@ export const CLIENTS_DATA_EQUIRON = {
   ],
 };
 
+export const CONTACT_DATA_EQUIRON = {
+  contact_text: "Have Any Questions?",
+  contact_title: "Get in Touch with Us",
+  contact_form_title: "Submit Your Inquiry",
+  contact_form_desc:
+    "<b>Keteragan : </b>Kirimkan pesan atau konsultasi kepada kami, senang melayani anda sebagai client kami, Terimakasih.",
+  contact_form_inputs: [
+    {
+      type: "radio",
+      title_fields: "Tipe Request",
+      value: "request_type",
+      value_radio: [
+        { label: "Individual", value: "Individual" },
+        { label: "Non Individual", value: "Non Individual" },
+      ],
+    },
+    {
+      label: "Nama",
+      placeholder: "Nama",
+      value: "name",
+      type: "text",
+    },
+    {
+      label: "No. Handphone",
+      placeholder: "No. Handphone",
+      value: "phone",
+      type: "number",
+    },
+    {
+      label: "Email",
+      placeholder: "Email",
+      value: "email",
+      type: "text",
+    },
+    {
+      label: "Area Praktek",
+      placeholder: "Area Praktek",
+      value: "area_praktek", // tambahkan value untuk setState
+      value_select: [
+        {
+          name: "Merger and Acquisitions",
+          value: "Merger and Acquisitions",
+        },
+        {
+          name: "Banking and Finance",
+          value: "Banking and Finance",
+        },
+        {
+          name: "Land and Property",
+          value: "Land and Property",
+        },
+        {
+          name: "Project Development",
+          value: "Project Development",
+        },
+        {
+          name: "Technology, Media & Telecom",
+          value: "Technology, Media & Telecom",
+        },
+        {
+          name: "Corporate Compliance Services",
+          value: "Corporate Compliance Services",
+        },
+        {
+          name: "Food & Beverage, Anti-Trust & Competition Law",
+          value: "Food & Beverage, Anti-Trust & Competition Law",
+        },
+        {
+          name: "Start-Up Company",
+          value: "Start-Up Company",
+        },
+        {
+          name: "Criminal Law",
+          value: "Criminal Law",
+        },
+        {
+          name: "Civil Law",
+          value: "Civil Law",
+        },
+        {
+          name: "Coal & Nickel Mining",
+          value: "Coal & Nickel Mining",
+        },
+      ],
+      type: "select",
+    },
+    {
+      label: "Pesan Anda",
+      placeholder: "Pesan Anda",
+      value: "message",
+      type: "textarea",
+    },
+  ],
+
+  contact_note: {
+    label: "Catatan Lain :",
+    text: "Pesan balasan daripada pesan konsultasi akan dikirimkan melalui No. Hp yang di masukan, jadi pastikan No. Hp anda aktif dan benar.",
+  },
+  contact_success_info:
+    "Informasi : silahkan cek pesan WhatsApp secara berkala.",
+  contact_button: "Kirim Pesan Konsultasi",
+};
+
 export const TECH_STACK = [
   {
     tech_img: html5,

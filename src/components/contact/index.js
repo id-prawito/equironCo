@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { FaAccusoft, FaInstagram, FaWhatsapp } from "react-icons/fa";
 import { useInView } from "react-intersection-observer";
 import { useAnimation, motion } from "framer-motion";
-import { CONTACT_DATA } from "../../config/Data";
+import { CONTACT_DATA_EQUIRON } from "../../config/Data";
 import { ButtonContent, ContactSite, FormContents } from "./ContactElements";
 import { FiPhone, FiVoicemail, FiX } from "react-icons/fi";
 
@@ -41,9 +41,12 @@ const Contact = () => {
     phone: "",
     email: "",
     message: "",
+    area_praktek: "",
+    request_type: "",
   });
 
-  const [select, setSelect] = useState("");
+  const [selectArea, setSelect] = useState("");
+
   const [berhasil, setBerhasil] = useState(false);
 
   const whatsappNumber = "6287777000919";
@@ -62,7 +65,8 @@ Informasi Pelapor:
 Nama          : ${form.name}
 No. HP        : ${form.phone}
 Email         : ${form.email}
-Area Praktek : ${select}
+Area Praktek  : ${form.area_praktek}
+Tipe Request  : ${form.request_type}
 
 -------------------------
 
@@ -74,11 +78,8 @@ Mohon segera ditindaklanjuti oleh tim terkait.
 
 Terima kasih.`;
 
-    console.log(text, e);
-
     const encodedText = encodeURIComponent(text);
     const url = `https://wa.me/${whatsappNumber}?text=${encodedText}`;
-
     window.open(url, "_blank");
 
     setForm({
@@ -86,6 +87,8 @@ Terima kasih.`;
       phone: "",
       email: "",
       message: "",
+      area_praktek: "",
+      request_type: "",
     });
     setSelect("");
     setBerhasil(true);
@@ -94,57 +97,6 @@ Terima kasih.`;
     setTimeout(() => {
       setBerhasil(false);
     }, 3000);
-  };
-
-  const valueSelect = [
-    {
-      name: "Merger and Acquisitions",
-      value: "Merger and Acquisitions",
-    },
-    {
-      name: "Banking and Finance",
-      value: "Banking and Finance",
-    },
-    {
-      name: "Land and Property",
-      value: "Land and Property",
-    },
-    {
-      name: "Project Development",
-      value: "Project Development",
-    },
-    {
-      name: "Technology, Media & Telecom",
-      value: "Technology, Media & Telecom",
-    },
-    {
-      name: "Corporate Compliance Services",
-      value: "Corporate Compliance Services",
-    },
-    {
-      name: "Food & Beverage, Anti-Trust & Competition Law",
-      value: "Food & Beverage, Anti-Trust & Competition Law",
-    },
-    {
-      name: "Start-Up Company",
-      value: "Start-Up Company",
-    },
-    {
-      name: "Criminal Law",
-      value: "Criminal Law",
-    },
-    {
-      name: "Civil Law",
-      value: "Civil Law",
-    },
-    {
-      name: "Coal & Nickel Mining",
-      value: "Coal & Nickel Mining",
-    },
-  ];
-
-  const handleSelect = (e) => {
-    setSelect(e.target.value);
   };
 
   return (
@@ -157,9 +109,11 @@ Terima kasih.`;
           ref={ref}
           className="contact-content"
         >
-          <motion.h1 variants={item_nya}>{CONTACT_DATA.text_small}</motion.h1>
+          <motion.h1 variants={item_nya}>
+            {CONTACT_DATA_EQUIRON.contact_text}
+          </motion.h1>
           <motion.div variants={item_nya} className="big-heading">
-            {CONTACT_DATA.big_heading}
+            {CONTACT_DATA_EQUIRON.contact_title}
           </motion.div>
         </motion.div>
       </div>
@@ -175,11 +129,14 @@ Terima kasih.`;
               className="card-form"
             >
               <div className="content">
-                <div className="title-text">Submit Your Inquiry</div>
-                <p>
-                  <b>Keteragan : </b>Kirimkan pesan atau konsultasi kepada kami,
-                  senang melayani anda sebagai client kami, Terimakasih.
-                </p>
+                <div className="title-text">
+                  {CONTACT_DATA_EQUIRON?.contact_form_title}
+                </div>
+                <p
+                  dangerouslySetInnerHTML={{
+                    __html: CONTACT_DATA_EQUIRON?.contact_form_desc,
+                  }}
+                ></p>
                 <div className="content-form">
                   <form
                     className="form_style"
@@ -187,75 +144,75 @@ Terima kasih.`;
                     id="form_baru"
                   >
                     <div className="inputan">
-                      <div className="form-content-input">
-                        <div className="text">Request</div>
-                        <div
-                          className="radio-group"
-                          style={{ marginBottom: "16px" }}
-                        >
-                          <div className="text">
-                            <input
-                              type="radio"
-                              name="jenis_kelamin"
-                              value="Laki-laki"
-                              onChange={() => {}}
-                            />
-                            Individual
-                          </div>
-                          <div className="text">
-                            <input
-                              type="radio"
-                              name="jenis_kelamin"
-                              value="Perempuan"
-                              onChange={() => {}}
-                            />
-                            Non Individual
-                          </div>
-                        </div>
-                      </div>
-
-                      <FormInput
-                        judul="Nama"
-                        placeholder="Nama"
-                        type="text"
-                        value={form.name}
-                        onChange={set("name")}
-                      />
-                      <FormInput
-                        judul="No. Handphone"
-                        placeholder="No. Handphone"
-                        type="number"
-                        value={form.phone}
-                        onChange={set("phone")}
-                      />
-                      <FormInput
-                        judul="Email"
-                        placeholder="Email"
-                        type="text"
-                        value={form.email}
-                        onChange={set("email")}
-                      />
-                      <FormInputSelectNew
-                        option={valueSelect}
-                        onChange={handleSelect}
-                        placeholder="Area Praktek"
-                        value={select}
-                      />
+                      {CONTACT_DATA_EQUIRON?.contact_form_inputs?.map(
+                        (field, index) => {
+                          if (field.type === "select") {
+                            return (
+                              <FormInputSelectNew
+                                key={index}
+                                option={field.value_select}
+                                onChange={set(field.value)}
+                                placeholder={field.placeholder}
+                                value={form[field.value]}
+                              />
+                            );
+                          } else if (field.type === "textarea") {
+                            return (
+                              <FormTextArea
+                                key={index}
+                                value={form[field.value]}
+                                onChange={set(field.value)}
+                                placeholder={field.placeholder}
+                              />
+                            );
+                          } else if (field.type === "radio") {
+                            return (
+                              <div className="form-content-input" key={index}>
+                                <div className="text">{field.title_fields}</div>
+                                <div
+                                  className="radio-group"
+                                  style={{ marginBottom: "16px" }}
+                                >
+                                  {field.value_radio?.map((option, i) => (
+                                    <div className="text" key={i}>
+                                      <input
+                                        type="radio"
+                                        name={field.value}
+                                        value={option.value}
+                                        checked={
+                                          form[field.value] === option.value
+                                        }
+                                        onChange={set(field.value)}
+                                      />
+                                      {option.label}
+                                    </div>
+                                  ))}
+                                </div>
+                              </div>
+                            );
+                          } else {
+                            return (
+                              <FormInput
+                                key={index}
+                                judul={field.label}
+                                placeholder={field.placeholder}
+                                type={field.type}
+                                value={form[field.value]}
+                                onChange={set(field.value)}
+                              />
+                            );
+                          }
+                        }
+                      )}
                     </div>
-                    <FormTextArea
-                      value={form.message}
-                      onChange={set("message")}
-                      placeholder="Pesan Anda"
-                    />
+
                     <p style={{ fontSize: "12px", borderBottom: "none" }}>
-                      <b>Catatan Lain : </b> Pesan balasan daripada pesan
-                      konsultasi akan dikirimkan melalui No. Hp yang di masukan,
-                      jadi pastikan No. Hp anda aktif dan benar.
+                      <b>{CONTACT_DATA_EQUIRON?.contact_note?.label}</b>{" "}
+                      {CONTACT_DATA_EQUIRON?.contact_note?.text}
                     </p>
                     {berhasil ? (
                       <p className="informasi">
-                        <b>Informasi : </b> silahkan cek pesan WhatsApp secara
-                        berkala.
+                        {CONTACT_DATA_EQUIRON?.contact_success_info}
                         <button onClick={() => setBerhasil(false)}>
                           <FiX />
                         </button>
@@ -268,11 +225,9 @@ Terima kasih.`;
                       <Button
                         id="form_baru"
                         icon={FaAccusoft}
-                        label="Kirim Pesan Konsultasi"
+                        label={CONTACT_DATA_EQUIRON?.contact_button}
                         style={{ fontSize: "12px" }}
-                      >
-                        Hitung
-                      </Button>
+                      ></Button>
                     </div>
                   </form>
                 </div>
@@ -361,6 +316,7 @@ export const Button = (item) => {
   return (
     <ButtonContent>
       <button
+        type="submit"
         style={item.style}
         onClick={item.onClick}
         id={item.id}
