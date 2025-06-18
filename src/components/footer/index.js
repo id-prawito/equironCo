@@ -1,7 +1,6 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import { FaInstagram, FaRegEnvelope } from "react-icons/fa";
-import { FooterSite, Item, WaItemSite } from "./FooterElements";
-import axios from "axios";
+import { FooterSite, WaItemSite } from "./FooterElements";
 import logoEquironWhite from "../../assets/img/law_stack/logo_white.png";
 import {
   FiFacebook,
@@ -12,28 +11,33 @@ import {
 } from "react-icons/fi";
 
 const Footer = () => {
-  const [total, setTotal] = useState([]);
-  const [fork, setFork] = useState([]);
+  // const [total, setTotal] = useState([]);
+  // const [fork, setFork] = useState([]);
 
-  useEffect(() => {
-    const getList = async () => {
-      try {
-        const response = await axios(
-          "https://api.github.com/users/id-prawito/repos"
-        );
+  // useEffect(() => {
+  //   const getList = async () => {
+  //     try {
+  //       const response = await axios(
+  //         "https://api.github.com/users/id-prawito/repos"
+  //       );
 
-        for (let i = 0; i < response.data.length; i++) {
-          let totalVal = 0;
-          let totalFork = 0;
-          setTotal((totalVal += response.data[i].stargazers_count));
-          setFork((totalFork += response.data[i].forks_count));
-        }
-      } catch {
-        console.log("error");
-      }
-    };
-    getList();
-  }, []);
+  //       let totalStar = 0;
+  //       let totalFork = 0;
+
+  //       response.data.forEach((repo) => {
+  //         totalStar += repo.stargazers_count;
+  //         totalFork += repo.forks_count;
+  //       });
+
+  //       setTotal(totalStar);
+  //       setFork(totalFork);
+  //     } catch (error) {
+  //       console.log("error fetching repo data", error);
+  //     }
+  //   };
+
+  //   getList();
+  // }, []);
 
   const valueSelect = [
     [

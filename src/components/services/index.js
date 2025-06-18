@@ -1,30 +1,11 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import icon_gavel from "../../assets/img/law_stack/icon_gavel.svg";
 import { useInView } from "react-intersection-observer";
 import { useAnimation, motion } from "framer-motion";
 import { ServicesSite } from "./ServicesElements";
-import axios from "axios";
 
 const Services = () => {
-  const [repo, setRepo] = useState([]);
   const myRef = useRef(null);
-
-  const [isloading, setLoading] = useState(true);
-  useEffect(() => {
-    const getList = async () => {
-      setLoading(true);
-      try {
-        const response = await axios(
-          "https://api.github.com/users/id-prawito/repos"
-        );
-        setRepo(response.data);
-      } catch {
-        console.log("error");
-      }
-      setLoading(false);
-    };
-    getList();
-  }, []);
 
   const controls = useAnimation();
   const [ref, inView] = useInView({ threshold: 0.2 });
@@ -174,7 +155,7 @@ const Services = () => {
                 <h3 className="card-title">{service.cardTitle}</h3>
                 <p className="card-desc">{service.cardDesc}</p>
                 {services === 1 && (
-                  <a href="#" className="read-more">
+                  <a href="/" className="read-more">
                     Read More <span className="arrow">→</span>
                   </a>
                 )}

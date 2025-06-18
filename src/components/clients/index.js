@@ -1,18 +1,8 @@
 import React, { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 import { useAnimation, motion } from "framer-motion";
-import jump from "../../assets/img/law_stack/process-1-shape.png";
-import teams_bg from "../../assets/img/law_stack/team-1-bg.jpg";
-import blog_bg from "../../assets/img/law_stack/blog_bg.jpg";
 import shape_left from "../../assets/img/law_stack/blog-1-shape-left.png";
 import shape_right from "../../assets/img/law_stack/blog-1-shape-right.png";
-import goto_logo from "./../../assets/img/law_stack/goto.png";
-import omron_logo from "./../../assets/img/law_stack/omron.png";
-import gopay_logo from "./../../assets/img/law_stack/gopay.png";
-import shopee_logo from "./../../assets/img/law_stack/shopee.png";
-import bumn_logo from "./../../assets/img/law_stack/bumn.png";
-import pertamina_logo from "./../../assets/img/law_stack/pertamina.png";
-import mandiri_logo from "./../../assets/img/law_stack/mandiri.png";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
@@ -67,11 +57,6 @@ const Clients = () => {
   };
 
   const lawyers = [
-    {
-      name: "Smith Miller",
-      title: "Attorney",
-      image: mandiri_logo,
-    },
     {
       name: "AIMTOPINDO",
       title: "Client",
@@ -176,10 +161,7 @@ const Clients = () => {
                 <SwiperSlide key={index}>
                   <div className="client-card">
                     <div className="content-img">
-                      <img
-                        src={lawyer.image}
-                        alt="Blog image about Legal Project Manager"
-                      />
+                      <img src={lawyer.image} alt={lawyer.title} />
                     </div>
                   </div>
                 </SwiperSlide>

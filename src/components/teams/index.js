@@ -10,6 +10,8 @@ import teams_bg from "../../assets/img/law_stack/team-1-bg.jpg";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import { FaInstagram } from "react-icons/fa";
+import { FiLinkedin, FiPhone, FiTwitter } from "react-icons/fi";
 
 const Teams = () => {
   const controls = useAnimation();
@@ -149,10 +151,39 @@ const Teams = () => {
                           </h3>
                           <span className="team-desig">Attorney</span>
                           <div className="team-social">
-                            <div className="th-social">
-                              <a target="_blank" href="https://facebook.com/">
-                                <i className="fab fa-facebook-f"></i>
-                              </a>
+                            <div className="team-social-media">
+                              <div className="card-media">
+                                <a
+                                  href="https://www.instagram.com/"
+                                  target="#"
+                                  rel="noopener noreferrer"
+                                >
+                                  <FaInstagram />
+                                </a>
+                              </div>
+                              <div className="card-media">
+                                <a
+                                  href="https://twitter.com/"
+                                  target="#"
+                                  rel="noopener noreferrer"
+                                >
+                                  <FiTwitter />
+                                </a>
+                              </div>
+                              <div className="card-media">
+                                <a
+                                  href="https://www.linkedin.com/"
+                                  target="#"
+                                  rel="noopener noreferrer"
+                                >
+                                  <FiLinkedin />
+                                </a>
+                              </div>
+                              <div className="card-media">
+                                <a href="/">
+                                  <FiPhone />
+                                </a>
+                              </div>
                             </div>
                           </div>
                         </div>

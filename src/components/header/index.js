@@ -3,7 +3,6 @@ import { FaArrowRight, FaChevronUp, FaEllipsisV } from "react-icons/fa";
 import { HeaderContainer, HeaderSite, NavLinks } from "./HeaderElements";
 import { FiMenu, FiX } from "react-icons/fi";
 import { MEDIA_SOSIAL, NAVLINKS } from "../../config/Data";
-import logoSite from "../../assets/img/logo_site.png";
 import logoEquironHeaderBlack from "../../assets/img/law_stack/header_logo_black.png";
 import logoEquironHeaderWhite from "../../assets/img/law_stack/header_logo_white.png";
 import logoEquiron from "../../assets/img/law_stack/logoEquiron.png";

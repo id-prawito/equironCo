@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { FaPeopleArrows, FaRegHandshake, FaRegNewspaper } from "react-icons/fa";
+import { FaRegHandshake, FaRegNewspaper } from "react-icons/fa";
 import process_jump_right from "../../assets/img/law_stack/process-1-shape.png";
 import process_one from "../../assets/img/law_stack/process-1.jpg";
 import { useInView } from "react-intersection-observer";

@@ -1,16 +1,10 @@
 import React, { useEffect, useState } from "react";
-import {
-  FaAccusoft,
-  FaFax,
-  FaInstagram,
-  FaRegThumbsUp,
-  FaWhatsapp,
-} from "react-icons/fa";
+import { FaAccusoft, FaInstagram, FaWhatsapp } from "react-icons/fa";
 import { useInView } from "react-intersection-observer";
 import { useAnimation, motion } from "framer-motion";
 import { CONTACT_DATA } from "../../config/Data";
 import { ButtonContent, ContactSite, FormContents } from "./ContactElements";
-import { FiFacebook, FiPhone, FiVoicemail, FiX } from "react-icons/fi";
+import { FiPhone, FiVoicemail, FiX } from "react-icons/fi";
 
 const Contact = () => {
   const controls = useAnimation();

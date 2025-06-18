@@ -103,27 +103,24 @@ const Article = () => {
                 <SwiperSlide key={index}>
                   <div className="blog-card">
                     <div className="blog-img">
-                      <a href="#">
-                        <img
-                          src={article?.image}
-                          alt="Blog image about Legal Project Manager"
-                        />
+                      <a href="/">
+                        <img src={article?.image} alt={article?.title}></img>
                       </a>
                     </div>
                     <div className="blog-content">
                       <div className="blog-meta">
-                        <a href="#">
+                        <a href="/">
                           <FaUserAlt /> By Jonson
                         </a>
-                        <a href="#">
+                        <a href="/">
                           <FaCalendarAlt /> 22 Sep, 2025
                         </a>
-                        <a href="#">
+                        <a href="/">
                           <FaCommentAlt /> 2 Comments
                         </a>
                       </div>
                       <h3 className="box-title">
-                        <a href="#">{article?.title}</a>
+                        <a href="/">{article?.title}</a>
                       </h3>
                     </div>
                   </div>
