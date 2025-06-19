@@ -36,6 +36,7 @@ import pbe_logo from "./../assets/img/law_stack/clients/pbe_logo.png";
 import semesta_energi_service_logo from "./../assets/img/law_stack/clients/semesta-energi-service_logo.png";
 import tridaya_esa_pakarti_logo from "./../assets/img/law_stack/clients/tridaya-esa-pakarti_logo.png";
 import warna_warni_logo from "./../assets/img/law_stack/clients/warna-warni_logo.png";
+import logo_equiron_white from "./../assets/img/law_stack/logo_white.png";
 
 export {
   about_jump_right,
@@ -75,4 +76,5 @@ export {
   semesta_energi_service_logo,
   tridaya_esa_pakarti_logo,
   warna_warni_logo,
+  logo_equiron_white,
 };

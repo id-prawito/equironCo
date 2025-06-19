@@ -26,10 +26,12 @@ import {
 } from "./_images";
 import {
   FiExternalLink,
+  FiFacebook,
   FiGithub,
   FiInstagram,
   FiLinkedin,
   FiMail,
+  FiMapPin,
   FiPhone,
   FiTwitter,
 } from "react-icons/fi";
@@ -50,6 +52,7 @@ import {
   FaCalendarAlt,
   FaUserAlt,
   FaWhatsapp,
+  FaRegEnvelope,
 } from "react-icons/fa";
 
 import {
@@ -68,6 +71,7 @@ import {
   images_about_3,
   indo_berkat_logo,
   lliadi_logo,
+  logo_equiron_white,
   mitra_galperti_logo,
   pbe_logo,
   process_jump_right,
@@ -642,7 +646,6 @@ export const CONTACT_DATA_EQUIRON = {
       type: "textarea",
     },
   ],
-
   contact_note: {
     label: "Catatan Lain :",
     text: "Pesan balasan daripada pesan konsultasi akan dikirimkan melalui No. Hp yang di masukan, jadi pastikan No. Hp anda aktif dan benar.",
@@ -700,6 +703,97 @@ export const CONTACT_DATA_EQUIRON = {
       },
     },
   ],
+};
+
+export const FOOTER_DATA_EQUIRON = {
+  footer_text: "Our Services",
+  footer_data_services: [
+    [
+      { name: "Merger and Acquisitions", value: "Merger and Acquisitions" },
+      { name: "Banking and Finance", value: "Banking and Finance" },
+    ],
+    [
+      { name: "Land and Property", value: "Land and Property" },
+      { name: "Project Development", value: "Project Development" },
+    ],
+    [
+      {
+        name: "Technology, Media & Telecom",
+        value: "Technology, Media & Telecom",
+      },
+      {
+        name: "Corporate Compliance Services",
+        value: "Corporate Compliance Services",
+      },
+    ],
+    [
+      {
+        name: "Food & Beverage, Anti-Trust & Competition Law",
+        value: "Food & Beverage, Anti-Trust & Competition Law",
+      },
+      { name: "Start-Up Company", value: "Start-Up Company" },
+    ],
+    [
+      { name: "Criminal Law", value: "Criminal Law" },
+      { name: "Civil Law", value: "Civil Law" },
+    ],
+    [{ name: "Coal & Nickel Mining", value: "Coal & Nickel Mining" }],
+  ],
+  footer_logo_equiron: {
+    img: logo_equiron_white,
+    alt: "logo_equiron_white",
+  },
+  footer_company_desc:
+    "Equiron & Co. is a forward-thinking, full-service law firm dedicated to providing comprehensive legal solutions across various sectors.",
+  footer_social_media: [
+    {
+      to: "https://www.instagram.com/praw.ito/",
+      label: "Instagram",
+      icon: FaInstagram,
+    },
+    {
+      to: "https://twitter.com/id_praw",
+      label: "Twitter",
+      icon: FiTwitter,
+    },
+    {
+      to: "https://linkedin.com/in/prawito/",
+      label: "Linkedin",
+      icon: FiLinkedin,
+    },
+    {
+      to: "tel:+6282137925172",
+      label: "Phone",
+      icon: FiPhone,
+    },
+    {
+      to: "tel:+6282137925172",
+      label: "Phone",
+      icon: FiFacebook,
+    },
+  ],
+  footer_contact_info: [
+    {
+      icon: FiMapPin,
+      label: "Location",
+      desc: "Jalan Pengasinan No. 3 Jatimulya, Bekasi, Jawa Barat 17115, Indonesia",
+    },
+    {
+      icon: FiPhone,
+      label: "Phone",
+      desc: "+62 8777-7000-919",
+    },
+    {
+      icon: FaRegEnvelope,
+      label: "Email",
+      desc: "equironandco@gmail.com",
+    },
+  ],
+  footer_whatsapp: {
+    value: "6287777000919",
+    href: "https://wa.me/6287777000919",
+    text: "Hubungi Kami via Whatsapp",
+  },
 };
 
 export const TECH_STACK = [

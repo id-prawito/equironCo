@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { FaAccusoft, FaInstagram, FaWhatsapp } from "react-icons/fa";
+import { ButtonContent, ContactSite, FormContents } from "./ContactElements";
+import { CONTACT_DATA_EQUIRON } from "../../config/Data";
 import { useInView } from "react-intersection-observer";
 import { useAnimation, motion } from "framer-motion";
-import { CONTACT_DATA_EQUIRON } from "../../config/Data";
-import { ButtonContent, ContactSite, FormContents } from "./ContactElements";
-import { FiPhone, FiVoicemail, FiX } from "react-icons/fi";
+import { FaAccusoft } from "react-icons/fa";
+import { FiX } from "react-icons/fi";
 
 const Contact = () => {
   const controls = useAnimation();
@@ -44,8 +44,6 @@ const Contact = () => {
     area_praktek: "",
     request_type: "",
   });
-
-  const [selectArea, setSelect] = useState("");
 
   const [berhasil, setBerhasil] = useState(false);
 
@@ -90,7 +88,6 @@ Terima kasih.`;
       area_praktek: "",
       request_type: "",
     });
-    setSelect("");
     setBerhasil(true);
 
     // Setelah 3 detik, set kembali ke false
@@ -410,30 +407,3 @@ export const FormInputSelectNew = (item) => {
     </div>
   );
 };
-
-export const MEDIA_SOSIAL = [
-  {
-    to: "https://wa.me/6287777000919",
-    label: "Whatsapp",
-    icon: FaWhatsapp,
-    title: "6287777000919",
-  },
-  {
-    to: "https://www.instagram.com/equironandco/",
-    label: "Instagram",
-    icon: FaInstagram,
-    title: "Equiron And Co.",
-  },
-  {
-    to: "tel:+6287777000919",
-    label: "Telp.",
-    icon: FiPhone,
-    title: "+6287777000919",
-  },
-  {
-    to: "mailto:equironandco@gmail.com",
-    label: "Email",
-    icon: FiVoicemail,
-    title: "equironandco@gmail.com",
-  },
-];
