@@ -1,15 +1,13 @@
 import React, { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 import { Navigation, Pagination } from "swiper/modules";
+import { TEAMS_DATA_EQUIRON } from "../../config/Data";
 import { useAnimation, motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { TeamsSite } from "./TeamsElements";
-import teams_jump_left from "../../assets/img/law_stack/process-1-shape.png";
-import team_member_1 from "./../../assets/img/law_stack/team_member_1.jpg";
-import teams_bg from "../../assets/img/law_stack/team-1-bg.jpg";
-import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import "swiper/css";
 
 const Teams = () => {
   const controls = useAnimation();
@@ -40,58 +38,15 @@ const Teams = () => {
       opacity: 1,
     },
   };
-  const lawyers = [
-    {
-      name: "Smith Miller",
-      title: "Attorney",
-      image: team_member_1,
-    },
-    {
-      name: "Samira Dsuza",
-      title: "Attorney",
-      image: team_member_1,
-    },
-    {
-      name: "Michel Phelps",
-      title: "Chief Justice",
-      image: team_member_1,
-    },
-    {
-      name: "Sarah Rahma",
-      title: "Attorney",
-      image: team_member_1,
-    },
-    {
-      name: "Sarah Rahma",
-      title: "Attorney",
-      image: team_member_1,
-    },
-    {
-      name: "Sarah Rahma",
-      title: "Attorney",
-      image: team_member_1,
-    },
-    {
-      name: "Sarah Rahma",
-      title: "Attorney",
-      image: team_member_1,
-    },
-    {
-      name: "Sarah Rahma",
-      title: "Attorney",
-      image: team_member_1,
-    },
-  ];
 
   return (
     <TeamsSite id="teams">
       <div
         className="th-hero-bg-teams"
         style={{
-          backgroundImage: `url(${teams_bg})`,
+          backgroundImage: `url(${TEAMS_DATA_EQUIRON?.teams_bg_images?.title})`,
         }}
       ></div>
-
       <motion.div
         variants={container}
         initial="hidden"
@@ -101,15 +56,15 @@ const Teams = () => {
       >
         <div className="team-content-container">
           <motion.div variants={item_nya} className="teams-desc">
-            <div className="subtitle">Our Teams</div>
+            <div className="subtitle">{TEAMS_DATA_EQUIRON?.teams_text}</div>
             <div className="text-content">
-              Dedicated Lawyers, Proven Results
+              {TEAMS_DATA_EQUIRON?.teams_title}
             </div>
           </motion.div>
           <motion.div variants={item_nya} className="teams-content">
             <Swiper
               modules={[Navigation, Pagination]}
-              slidesPerView={5}
+              slidesPerView={4}
               spaceBetween={24}
               navigation
               pagination={{ clickable: true }}
@@ -122,37 +77,46 @@ const Teams = () => {
                 1480: { slidesPerView: 3 },
               }}
             >
-              {lawyers.map((lawyer, index) => (
+              {TEAMS_DATA_EQUIRON?.teams_members.map((lawyer, index) => (
                 <SwiperSlide key={index}>
                   <div className="team-card">
                     <div className="team-img">
                       <img
-                        src={team_member_1}
-                        alt="team_member"
+                        src={lawyer.image}
+                        alt={lawyer.name}
                         className="img-hero"
                       />
                     </div>
-
                     <div className="team-content">
-                      <div className="box-title">{lawyer?.name}</div>
-                      <div className="desc">Chief Justice</div>
+                      <div className="box-title">{lawyer.name}</div>
+                      <div className="desc">{lawyer.title}</div>
                     </div>
-
                     <div className="team-content-hover-wrap">
                       <div className="team-content-hover">
                         <div className="team-img">
-                          <img src={team_member_1} alt="Team" />
+                          <img src={lawyer.image} alt={lawyer.name} />
                         </div>
                         <div className="hover-inner">
                           <h3 className="box-title">
-                            <a href="team-details.html">Samira Dsuza</a>
+                            <a href="team-details.html">{lawyer.name}</a>
                           </h3>
-                          <span className="team-desig">Attorney</span>
+                          <span className="team-desig">{lawyer.title}</span>
                           <div className="team-social">
-                            <div className="th-social">
-                              <a target="_blank" href="https://facebook.com/">
-                                <i className="fab fa-facebook-f"></i>
-                              </a>
+                            <div className="team-social-media">
+                              {lawyer.socials.map((social, idx) => {
+                                const Icon = social.icon;
+                                return (
+                                  <div className="card-media" key={idx}>
+                                    <a
+                                      href={social.url}
+                                      target="_blank"
+                                      rel="noopener noreferrer"
+                                    >
+                                      <Icon />
+                                    </a>
+                                  </div>
+                                );
+                              })}
                             </div>
                           </div>
                         </div>
@@ -165,10 +129,11 @@ const Teams = () => {
           </motion.div>
         </div>
       </motion.div>
-
-      <div className="shape-mockup-teams jump_teams">
-        <img src={teams_jump_left} alt="teams_jump_left" />
-      </div>
+      {TEAMS_DATA_EQUIRON?.teams_shape_mockup_data?.map((item, index) => (
+        <div key={index} className={`shape-mockup-teams jump_teams`}>
+          <img src={item.tech_img} alt={item.alt} />
+        </div>
+      ))}
     </TeamsSite>
   );
 };

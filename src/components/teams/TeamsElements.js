@@ -304,6 +304,39 @@ export const TeamsSite = styled.section`
               color: #314e52;
             }
           }
+
+          .team-social-media {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            gap: 10px;
+
+            .card-media {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 40px;
+              height: 40px;
+              border-radius: 12px;
+              background-color: #1a3331;
+              color: #a8b2d1;
+              cursor: pointer;
+
+              a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+              }
+
+              &:hover {
+                background-color: rgb(43, 82, 79);
+              }
+            }
+          }
         }
       }
     }

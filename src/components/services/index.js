@@ -1,30 +1,11 @@
-import React, { useEffect, useRef, useState } from "react";
-import icon_gavel from "../../assets/img/law_stack/icon_gavel.svg";
+import React, { useEffect, useRef } from "react";
 import { useInView } from "react-intersection-observer";
 import { useAnimation, motion } from "framer-motion";
 import { ServicesSite } from "./ServicesElements";
-import axios from "axios";
+import { SERVICES_DATA_EQUIRON } from "../../config/Data";
 
 const Services = () => {
-  const [repo, setRepo] = useState([]);
   const myRef = useRef(null);
-
-  const [isloading, setLoading] = useState(true);
-  useEffect(() => {
-    const getList = async () => {
-      setLoading(true);
-      try {
-        const response = await axios(
-          "https://api.github.com/users/id-prawito/repos"
-        );
-        setRepo(response.data);
-      } catch {
-        console.log("error");
-      }
-      setLoading(false);
-    };
-    getList();
-  }, []);
 
   const controls = useAnimation();
   const [ref, inView] = useInView({ threshold: 0.2 });
@@ -57,86 +38,6 @@ const Services = () => {
 
   const services = 0;
 
-  const servicesData = [
-    {
-      icon: icon_gavel,
-      cornerIcon: icon_gavel,
-      cardTitle: "Merger and Acquisitions",
-      cardDesc:
-        "Strategic legal guidance for seamless mergers, acquisitions, and business transitions.",
-    },
-    {
-      icon: icon_gavel,
-      cornerIcon: icon_gavel,
-      cardTitle: "Banking and Finance",
-      cardDesc:
-        "Reliable counsel on financial regulations, lending structures, and transactional compliance.",
-    },
-    {
-      icon: icon_gavel,
-      cornerIcon: icon_gavel,
-      cardTitle: "Land and Property",
-      cardDesc:
-        "Comprehensive support on real estate transactions, land use, and asset protection.",
-    },
-    {
-      icon: icon_gavel,
-      cornerIcon: icon_gavel,
-      cardTitle: "Project Development",
-      cardDesc:
-        "Legal support from planning to execution, ensuring regulatory and commercial alignment.",
-    },
-    {
-      icon: icon_gavel,
-      cornerIcon: icon_gavel,
-      cardTitle: "Technology, Media & Telecom",
-      cardDesc:
-        "Insightful legal solutions for innovation-driven sectors in a fast-evolving digital world.",
-    },
-    {
-      icon: icon_gavel,
-      cornerIcon: icon_gavel,
-      cardTitle: "Corporate Compliance Services",
-      cardDesc:
-        "Helping businesses meet governance standards with clarity and confidence.",
-    },
-    {
-      icon: icon_gavel,
-      cornerIcon: icon_gavel,
-      cardTitle: "Food & Beverage, Anti-Trust & Competition Law",
-      cardDesc:
-        "Navigating industry regulations while protecting your competitive edge.",
-    },
-    {
-      icon: icon_gavel,
-      cornerIcon: icon_gavel,
-      cardTitle: "Start-Up Company",
-      cardDesc:
-        "Tailored legal frameworks to support sustainable growth from early stages.",
-    },
-    {
-      icon: icon_gavel,
-      cornerIcon: icon_gavel,
-      cardTitle: "Criminal Law",
-      cardDesc:
-        "Trusted representation and defense with integrity, discretion, and expertise.",
-    },
-    {
-      icon: icon_gavel,
-      cornerIcon: icon_gavel,
-      cardTitle: "Civil Law",
-      cardDesc:
-        "Resolving personal and commercial disputes with fairness and efficiency.",
-    },
-    {
-      icon: icon_gavel,
-      cornerIcon: icon_gavel,
-      cardTitle: "Coal & Nickel Mining",
-      cardDesc:
-        "Legal insight into mining operations, licensing, and environmental compliance.",
-    },
-  ];
-
   return (
     <ServicesSite ref={myRef} id="services">
       <div className="services-container">
@@ -148,22 +49,13 @@ const Services = () => {
           className="services-content"
         >
           <motion.div variants={item_nya} className="content-title">
-            <div className="big-heading">Legal Services We Offer</div>
-            <h1>
-              At Equiron & Co., we provide forward-thinking and comprehensive
-              legal services tailored to meet the demands of today’s dynamic
-              legal landscape. Guided by our core values—Trust, Commitment, and
-              Accessibility—we deliver clear, strategic legal counsel across a
-              broad spectrum of practice areas. Whether serving individuals,
-              corporations, or institutions, our experienced team takes a
-              client-first approach, ensuring each solution is crafted with
-              precision, integrity, and a deep understanding of your unique
-              needs. With Equiron & Co. by your side, you can face legal
-              complexities with clarity and confidence.
-            </h1>
+            <div className="big-heading">
+              {SERVICES_DATA_EQUIRON?.service_big_heading}
+            </div>
+            <h1>{SERVICES_DATA_EQUIRON?.service_desc}</h1>
           </motion.div>
           <motion.div variants={item_nya} className="content-service">
-            {servicesData?.map((service, i) => (
+            {SERVICES_DATA_EQUIRON?.service_data_services?.map((service, i) => (
               <div key={i} className="custom-card">
                 <div className="icon-wrapper">
                   <img src={service.icon} alt="icon" />
@@ -174,7 +66,7 @@ const Services = () => {
                 <h3 className="card-title">{service.cardTitle}</h3>
                 <p className="card-desc">{service.cardDesc}</p>
                 {services === 1 && (
-                  <a href="#" className="read-more">
+                  <a href="/" className="read-more">
                     Read More <span className="arrow">→</span>
                   </a>
                 )}

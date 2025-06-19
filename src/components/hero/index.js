@@ -35,7 +35,7 @@ const Hero = () => {
           backgroundImage: `url(${hero_background})`,
         }}
       >
-        <img src={hero_overlay} alt="Hero overlay"></img>
+        <img src={hero_overlay} alt="back"></img>
       </div>
       <div className="background-container">
         <div className="hero-container">
@@ -72,11 +72,7 @@ const Hero = () => {
           >
             <motion.div variants={item_nya} className="images-hero">
               <div className="image-border-container">
-                <img
-                  src={images_about_2}
-                  alt="Law Image"
-                  className="main-image"
-                />
+                <img src={images_about_2} alt="law" className="main-image" />
               </div>
             </motion.div>
           </motion.div>

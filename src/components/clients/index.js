@@ -1,40 +1,13 @@
 import React, { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
-import { useAnimation, motion } from "framer-motion";
-import jump from "../../assets/img/law_stack/process-1-shape.png";
-import teams_bg from "../../assets/img/law_stack/team-1-bg.jpg";
-import blog_bg from "../../assets/img/law_stack/blog_bg.jpg";
-import shape_left from "../../assets/img/law_stack/blog-1-shape-left.png";
-import shape_right from "../../assets/img/law_stack/blog-1-shape-right.png";
-import goto_logo from "./../../assets/img/law_stack/goto.png";
-import omron_logo from "./../../assets/img/law_stack/omron.png";
-import gopay_logo from "./../../assets/img/law_stack/gopay.png";
-import shopee_logo from "./../../assets/img/law_stack/shopee.png";
-import bumn_logo from "./../../assets/img/law_stack/bumn.png";
-import pertamina_logo from "./../../assets/img/law_stack/pertamina.png";
-import mandiri_logo from "./../../assets/img/law_stack/mandiri.png";
-
-import { Swiper, SwiperSlide } from "swiper/react";
+import { CLIENTS_DATA_EQUIRON } from "../../config/Data";
 import { Navigation, Pagination } from "swiper/modules";
-import "swiper/css";
+import { useAnimation, motion } from "framer-motion";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { ClientsSite } from "./ClientsElements";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { ClientsSite } from "./ClientsElements";
-
-import aimtopindo_logo from "./../../assets/img/law_stack/clients/aimtopindo_logo.png";
-import chakra_giri_logo from "./../../assets/img/law_stack/clients/chakra-giri_logo.png";
-import citra_harapan_jaya_permai_logo from "./../../assets/img/law_stack/clients/citra-harapan-jaya-permai_logo.png";
-import clm_logo from "./../../assets/img/law_stack/clients/clm_logo.png";
-import dana_paint_logo from "./../../assets/img/law_stack/clients/dana-paint_logo.png";
-import pssi_logo from "./../../assets/img/law_stack/clients/pssi_logo.png";
-import gaharu_pelayaran_logo from "./../../assets/img/law_stack/clients/gaharu-pelayaran_logo.png";
-import lliadi_logo from "./../../assets/img/law_stack/clients/Illiadi_logo.png";
-import indo_berkat_logo from "./../../assets/img/law_stack/clients/indo-berkat_logo.png";
-import mitra_galperti_logo from "./../../assets/img/law_stack/clients/mitra galperti_logo.webp";
-import pbe_logo from "./../../assets/img/law_stack/clients/pbe_logo.png";
-import semesta_energi_service_logo from "./../../assets/img/law_stack/clients/semesta-energi-service_logo.png";
-import tridaya_esa_pakarti_logo from "./../../assets/img/law_stack/clients/tridaya-esa-pakarti_logo.png";
-import warna_warni_logo from "./../../assets/img/law_stack/clients/warna-warni_logo.png";
+import "swiper/css";
 
 const Clients = () => {
   const controls = useAnimation();
@@ -66,84 +39,6 @@ const Clients = () => {
     },
   };
 
-  const lawyers = [
-    {
-      name: "Smith Miller",
-      title: "Attorney",
-      image: mandiri_logo,
-    },
-    {
-      name: "AIMTOPINDO",
-      title: "Client",
-      image: aimtopindo_logo,
-    },
-    {
-      name: "Chakra Giri",
-      title: "Client",
-      image: chakra_giri_logo,
-    },
-    {
-      name: "Citra Harapan Jaya Permai",
-      title: "Client",
-      image: citra_harapan_jaya_permai_logo,
-    },
-    {
-      name: "CLM",
-      title: "Client",
-      image: clm_logo,
-    },
-    {
-      name: "Dana Paint",
-      title: "Client",
-      image: dana_paint_logo,
-    },
-    {
-      name: "PSSI",
-      title: "Client",
-      image: pssi_logo,
-    },
-    {
-      name: "Gaharu Pelayaran",
-      title: "Client",
-      image: gaharu_pelayaran_logo,
-    },
-    {
-      name: "Lliadi",
-      title: "Client",
-      image: lliadi_logo,
-    },
-    {
-      name: "Indo Berkat",
-      title: "Client",
-      image: indo_berkat_logo,
-    },
-    {
-      name: "Mitra Galperti",
-      title: "Client",
-      image: mitra_galperti_logo,
-    },
-    {
-      name: "PBE",
-      title: "Client",
-      image: pbe_logo,
-    },
-    {
-      name: "Semesta Energi Service",
-      title: "Client",
-      image: semesta_energi_service_logo,
-    },
-    {
-      name: "Tridaya Esa Pakarti",
-      title: "Client",
-      image: tridaya_esa_pakarti_logo,
-    },
-    {
-      name: "Warna Warni",
-      title: "Client",
-      image: warna_warni_logo,
-    },
-  ];
-
   return (
     <ClientsSite id="clients">
       <div className="clients-container">
@@ -155,8 +50,12 @@ const Clients = () => {
           className="clients-content-container"
         >
           <motion.div variants={item_nya} className="clients-desc">
-            <div className="clients-title">Clients</div>
-            <div className="clients-subtitle">Our Featured Clients</div>
+            <div className="clients-title">
+              {CLIENTS_DATA_EQUIRON?.clients_text}
+            </div>
+            <div className="clients-subtitle">
+              {CLIENTS_DATA_EQUIRON?.clients_title}
+            </div>
           </motion.div>
           <motion.div variants={item_nya} className="clients-content">
             <Swiper
@@ -172,30 +71,29 @@ const Clients = () => {
                 1024: { slidesPerView: 4 },
               }}
             >
-              {lawyers.map((lawyer, index) => (
-                <SwiperSlide key={index}>
-                  <div className="client-card">
-                    <div className="content-img">
-                      <img
-                        src={lawyer.image}
-                        alt="Blog image about Legal Project Manager"
-                      />
+              {CLIENTS_DATA_EQUIRON?.clients_data_client.map(
+                (lawyer, index) => (
+                  <SwiperSlide key={index}>
+                    <div className="client-card">
+                      <div className="content-img">
+                        <img src={lawyer.image} alt={lawyer.title} />
+                      </div>
                     </div>
-                  </div>
-                </SwiperSlide>
-              ))}
+                  </SwiperSlide>
+                )
+              )}
             </Swiper>
           </motion.div>
         </motion.div>
       </div>
-
-      <div className="shape-mockup-clients-left jump-clients">
-        <img src={shape_left} alt="jump" srcSet="" />
-      </div>
-
-      <div className="shape-mockup-clients-right jump-clients">
-        <img src={shape_right} alt="jump" srcSet="" />
-      </div>
+      {CLIENTS_DATA_EQUIRON?.clients_shape_mockup_data?.map((item, index) => (
+        <div
+          key={index}
+          className={`shape-mockup-clients-${item.class} jump-clients`}
+        >
+          <img src={item.tech_img} alt={item.alt} />
+        </div>
+      ))}
     </ClientsSite>
   );
 };
