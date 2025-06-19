@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 import { CLIENTS_DATA_EQUIRON } from "../../config/Data";
 import { Navigation, Pagination } from "swiper/modules";
@@ -8,6 +8,7 @@ import { ClientsSite } from "./ClientsElements";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css";
+import AppContext from "../../config/AppContext";
 
 const Clients = () => {
   const controls = useAnimation();
@@ -39,6 +40,9 @@ const Clients = () => {
     },
   };
 
+  const { language } = useContext(AppContext); // misalnya "en" atau "id"
+  const CLIENTS_DATA = CLIENTS_DATA_EQUIRON[language];
+
   return (
     <ClientsSite id="clients">
       <div className="clients-container">
@@ -50,11 +54,9 @@ const Clients = () => {
           className="clients-content-container"
         >
           <motion.div variants={item_nya} className="clients-desc">
-            <div className="clients-title">
-              {CLIENTS_DATA_EQUIRON?.clients_text}
-            </div>
+            <div className="clients-title">{CLIENTS_DATA?.clients_text}</div>
             <div className="clients-subtitle">
-              {CLIENTS_DATA_EQUIRON?.clients_title}
+              {CLIENTS_DATA?.clients_title}
             </div>
           </motion.div>
           <motion.div variants={item_nya} className="clients-content">

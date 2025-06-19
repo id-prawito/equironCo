@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import { PUBLICATIONS_DATA_EQUIRON } from "../../config/Data";
 import { useInView } from "react-intersection-observer";
 import { Navigation, Pagination } from "swiper/modules";
@@ -8,6 +8,7 @@ import { ArticleSite } from "./ArticleElements";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css";
+import AppContext from "../../config/AppContext";
 
 const Article = () => {
   const controls = useAnimation();
@@ -39,6 +40,9 @@ const Article = () => {
     },
   };
 
+  const { language } = useContext(AppContext);
+  const PUBLICATIONS_DATA = PUBLICATIONS_DATA_EQUIRON[language];
+
   return (
     <ArticleSite id="article">
       <div className="article-container">
@@ -51,10 +55,10 @@ const Article = () => {
         >
           <motion.div variants={item_nya} className="article-desc">
             <div className="article-title">
-              {PUBLICATIONS_DATA_EQUIRON?.publications_text}
+              {PUBLICATIONS_DATA?.publications_text}
             </div>
             <div className="article-subtitle">
-              {PUBLICATIONS_DATA_EQUIRON?.publications_title}
+              {PUBLICATIONS_DATA?.publications_title}
             </div>
           </motion.div>
           <motion.div variants={item_nya} className="article-content">
@@ -73,7 +77,7 @@ const Article = () => {
                 1290: { slidesPerView: 3 },
               }}
             >
-              {PUBLICATIONS_DATA_EQUIRON?.publications_articles?.map(
+              {PUBLICATIONS_DATA?.publications_articles?.map(
                 (article, index) => {
                   const {
                     user: UserIcon,
@@ -113,16 +117,14 @@ const Article = () => {
           </motion.div>
         </motion.div>
       </div>
-      {PUBLICATIONS_DATA_EQUIRON?.publications_shape_mockup_data?.map(
-        (item, index) => (
-          <div
-            key={index}
-            className={`shape-mockup-article-${item.class} jump_about`}
-          >
-            <img src={item.tech_img} alt={item.alt} />
-          </div>
-        )
-      )}
+      {PUBLICATIONS_DATA?.publications_shape_mockup_data?.map((item, index) => (
+        <div
+          key={index}
+          className={`shape-mockup-article-${item.class} jump_about`}
+        >
+          <img src={item.tech_img} alt={item.alt} />
+        </div>
+      ))}
     </ArticleSite>
   );
 };

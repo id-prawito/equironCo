@@ -271,6 +271,12 @@ export const ArticleSite = styled.section`
         text-transform: none;
         margin: 0 0 15px 0;
 
+        display: -webkit-box;
+        -webkit-line-clamp: 2; /* Batas 2 baris */
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
         ${devices.smartphone} {
           line-height: 1.2;
           font-size: 18px;

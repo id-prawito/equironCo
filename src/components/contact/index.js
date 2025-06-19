@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { ButtonContent, ContactSite, FormContents } from "./ContactElements";
 import { CONTACT_DATA_EQUIRON } from "../../config/Data";
 import { useInView } from "react-intersection-observer";
 import { useAnimation, motion } from "framer-motion";
 import { FaAccusoft } from "react-icons/fa";
 import { FiX } from "react-icons/fi";
+import AppContext from "../../config/AppContext";
 
 const Contact = () => {
   const controls = useAnimation();
@@ -96,6 +97,9 @@ Terima kasih.`;
     }, 3000);
   };
 
+  const { language } = useContext(AppContext); // 'en' atau 'id'
+  const CONTACT_DATA = CONTACT_DATA_EQUIRON[language];
+
   return (
     <ContactSite id="contact">
       <div className="hero-container">
@@ -106,11 +110,9 @@ Terima kasih.`;
           ref={ref}
           className="contact-content"
         >
-          <motion.h1 variants={item_nya}>
-            {CONTACT_DATA_EQUIRON.contact_text}
-          </motion.h1>
+          <motion.h1 variants={item_nya}>{CONTACT_DATA.contact_text}</motion.h1>
           <motion.div variants={item_nya} className="big-heading">
-            {CONTACT_DATA_EQUIRON.contact_title}
+            {CONTACT_DATA.contact_title}
           </motion.div>
         </motion.div>
       </div>
@@ -127,11 +129,11 @@ Terima kasih.`;
             >
               <div className="content">
                 <div className="title-text">
-                  {CONTACT_DATA_EQUIRON?.contact_form_title}
+                  {CONTACT_DATA?.contact_form_title}
                 </div>
                 <p
                   dangerouslySetInnerHTML={{
-                    __html: CONTACT_DATA_EQUIRON?.contact_form_desc,
+                    __html: CONTACT_DATA?.contact_form_desc,
                   }}
                 ></p>
                 <div className="content-form">
@@ -141,7 +143,7 @@ Terima kasih.`;
                     id="form_baru"
                   >
                     <div className="inputan">
-                      {CONTACT_DATA_EQUIRON?.contact_form_inputs?.map(
+                      {CONTACT_DATA?.contact_form_inputs?.map(
                         (field, index) => {
                           if (field.type === "select") {
                             return (
@@ -204,12 +206,12 @@ Terima kasih.`;
                     </div>
 
                     <p style={{ fontSize: "12px", borderBottom: "none" }}>
-                      <b>{CONTACT_DATA_EQUIRON?.contact_note?.label}</b>{" "}
-                      {CONTACT_DATA_EQUIRON?.contact_note?.text}
+                      <b>{CONTACT_DATA?.contact_note?.label}</b>{" "}
+                      {CONTACT_DATA?.contact_note?.text}
                     </p>
                     {berhasil ? (
                       <p className="informasi">
-                        {CONTACT_DATA_EQUIRON?.contact_success_info}
+                        {CONTACT_DATA?.contact_success_info}
                         <button onClick={() => setBerhasil(false)}>
                           <FiX />
                         </button>
@@ -222,7 +224,7 @@ Terima kasih.`;
                       <Button
                         id="form_baru"
                         icon={FaAccusoft}
-                        label={CONTACT_DATA_EQUIRON?.contact_button}
+                        label={CONTACT_DATA?.contact_button}
                         style={{ fontSize: "12px" }}
                       ></Button>
                     </div>
@@ -270,31 +272,29 @@ Terima kasih.`;
                 </div>
 
                 <div className="title-text">
-                  {CONTACT_DATA_EQUIRON?.contact_title_address}
+                  {CONTACT_DATA?.contact_title_address}
                 </div>
-                {CONTACT_DATA_EQUIRON?.contact_title_address_data?.map(
-                  (branch, i) => (
-                    <div className="informasi-text" key={i}>
-                      <div className="text-contant">{branch.title}</div>
-                      <div className="text-desc">{branch.address}</div>
+                {CONTACT_DATA?.contact_title_address_data?.map((branch, i) => (
+                  <div className="informasi-text" key={i}>
+                    <div className="text-contant">{branch.title}</div>
+                    <div className="text-desc">{branch.address}</div>
 
-                      <div className="text-desc">
-                        {branch.information.map((info, index) => (
-                          <div className="informasi-kantor" key={index}>
-                            {info.label}
-                            <div className="style-email">
-                              <a href={info.href}>{info.value}</a>
-                            </div>
+                    <div className="text-desc">
+                      {branch.information.map((info, index) => (
+                        <div className="informasi-kantor" key={index}>
+                          {info.label}
+                          <div className="style-email">
+                            <a href={info.href}>{info.value}</a>
                           </div>
-                        ))}
-                      </div>
-
-                      <div className="maps">
-                        <a href={branch?.maps?.href}>{branch?.maps?.text}</a>
-                      </div>
+                        </div>
+                      ))}
                     </div>
-                  )
-                )}
+
+                    <div className="maps">
+                      <a href={branch?.maps?.href}>{branch?.maps?.text}</a>
+                    </div>
+                  </div>
+                ))}
               </div>
             </motion.div>
           </FormContents>
@@ -367,9 +367,10 @@ export const FormInput = (item) => {
 };
 
 export const FormTextArea = (item) => {
+  const { language } = useContext(AppContext); // 'en' atau 'id'
   return (
     <div className="form-content-input">
-      <div className="text">Pesan</div>
+      <div className="text">{language === "en" ? "Message" : "Pesan"}</div>
       <textarea
         placeholder={item.placeholder}
         required

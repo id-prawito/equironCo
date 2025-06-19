@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 import { Navigation, Pagination } from "swiper/modules";
 import { TEAMS_DATA_EQUIRON } from "../../config/Data";
@@ -8,6 +8,7 @@ import { TeamsSite } from "./TeamsElements";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css";
+import AppContext from "../../config/AppContext";
 
 const Teams = () => {
   const controls = useAnimation();
@@ -39,12 +40,15 @@ const Teams = () => {
     },
   };
 
+  const { language } = useContext(AppContext);
+  const TEAMS_DATA = TEAMS_DATA_EQUIRON[language];
+
   return (
     <TeamsSite id="teams">
       <div
         className="th-hero-bg-teams"
         style={{
-          backgroundImage: `url(${TEAMS_DATA_EQUIRON?.teams_bg_images?.title})`,
+          backgroundImage: `url(${TEAMS_DATA?.teams_bg_images?.title})`,
         }}
       ></div>
       <motion.div
@@ -56,10 +60,8 @@ const Teams = () => {
       >
         <div className="team-content-container">
           <motion.div variants={item_nya} className="teams-desc">
-            <div className="subtitle">{TEAMS_DATA_EQUIRON?.teams_text}</div>
-            <div className="text-content">
-              {TEAMS_DATA_EQUIRON?.teams_title}
-            </div>
+            <div className="subtitle">{TEAMS_DATA?.teams_text}</div>
+            <div className="text-content">{TEAMS_DATA?.teams_title}</div>
           </motion.div>
           <motion.div variants={item_nya} className="teams-content">
             <Swiper
@@ -77,7 +79,7 @@ const Teams = () => {
                 1480: { slidesPerView: 3 },
               }}
             >
-              {TEAMS_DATA_EQUIRON?.teams_members.map((lawyer, index) => (
+              {TEAMS_DATA?.teams_members.map((lawyer, index) => (
                 <SwiperSlide key={index}>
                   <div className="team-card">
                     <div className="team-img">
@@ -129,7 +131,7 @@ const Teams = () => {
           </motion.div>
         </div>
       </motion.div>
-      {TEAMS_DATA_EQUIRON?.teams_shape_mockup_data?.map((item, index) => (
+      {TEAMS_DATA?.teams_shape_mockup_data?.map((item, index) => (
         <div key={index} className={`shape-mockup-teams jump_teams`}>
           <img src={item.tech_img} alt={item.alt} />
         </div>

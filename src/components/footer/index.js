@@ -1,16 +1,20 @@
-import React, { useEffect, useRef } from "react";
+import React, { useContext, useEffect, useRef } from "react";
 import { FooterSite, WaItemSite } from "./FooterElements";
 import { FOOTER_DATA_EQUIRON } from "../../config/Data";
+import AppContext from "../../config/AppContext";
 
 const Footer = () => {
+  const { language } = useContext(AppContext);
+  const FOOTER_DATA = FOOTER_DATA_EQUIRON[language];
+
   return (
     <FooterSite>
       <div className="footer-container">
         <div className="footer-services">
-          <div className="text">{FOOTER_DATA_EQUIRON?.footer_text}</div>
+          <div className="text">{FOOTER_DATA?.footer_text}</div>
 
           <div className="test-flex">
-            {FOOTER_DATA_EQUIRON?.footer_data_services.map((group, index) => (
+            {FOOTER_DATA?.footer_data_services.map((group, index) => (
               <div className="service" key={index}>
                 {group.map((item, subIndex) => (
                   <div className="text" key={subIndex}>
@@ -24,15 +28,15 @@ const Footer = () => {
         <div className="footer-company">
           <div className="footer-company-logo">
             <img
-              src={FOOTER_DATA_EQUIRON?.footer_logo_equiron?.img}
-              alt={FOOTER_DATA_EQUIRON?.footer_logo_equiron?.alt}
+              src={FOOTER_DATA?.footer_logo_equiron?.img}
+              alt={FOOTER_DATA?.footer_logo_equiron?.alt}
             />
           </div>
           <div className="footer-company-desc">
-            {FOOTER_DATA_EQUIRON?.footer_company_desc}
+            {FOOTER_DATA?.footer_company_desc}
           </div>
           <div className="footer-company-social">
-            {FOOTER_DATA_EQUIRON?.footer_social_media?.map((item, i) => (
+            {FOOTER_DATA?.footer_social_media?.map((item, i) => (
               <div key={i} className="social-icon">
                 <a
                   href={item.to}
@@ -48,7 +52,7 @@ const Footer = () => {
         </div>
 
         <div className="footer-info">
-          {FOOTER_DATA_EQUIRON?.footer_contact_info?.map((item, i) => (
+          {FOOTER_DATA?.footer_contact_info?.map((item, i) => (
             <div key={i} className="footer-info-card">
               <div className="card-icon">
                 <item.icon className="icon" />
@@ -71,6 +75,9 @@ export default Footer;
 export const WaItemContent = () => {
   const waRef = useRef(null);
 
+  const { language } = useContext(AppContext);
+  const FOOTER_DATA = FOOTER_DATA_EQUIRON[language];
+
   useEffect(() => {
     const shrinkHeader = () => {
       if (
@@ -92,13 +99,11 @@ export const WaItemContent = () => {
     <WaItemSite>
       <div ref={waRef} className="wa_content">
         <a
-          href={FOOTER_DATA_EQUIRON?.footer_whatsapp?.href}
+          href={FOOTER_DATA?.footer_whatsapp?.href}
           target="_blank"
           rel="noopener noreferrer"
         >
-          <div className="wa_text">
-            {FOOTER_DATA_EQUIRON?.footer_whatsapp?.text}
-          </div>
+          <div className="wa_text">{FOOTER_DATA?.footer_whatsapp?.text}</div>
           <div className="wa_icon"></div>
         </a>
       </div>

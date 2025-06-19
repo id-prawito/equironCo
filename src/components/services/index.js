@@ -1,8 +1,9 @@
-import React, { useEffect, useRef } from "react";
+import React, { useContext, useEffect, useRef } from "react";
 import { useInView } from "react-intersection-observer";
 import { useAnimation, motion } from "framer-motion";
 import { ServicesSite } from "./ServicesElements";
 import { SERVICES_DATA_EQUIRON } from "../../config/Data";
+import AppContext from "../../config/AppContext";
 
 const Services = () => {
   const myRef = useRef(null);
@@ -37,6 +38,8 @@ const Services = () => {
   };
 
   const services = 0;
+  const { language } = useContext(AppContext);
+  const SERVICES_DATA = SERVICES_DATA_EQUIRON[language];
 
   return (
     <ServicesSite ref={myRef} id="services">
@@ -50,12 +53,12 @@ const Services = () => {
         >
           <motion.div variants={item_nya} className="content-title">
             <div className="big-heading">
-              {SERVICES_DATA_EQUIRON?.service_big_heading}
+              {SERVICES_DATA?.service_big_heading}
             </div>
-            <h1>{SERVICES_DATA_EQUIRON?.service_desc}</h1>
+            <h1>{SERVICES_DATA?.service_desc}</h1>
           </motion.div>
           <motion.div variants={item_nya} className="content-service">
-            {SERVICES_DATA_EQUIRON?.service_data_services?.map((service, i) => (
+            {SERVICES_DATA?.service_data_services?.map((service, i) => (
               <div key={i} className="custom-card">
                 <div className="icon-wrapper">
                   <img src={service.icon} alt="icon" />
