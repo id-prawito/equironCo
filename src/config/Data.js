@@ -1,8 +1,5 @@
-import { pokedex, disneyPlus, spkPromethee, arthamas } from "./_images";
 import {
-  FiExternalLink,
   FiFacebook,
-  FiGithub,
   FiInstagram,
   FiLinkedin,
   FiMail,
@@ -13,8 +10,6 @@ import {
 import {
   FaEllipsisV,
   FaCheckCircle,
-  FaRegThumbsUp,
-  FaLeaf,
   FaInstagram,
   FaChalkboardTeacher,
   FaBalanceScale,
@@ -106,6 +101,44 @@ export const NAVLINKS = [
     name: "CLIENTS",
   },
 ];
+
+export const HERO_DATA_EQUIRON = {
+  en: {
+    hero_image_background: hero_background,
+    hero_image_overlay: hero_overlay,
+    hero_image_about: hero_about,
+    text_small: "Your Guardian in Law",
+    big_heading: "Experienced.",
+    big_heading2: "Lawyers, Proven, Result",
+    description:
+      "Our team of experienced attorneys has a diverse range of expertise, covering a wide spectrum of legal areas. We specialize in corporate law, family law.",
+    button: [
+      {
+        to: "https://wa.me/6287777000919",
+        nama_button: "CONTACT US",
+        icon: FaChalkboardTeacher,
+      },
+    ],
+  },
+
+  id: {
+    hero_image_background: hero_background,
+    hero_image_overlay: hero_overlay,
+    hero_image_about: hero_about,
+    text_small: "Penjaga Anda dalam Hukum",
+    big_heading: "Berpengalaman.",
+    big_heading2: "Pengacara, Terbukti, Hasil",
+    description:
+      "Tim pengacara kami yang berpengalaman memiliki keahlian yang beragam, mencakup berbagai bidang hukum. Kami mengkhususkan diri pada hukum korporasi dan hukum keluarga.",
+    button: [
+      {
+        to: "https://wa.me/6287777000919",
+        nama_button: "HUBUNGI KAMI",
+        icon: FaChalkboardTeacher,
+      },
+    ],
+  },
+};
 
 export const ABOUT_DATA_EQUIRON = {
   about_shape_mockup_data: [
@@ -1193,302 +1226,4 @@ export const FOOTER_DATA_EQUIRON = {
       text: "Hubungi Kami via Whatsapp",
     },
   },
-};
-
-export const CONTACT_DATA = {
-  text_small: "Have Any Questions?",
-  big_heading: "Get in Touch with Us",
-  description:
-    "Although I'm not currently looking for any new opportunities, my inbox is always open. Whether you have a question or just want to say hi, I'll try my best to get back to you!",
-  icon: FaRegThumbsUp,
-  to: "mailto:prawito.id@gmail.com",
-  button: "Say Hello",
-};
-
-export const EXPE_DATA = {
-  text_small: "What's Next ?",
-  big_heading: "Where from I've Experienced",
-  expe: [
-    {
-      tab: "Fulltime",
-      key: 1,
-      heading: "WEB DEVELOPER ",
-      to: "https://www.linkedin.com/company/bank-mandiri/?originalSubdomain=id",
-      text_expe: "@ PT. Bank Mandiri (Persero)",
-      date: "Agustus 2022 - Now",
-      skill: [
-        {
-          icon: FaLeaf,
-          desc: "Work as Web Developer at Departement Wholesale, Group Digital Banking Delivery, PT. Bank Mandiri in developing EForm (Tab Application) for reservation transaction financial or non financial at branch of Bank Mandiri, and developing Branch Admin (Web Application) based on AngularJS.",
-        },
-      ],
-    },
-    {
-      tab: "Fulltime",
-      key: 2,
-      heading: "FRONTEND DEVELOPER ",
-      to: "www.facebook.com",
-      text_expe: "@ Prudential Indonesia",
-      date: "April 2022 - Juli 2022 (4 Month)",
-      skill: [
-        {
-          icon: FaLeaf,
-          desc: "Work as Front-End Developer at Prudential Indonesia in developing PRUForce (Mobile Application) and PRUHub (Web Application) based on ReactJS, AngularJS, and Ionic Framework.",
-        },
-      ],
-    },
-    {
-      tab: "Training II",
-      key: 3,
-      heading: "FRONTEND IT PERBANKAN ",
-      to: "www.facebook.com",
-      text_expe: "@ Thematic Academy DTS KOMINFO",
-      date: "August 2021 - October 2021",
-      skill: [
-        {
-          icon: FaLeaf,
-          desc: "Training to answer the challenges of technological developments in the service sector financial management that aims to equip trainees with basic knowledge, specific hard skills and soft skills with the needs of the banking industry.",
-        },
-        {
-          icon: FaLeaf,
-          desc: "Shared knowledge about how to do coding with programming technology HTML, CSS, JavaScript, and React JS.",
-        },
-      ],
-    },
-    {
-      tab: "Internship",
-      key: 4,
-      heading: "WEB DEVELOPER ",
-      to: "www.facebook.com",
-      text_expe: "@ PT. KAI Indonesia",
-      date: "January 2019 - March 2019",
-      skill: [
-        {
-          icon: FaLeaf,
-          desc: "Designed, built, and tested an online system for PT. KAI DAOP 6 Yogyakarta employees using PHP, HTML, Bootstrap, JavaScript, and MySQL.",
-        },
-      ],
-    },
-    {
-      tab: "Training I",
-      key: 5,
-      heading: "BIG DATA ANALYTICS ",
-      to: "www.facebook.com",
-      text_expe: "@ Fresh Graduate Academy DTS KOMINFO",
-      date: "October 2019 - December 2019",
-      skill: [
-        {
-          icon: FaLeaf,
-          desc: "Shared knowledge about how to do basic coding with Python.",
-        },
-        {
-          icon: FaLeaf,
-          desc: "Worked on some final projects to solved current problems using Machine Learning, and data twitter.",
-        },
-      ],
-    },
-    {
-      tab: "Certificate",
-      key: 6,
-      heading: "ORACLE ACADEMY ",
-      to: "www.facebook.com",
-      text_expe: "@ Oracle | Diponegoro University",
-      date: "December 2018",
-      skill: [
-        {
-          icon: FaLeaf,
-          desc: "Oracle Academy is a training program from Oracle that provides training that includes Database design and Database programming with SQL, Database programming with PL/SQL, Java Programming, and Java Fundamentals.",
-        },
-      ],
-    },
-  ],
-};
-
-export const MEDIA_SOSIAL = [
-  {
-    to: "https://github.com/id-prawito",
-    label: "Github",
-    icon: FiGithub,
-  },
-  {
-    to: "https://www.instagram.com/praw.ito/",
-    label: "Instagram",
-    icon: FaInstagram,
-  },
-  {
-    to: "https://twitter.com/id_praw",
-    label: "Twitter",
-    icon: FiTwitter,
-  },
-  {
-    to: "https://linkedin.com/in/prawito/",
-    label: "Linkedin",
-    icon: FiLinkedin,
-  },
-  {
-    to: "tel:+6282137925172",
-    label: "Phone",
-    icon: FiPhone,
-  },
-];
-
-export const HERO_DATA_EQUIRON = {
-  en: {
-    hero_image_background: hero_background,
-    hero_image_overlay: hero_overlay,
-    hero_image_about: hero_about,
-    text_small: "Your Guardian in Law",
-    big_heading: "Experienced.",
-    big_heading2: "Lawyers, Proven, Result",
-    description:
-      "Our team of experienced attorneys has a diverse range of expertise, covering a wide spectrum of legal areas. We specialize in corporate law, family law.",
-    button: [
-      {
-        to: "https://wa.me/6287777000919",
-        nama_button: "CONTACT US",
-        icon: FaChalkboardTeacher,
-      },
-    ],
-  },
-
-  id: {
-    hero_image_background: hero_background,
-    hero_image_overlay: hero_overlay,
-    hero_image_about: hero_about,
-    text_small: "Penjaga Anda dalam Hukum",
-    big_heading: "Berpengalaman.",
-    big_heading2: "Pengacara, Terbukti, Hasil",
-    description:
-      "Tim pengacara kami yang berpengalaman memiliki keahlian yang beragam, mencakup berbagai bidang hukum. Kami mengkhususkan diri pada hukum korporasi dan hukum keluarga.",
-    button: [
-      {
-        to: "https://wa.me/6287777000919",
-        nama_button: "HUBUNGI KAMI",
-        icon: FaChalkboardTeacher,
-      },
-    ],
-  },
-};
-
-export const WORK_DATA = {
-  text_small: "Hi bro, this is",
-  big_heading: "Some Things I've Built",
-  project: [
-    {
-      style: "row-reverse",
-      project_to: "https://www.arthamasabadi.co.id/",
-      project_img: arthamas,
-      alt: "Bank Artha Mas Abadi",
-      ml: "0px",
-      mr: "-80px",
-      ai: "flex-start",
-      ta: "left",
-      text: "Featured Project",
-      description:
-        "Bank Artha Mas Abadi website is a website that is used to provide information to customers about the products and services of Bank Artha Mas Abadi, and other information.",
-      tect_list: ["React", "Laravel", "MySql"],
-      project_link: [
-        {
-          to: "https://github.com/id-prawito/disney-plus",
-          icon: FiGithub,
-        },
-        {
-          to: "https://id-prawito.github.io/disney-plus/",
-          icon: FiExternalLink,
-        },
-      ],
-    },
-    {
-      style: "row",
-      project_to: "https://id-prawito.github.io/pokedex-id/",
-      project_img: pokedex,
-      alt: "Pokedex-id",
-      ml: "-80px",
-      mr: "0px",
-      ai: "flex-end",
-      ta: "right",
-      text: "Featured Project",
-      description:
-        "Pokédex id is an electronic device designed to catalogue and provide information regarding the various species of Pokémon featured in the Pokémon video game, anime and manga series. Search for a Pokémon by name orusing it's National Pokédex number.",
-      tect_list: [
-        "VS Code",
-        "Pokedex API",
-        "React",
-        "Styled Components",
-        "Github Pages",
-      ],
-      project_link: [
-        {
-          to: "https://github.com/id-prawito/pokedex-id",
-          icon: FiGithub,
-        },
-        {
-          to: "https://id-prawito.github.io/pokedex-id/",
-          icon: FiExternalLink,
-        },
-      ],
-    },
-    {
-      style: "row-reverse",
-      project_to: "https://id-prawito.github.io/disney-plus/",
-      project_img: disneyPlus,
-      alt: "Disney Plus",
-      ml: "0px",
-      mr: "-80px",
-      ai: "flex-start",
-      ta: "left",
-      text: "Featured Project",
-      description:
-        "Disney Plus is a movie search app clone from Disney + website, this app can helps display and sort all movies available in the TMDB API. This App is build with ReactJS, SCSS and Swiper JS. Also, uses Github Pages to deploy.",
-      tect_list: [
-        "VS Code",
-        "TMDB API",
-        "React",
-        "Scss",
-        "Github Pages",
-        "Swiper Js",
-      ],
-      project_link: [
-        {
-          to: "https://github.com/id-prawito/disney-plus",
-          icon: FiGithub,
-        },
-        {
-          to: "https://id-prawito.github.io/disney-plus/",
-          icon: FiExternalLink,
-        },
-      ],
-    },
-    {
-      style: "row",
-      project_to: "https://promethee.ta-spk.xyz",
-      project_img: spkPromethee,
-      alt: "SPK - Promethee",
-      ml: "-80px",
-      mr: "0px",
-      ai: "flex-end",
-      ta: "right",
-      text: "Featured Project",
-      description:
-        "Decision Support System for Priority Determination of Small Dam Construction Development with The Promethee Method (Preference Ranking Organization Methodfor Enrichment Evaluation).",
-      tect_list: [
-        "VS Code",
-        "Laravel",
-        "PHP",
-        "MySQL",
-        "Pond Data",
-        "Promethee Method",
-      ],
-      project_link: [
-        {
-          to: "#",
-          icon: FiGithub,
-        },
-        {
-          to: "https://promethee.ta-spk.xyz",
-          icon: FiExternalLink,
-        },
-      ],
-    },
-  ],
 };
