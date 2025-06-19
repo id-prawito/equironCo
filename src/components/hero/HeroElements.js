@@ -73,6 +73,22 @@ export const HeroSite = styled.section`
     gap: 20px;
     width: 50%;
 
+    ${devices?.smartphone} {
+      width: 100%;
+    }
+
+    ${devices?.ipads} {
+      width: 100%;
+    }
+
+    ${devices?.tablet} {
+      width: 100%;
+    }
+
+    ${devices?.laptop} {
+      width: 100%;
+    }
+
     h1 {
       font-weight: 500;
       font-size: 20px;
@@ -87,14 +103,21 @@ export const HeroSite = styled.section`
 
     ${devices.smartphone} {
       align-items: center;
+      width: 100%;
     }
 
     ${devices.ipads} {
       align-items: center;
+      width: 100%;
     }
 
     ${devices.tablet} {
       align-items: center;
+      width: 100%;
+    }
+
+    ${devices?.laptop} {
+      width: 100%;
     }
   }
 
@@ -272,7 +295,7 @@ export const HeroSite = styled.section`
     .main-image {
       display: block;
       width: 100%;
-      height: auto;
+      height: 100%;
       border-radius: 0 70px 0 70px;
       position: relative;
       z-index: 2;
@@ -286,7 +309,7 @@ export const HeroSite = styled.section`
     z-index: -4;
 
     ${devices.smartphone} {
-      height: 780px;
+      height: 820px;
     }
 
     ${devices.ipads} {

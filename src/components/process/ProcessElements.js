@@ -101,6 +101,7 @@ export const ProcessSite = styled.section`
       border-radius: 24px;
       overflow: hidden;
       transition: transform 0.3s ease-in-out;
+      height: 80%;
 
       ${devices.smartphone} {
         transform: none;
