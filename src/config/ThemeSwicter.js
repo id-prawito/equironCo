@@ -100,8 +100,8 @@ const ThemeSwitcherStylesFlag = styled.div`
       justify-content: center;
 
       img {
-        height: 15px;
-        width: 15px;
+        height: 16px;
+        width: 16px;
       }
     }
     svg {
@@ -141,7 +141,7 @@ export default function ThemeSwitcher() {
         type="checkbox"
         id="switcher"
         onChange={toggleTheme}
-        checked={theme === "light"}
+        checked={theme === "dark"}
       />
       <label htmlFor="switcher">
         <div className="icon">

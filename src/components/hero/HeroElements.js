@@ -71,6 +71,7 @@ export const HeroSite = styled.section`
     display: flex;
     flex-direction: column;
     gap: 20px;
+    width: 50%;
 
     h1 {
       font-weight: 500;
@@ -82,6 +83,7 @@ export const HeroSite = styled.section`
     display: flex;
     flex-direction: column;
     gap: 20px;
+    width: 45%;
 
     ${devices.smartphone} {
       align-items: center;

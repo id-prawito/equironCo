@@ -41,6 +41,9 @@ import {
   clm_logo,
   dana_paint_logo,
   gaharu_pelayaran_logo,
+  hero_about,
+  hero_background,
+  hero_overlay,
   images_about_1,
   images_about_2,
   images_about_3,
@@ -1329,19 +1332,42 @@ export const MEDIA_SOSIAL = [
   },
 ];
 
-export const HERO_DATA = {
-  text_small: "Your Guardian in Law",
-  big_heading: "Experienced.",
-  big_heading2: "Lawyers, Proven, Result",
-  description:
-    "Our team of experienced attorneys has a diverse range of expe rtise, covering a wide spectrum of legal areas. We specialize in corporate law, family law.",
-  button: [
-    {
-      to: "https://wa.me/6287777000919",
-      nama_button: "CONTACT US",
-      icon: FaChalkboardTeacher,
-    },
-  ],
+export const HERO_DATA_EQUIRON = {
+  en: {
+    hero_image_background: hero_background,
+    hero_image_overlay: hero_overlay,
+    hero_image_about: hero_about,
+    text_small: "Your Guardian in Law",
+    big_heading: "Experienced.",
+    big_heading2: "Lawyers, Proven, Result",
+    description:
+      "Our team of experienced attorneys has a diverse range of expertise, covering a wide spectrum of legal areas. We specialize in corporate law, family law.",
+    button: [
+      {
+        to: "https://wa.me/6287777000919",
+        nama_button: "CONTACT US",
+        icon: FaChalkboardTeacher,
+      },
+    ],
+  },
+
+  id: {
+    hero_image_background: hero_background,
+    hero_image_overlay: hero_overlay,
+    hero_image_about: hero_about,
+    text_small: "Penjaga Anda dalam Hukum",
+    big_heading: "Berpengalaman.",
+    big_heading2: "Pengacara, Terbukti, Hasil",
+    description:
+      "Tim pengacara kami yang berpengalaman memiliki keahlian yang beragam, mencakup berbagai bidang hukum. Kami mengkhususkan diri pada hukum korporasi dan hukum keluarga.",
+    button: [
+      {
+        to: "https://wa.me/6287777000919",
+        nama_button: "HUBUNGI KAMI",
+        icon: FaChalkboardTeacher,
+      },
+    ],
+  },
 };
 
 export const WORK_DATA = {
