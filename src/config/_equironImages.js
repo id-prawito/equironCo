@@ -38,6 +38,10 @@ import tridaya_esa_pakarti_logo from "./../assets/img/law_stack/clients/tridaya-
 import warna_warni_logo from "./../assets/img/law_stack/clients/warna-warni_logo.png";
 import logo_equiron_white from "./../assets/img/law_stack/logo_white.png";
 
+import hero_background from "./../assets/img/law_stack/hero_background.jpg";
+import hero_overlay from "./../assets/img/law_stack/hero_overlay.png";
+import hero_about from "./../assets/img/law_stack/images_about_2.png";
+
 export {
   about_jump_right,
   about_jump_left,
@@ -77,4 +81,7 @@ export {
   tridaya_esa_pakarti_logo,
   warna_warni_logo,
   logo_equiron_white,
+  hero_background,
+  hero_overlay,
+  hero_about,
 };

@@ -1,10 +1,8 @@
-import React from "react";
-import { HERO_DATA } from "../../config/Data";
+import React, { useContext } from "react";
+import { HERO_DATA, HERO_DATA_EQUIRON } from "../../config/Data";
 import { HeroSite } from "./HeroElements";
 import { motion } from "framer-motion";
-import images_about_2 from "./../../assets/img/law_stack/images_about_2.png";
-import hero_background from "./../../assets/img/law_stack/hero_background.jpg";
-import hero_overlay from "./../../assets/img/law_stack/hero_overlay.png";
+import AppContext from "../../config/AppContext";
 
 const Hero = () => {
   const container = {
@@ -27,15 +25,18 @@ const Hero = () => {
     },
   };
 
+  const { language } = useContext(AppContext);
+  const HERO_DATA = HERO_DATA_EQUIRON[language];
+
   return (
     <HeroSite id="home">
       <div
         className="th-hero-bg background-images-hero"
         style={{
-          backgroundImage: `url(${hero_background})`,
+          backgroundImage: `url(${HERO_DATA?.hero_image_background})`,
         }}
       >
-        <img src={hero_overlay} alt="back"></img>
+        <img src={HERO_DATA.hero_image_overlay} alt="back"></img>
       </div>
       <div className="background-container">
         <div className="hero-container">
@@ -72,7 +73,11 @@ const Hero = () => {
           >
             <motion.div variants={item_nya} className="images-hero">
               <div className="image-border-container">
-                <img src={images_about_2} alt="law" className="main-image" />
+                <img
+                  src={HERO_DATA?.hero_image_about}
+                  alt="law"
+                  className="main-image"
+                />
               </div>
             </motion.div>
           </motion.div>

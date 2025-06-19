@@ -141,7 +141,7 @@ export default function ThemeSwitcher() {
         type="checkbox"
         id="switcher"
         onChange={toggleTheme}
-        checked={theme === "light"}
+        checked={theme === "dark"}
       />
       <label htmlFor="switcher">
         <div className="icon">
