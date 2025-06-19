@@ -1,5 +1,4 @@
 import {
-  FiFacebook,
   FiInstagram,
   FiLinkedin,
   FiMail,
