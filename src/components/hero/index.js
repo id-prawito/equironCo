@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { HERO_DATA, HERO_DATA_EQUIRON } from "../../config/Data";
+import { HERO_DATA_EQUIRON } from "../../config/Data";
 import { HeroSite } from "./HeroElements";
 import { motion } from "framer-motion";
 import AppContext from "../../config/AppContext";

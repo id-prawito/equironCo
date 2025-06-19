@@ -100,8 +100,8 @@ const ThemeSwitcherStylesFlag = styled.div`
       justify-content: center;
 
       img {
-        height: 15px;
-        width: 15px;
+        height: 16px;
+        width: 16px;
       }
     }
     svg {
