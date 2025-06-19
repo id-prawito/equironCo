@@ -144,26 +144,62 @@ export const ABOUT_DATA_EQUIRON = {
       class: "left",
     },
   ],
-  about_title:
-    "Our core values—Trust, Commitment, and Accessibility—are at the heart of everything we do.",
-  about_heading: "A Legacy <span>Of</span> Legal Excellence",
-  about_desc:
-    "is a forward-thinking, full-service law firm dedicated to providing comprehensive legal solutions across various sectors. Founded with a vision to become a trusted legal partner, we serve individuals, businesses, and organizations with professionalism and integrity. Our core values—Trust, Commitment, and Accessibility—are at the heart of everything we do.",
-  about_skill_data: [
-    {
-      icon: FaCheckCircle,
-      text: "Trust is the foundation of our client relationships.",
-    },
-    {
-      icon: FaCheckCircle,
-      text: "Client-Centered Approach, Excellence and Proactivity",
-    },
-    {
-      icon: FaCheckCircle,
-      text: "Accessibility is central to our philosophy.",
-    },
-    { icon: FaCheckCircle, text: "Partners in Your Success" },
-  ],
+  en: {
+    about_title:
+      "Our core values—Trust, Commitment, and Accessibility—are at the heart of everything we do.",
+    about_heading: "A Legacy <span>Of</span> Legal Excellence",
+    about_desc:
+      "is a forward-thinking, full-service law firm dedicated to providing comprehensive legal solutions across various sectors. Founded with a vision to become a trusted legal partner, we serve individuals, businesses, and organizations with professionalism and integrity. Our core values—Trust, Commitment, and Accessibility—are at the heart of everything we do.",
+    about_skill_data: [
+      {
+        icon: FaCheckCircle,
+        text: "Trust is the foundation of our client relationships.",
+      },
+      {
+        icon: FaCheckCircle,
+        text: "Client-Centered Approach, Excellence and Proactivity",
+      },
+      {
+        icon: FaCheckCircle,
+        text: "Accessibility is central to our philosophy.",
+      },
+      { icon: FaCheckCircle, text: "Partners in Your Success" },
+    ],
+    about_stats_data: [
+      { icon: <FaBalanceScale />, value: "10k+", label: "Case Done" },
+      { icon: <FaUserShield />, value: "12k+", label: "Expert Attorneys" },
+      { icon: <FaStarHalfAlt />, value: "15k+", label: "Happy Clients" },
+      { icon: <FaTrophy />, value: "20k+", label: "Award Winning" },
+    ],
+  },
+  id: {
+    about_title:
+      "Nilai-nilai utama kami—Kepercayaan, Komitmen, dan Aksesibilitas—adalah inti dari semua yang kami lakukan.",
+    about_heading: "Warisan <span>Keunggulan</span> Hukum",
+    about_desc:
+      "adalah firma hukum layanan lengkap yang berpikiran maju, didedikasikan untuk menyediakan solusi hukum yang komprehensif di berbagai sektor. Didirikan dengan visi menjadi mitra hukum terpercaya, kami melayani individu, bisnis, dan organisasi dengan profesionalisme dan integritas. Nilai-nilai inti kami—Kepercayaan, Komitmen, dan Aksesibilitas—adalah inti dari semua yang kami lakukan.",
+    about_skill_data: [
+      {
+        icon: FaCheckCircle,
+        text: "Kepercayaan adalah fondasi hubungan kami dengan klien.",
+      },
+      {
+        icon: FaCheckCircle,
+        text: "Pendekatan Berorientasi Klien, Keunggulan, dan Proaktif",
+      },
+      {
+        icon: FaCheckCircle,
+        text: "Aksesibilitas adalah pusat dari filosofi kami.",
+      },
+      { icon: FaCheckCircle, text: "Mitra dalam Kesuksesan Anda" },
+    ],
+    about_stats_data: [
+      { icon: <FaBalanceScale />, value: "10rb+", label: "Kasus Selesai" },
+      { icon: <FaUserShield />, value: "12rb+", label: "Pengacara Ahli" },
+      { icon: <FaStarHalfAlt />, value: "15rb+", label: "Klien Puas" },
+      { icon: <FaTrophy />, value: "20rb+", label: "Penghargaan" },
+    ],
+  },
   about_images_one: {
     title: images_about_1,
     alt: "images_about_1",
@@ -173,12 +209,6 @@ export const ABOUT_DATA_EQUIRON = {
     alt: "images_about_1",
   },
   about_images_three: { title: images_about_3, alt: "images_about_1" },
-  about_stats_data: [
-    { icon: <FaBalanceScale />, value: "10k+", label: "Case Done" },
-    { icon: <FaUserShield />, value: "12k+", label: "Expert Attorneys" },
-    { icon: <FaStarHalfAlt />, value: "15k+", label: "Happy Clients" },
-    { icon: <FaTrophy />, value: "20k+", label: "Award Winning" },
-  ],
 };
 
 export const SERVICES_DATA_EQUIRON = {
