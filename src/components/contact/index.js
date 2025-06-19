@@ -245,7 +245,9 @@ Terima kasih.`;
               className="card-form"
             >
               <div className="content">
-                <div className="title-text">Informasi Kontak</div>
+                <div className="title-text">
+                  {CONTACT_DATA?.contact_title_contact}
+                </div>
                 <div className="content-form">
                   <div className="contact-item">
                     {CONTACT_DATA_EQUIRON?.contact_media_sosial?.map(

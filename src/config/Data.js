@@ -114,7 +114,7 @@ export const HERO_DATA_EQUIRON = {
       "Our team of experienced attorneys has a diverse range of expertise, covering a wide spectrum of legal areas. We specialize in corporate law, family law.",
     button: [
       {
-        to: "https://wa.me/6287777000919",
+        to: "https://wa.me/+6287772300770",
         nama_button: "CONTACT US",
         icon: FaChalkboardTeacher,
       },
@@ -132,7 +132,7 @@ export const HERO_DATA_EQUIRON = {
       "Tim pengacara kami yang berpengalaman memiliki keahlian yang beragam, mencakup berbagai bidang hukum. Kami mengkhususkan diri pada hukum korporasi dan hukum keluarga.",
     button: [
       {
-        to: "https://wa.me/6287777000919",
+        to: "https://wa.me/+6287772300770",
         nama_button: "HUBUNGI KAMI",
         icon: FaChalkboardTeacher,
       },
@@ -908,6 +908,7 @@ export const CONTACT_DATA_EQUIRON = {
       "Info: Please check your WhatsApp for follow-up messages.",
     contact_button: "Send Consultation",
     contact_title_address: "Address Information",
+    contact_title_contact: "Contact Information",
     contact_title_address_data: [
       {
         title: "Branch Office",
@@ -916,13 +917,13 @@ export const CONTACT_DATA_EQUIRON = {
         information: [
           {
             label: "Email:",
-            value: "equiron@gmail.com",
+            value: "equironandco@gmail.com",
             href: "mailto:equironandco@gmail.com",
           },
           {
             label: "Phone Number:",
-            value: "6287777000919",
-            href: "https://wa.me/6287777000919",
+            value: "6287772300770",
+            href: "https://wa.me/6287772300770",
           },
         ],
         maps: {
@@ -1010,6 +1011,7 @@ export const CONTACT_DATA_EQUIRON = {
       "Informasi: Silakan cek pesan WhatsApp secara berkala.",
     contact_button: "Kirim Pesan Konsultasi",
     contact_title_address: "Informasi Alamat",
+    contact_title_contact: "Informasi Kontak",
     contact_title_address_data: [
       {
         title: "Kantor Cabang",
@@ -1018,13 +1020,13 @@ export const CONTACT_DATA_EQUIRON = {
         information: [
           {
             label: "Email :",
-            value: "equiron@gmail.com",
+            value: "equironandco@gmail.com",
             href: "mailto:equironandco@gmail.com",
           },
           {
             label: "No. Handphone :",
-            value: "6287777000919",
-            href: "https://wa.me/6287777000919",
+            value: "6287772300770",
+            href: "https://wa.me/6287772300770",
           },
         ],
         maps: {
@@ -1039,26 +1041,26 @@ export const CONTACT_DATA_EQUIRON = {
     {
       icon: FaWhatsapp,
       label: "Whatsapp",
-      title: "6287777000919",
-      to: "https://wa.me/6287777000919",
+      title: "6287772300770",
+      to: "https://wa.me/6287772300770",
     },
     {
       icon: FiPhone,
       label: "Telepon",
-      title: "+6287777000919",
-      to: "https://wa.me/6287777000919",
+      title: "+6287772300770",
+      to: "https://wa.me/+6287772300770",
     },
     {
       icon: FiMail,
       label: "Email",
-      title: "equiron@gmail.com",
+      title: "equironandco@gmail.com",
       to: "mailto:equironandco@gmail.com",
     },
     {
       icon: FiInstagram,
       label: "Instagram",
-      title: "@equironlegal",
-      to: "https://instagram.com/equironlegal",
+      title: "@equironandco",
+      to: "https://www.instagram.com/equironandco/",
     },
   ],
 };
@@ -1106,18 +1108,12 @@ export const FOOTER_DATA_EQUIRON = {
       "Equiron & Co. is a forward-thinking, full-service law firm dedicated to providing comprehensive legal solutions across various sectors.",
     footer_social_media: [
       {
-        to: "https://www.instagram.com/praw.ito/",
+        to: "https://www.instagram.com/equironandco/",
         label: "Instagram",
         icon: FaInstagram,
       },
-      { to: "https://twitter.com/id_praw", label: "Twitter", icon: FiTwitter },
-      {
-        to: "https://linkedin.com/in/prawito/",
-        label: "Linkedin",
-        icon: FiLinkedin,
-      },
-      { to: "tel:+6282137925172", label: "Phone", icon: FiPhone },
-      { to: "tel:+6282137925172", label: "Facebook", icon: FiFacebook },
+      { to: "mailto:equironandco@gmail.com", label: "Email", icon: FiMail },
+      { to: "tel:+6287772300770", label: "Phone", icon: FiPhone },
     ],
     footer_contact_info: [
       {
@@ -1128,7 +1124,7 @@ export const FOOTER_DATA_EQUIRON = {
       {
         icon: FiPhone,
         label: "Phone",
-        desc: "+62 8777-7000-919",
+        desc: "+62 8777-230-0770",
       },
       {
         icon: FaRegEnvelope,
@@ -1137,8 +1133,8 @@ export const FOOTER_DATA_EQUIRON = {
       },
     ],
     footer_whatsapp: {
-      value: "6287777000919",
-      href: "https://wa.me/6287777000919",
+      value: "6287772300770",
+      href: "https://wa.me/6287772300770",
       text: "Contact Us via Whatsapp",
     },
   },
@@ -1190,18 +1186,12 @@ export const FOOTER_DATA_EQUIRON = {
       "Equiron & Co. adalah firma hukum penuh visi ke depan yang menyediakan solusi hukum menyeluruh di berbagai sektor.",
     footer_social_media: [
       {
-        to: "https://www.instagram.com/praw.ito/",
+        to: "https://www.instagram.com/equironandco/",
         label: "Instagram",
         icon: FaInstagram,
       },
-      { to: "https://twitter.com/id_praw", label: "Twitter", icon: FiTwitter },
-      {
-        to: "https://linkedin.com/in/prawito/",
-        label: "Linkedin",
-        icon: FiLinkedin,
-      },
-      { to: "tel:+6282137925172", label: "Telepon", icon: FiPhone },
-      { to: "tel:+6282137925172", label: "Facebook", icon: FiFacebook },
+      { to: "mailto:equironandco@gmail.com", label: "Email", icon: FiMail },
+      { to: "tel:+6287772300770", label: "Phone", icon: FiPhone },
     ],
     footer_contact_info: [
       {
@@ -1212,7 +1202,7 @@ export const FOOTER_DATA_EQUIRON = {
       {
         icon: FiPhone,
         label: "Telepon",
-        desc: "+62 8777-7000-919",
+        desc: "+62 8777-230-0770",
       },
       {
         icon: FaRegEnvelope,
@@ -1221,8 +1211,8 @@ export const FOOTER_DATA_EQUIRON = {
       },
     ],
     footer_whatsapp: {
-      value: "6287777000919",
-      href: "https://wa.me/6287777000919",
+      value: "6287772300770",
+      href: "https://wa.me/6287772300770",
       text: "Hubungi Kami via Whatsapp",
     },
   },

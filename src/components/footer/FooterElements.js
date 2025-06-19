@@ -239,6 +239,12 @@ export const FooterSite = styled.footer`
           color: #a8b2d1;
           cursor: pointer;
 
+          a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+
           &:hover {
             background-color: rgb(43, 82, 79);
           }
