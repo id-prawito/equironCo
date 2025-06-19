@@ -92,8 +92,8 @@ export const HeaderContainer = styled.div`
     svg {
       color: ${({ theme: { theme } }) =>
         theme === themeList.light ? "#222B5F" : "#F3F1FE"};
-      height: 25px;
-      width: 25px;
+      height: 30px;
+      width: 30px;
     }
     &:hover {
       background-color: #8080803b;
@@ -103,7 +103,7 @@ export const HeaderContainer = styled.div`
   .closeIcon {
     position: absolute;
     right: 35px;
-    top: 30px;
+    top: -4px;
     &:hover {
       background-color: #8080803b;
       svg {
@@ -113,10 +113,10 @@ export const HeaderContainer = styled.div`
   }
   .navOverlay {
     position: absolute;
-    background: #b88649;
+    background: #0000007a;
     height: 100vh;
     width: 100vw;
-    opacity: 0.2;
+    opacity: 0.8;
     left: 0;
     top: 0;
   }
@@ -178,11 +178,19 @@ export const HeaderContainer = styled.div`
       ${devices.smartphone} {
         font-weight: 500;
         font-size: 14px;
+        padding: 0 0px;
       }
 
       ${devices.ipads} {
         font-weight: 500;
-        font-size: 15px;
+        font-size: 14px;
+        padding: 0 0px;
+      }
+
+      ${devices.tablet} {
+        font-weight: 500;
+        font-size: 14px;
+        padding: 0 0px;
       }
 
       .resume {
@@ -322,17 +330,29 @@ export const HeaderContainer = styled.div`
 
           ${devices.smartphone} {
             flex-direction: column;
-            gap: 20px;
+            gap: 24px;
+            top: 130px;
+            position: absolute;
+            align-items: flex-start;
+            padding: 0px 34px;
           }
 
           ${devices.ipads} {
             flex-direction: column;
-            gap: 20px;
+            gap: 24px;
+            top: 130px;
+            position: absolute;
+            align-items: flex-start;
+            padding: 0px 34px;
           }
 
           ${devices.tablet} {
             flex-direction: column;
-            gap: 20px;
+            gap: 24px;
+            top: 130px;
+            position: absolute;
+            align-items: flex-start;
+            padding: 0px 34px;
           }
 
           li {
@@ -341,6 +361,22 @@ export const HeaderContainer = styled.div`
               align-items: center;
             }
           }
+        }
+
+        .nav-menu-close {
+          position: absolute;
+          right: 0px;
+          top: 50px;
+
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          width: 100%;
+          color: #000;
+          padding: 0px 34px;
+          font-size: 20px;
+          font-weight: 500;
         }
       }
 
