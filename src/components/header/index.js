@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useRef, useState } from "react";
 import { FaArrowRight, FaChevronUp, FaEllipsisV } from "react-icons/fa";
 import { HeaderContainer, HeaderSite, NavLinks } from "./HeaderElements";
 import { FiMenu, FiX } from "react-icons/fi";
-import { MEDIA_SOSIAL, NAVLINKS } from "../../config/Data";
+import { NAVLINKS } from "../../config/Data";
 import logoEquironHeaderBlack from "../../assets/img/law_stack/header_logo_black.png";
 import logoEquironHeaderWhite from "../../assets/img/law_stack/header_logo_white.png";
 import logoEquiron from "../../assets/img/law_stack/logoEquiron.png";
@@ -203,32 +203,8 @@ const Header = () => {
 };
 
 const MediaSocial = ({ variants }) => {
-  const active = 1;
-
   return (
     <>
-      {active === 0 ? (
-        <motion.div
-          variants={variants}
-          className="media_social"
-          orientation="left"
-        >
-          <ul className="item_media">
-            {MEDIA_SOSIAL.map((item, i) => (
-              <li key={i} className="item_li">
-                <a
-                  href={item.to}
-                  aria-label={item.label}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <item.icon />
-                </a>
-              </li>
-            ))}
-          </ul>
-        </motion.div>
-      ) : null}
       <motion.div
         variants={variants}
         className="media_social_right"
