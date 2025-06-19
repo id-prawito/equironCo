@@ -1,11 +1,11 @@
 import React, { useContext } from "react";
 import styled from "styled-components";
 import { FiSun, FiMoon } from "react-icons/fi";
-import ThemeContext from "./ThemeContext";
 import themeList from "./themeList";
 import { devices } from "../assets/scss/_respondTo";
 import flagUk from "../assets/img/law_stack/uk-flag.png";
 import flagIndo from "../assets/img/law_stack/indonesia-flag.png";
+import AppContext from "./AppContext";
 
 const ThemeSwitcherStyles = styled.div`
   padding: 0 10px;
@@ -87,7 +87,7 @@ const ThemeSwitcherStylesFlag = styled.div`
     cursor: pointer;
     border-radius: 50px;
     background: ${({ theme: { theme } }) =>
-      theme === themeList.light ? "#1a1d29" : "#979797"};
+      theme === "light" ? "#1a1d29" : "#979797"};
     z-index: 1;
     display: flex;
     align-items: center;
@@ -134,14 +134,14 @@ const ThemeSwitcherStylesFlag = styled.div`
 `;
 
 export default function ThemeSwitcher() {
-  const { theme, toggleTheme } = useContext(ThemeContext);
+  const { theme, toggleTheme } = useContext(AppContext);
   return (
     <ThemeSwitcherStyles>
       <input
         type="checkbox"
         id="switcher"
         onChange={toggleTheme}
-        checked={theme === "dark"}
+        checked={theme === "light"}
       />
       <label htmlFor="switcher">
         <div className="icon">
@@ -155,25 +155,22 @@ export default function ThemeSwitcher() {
   );
 }
 
-export function ThemeSwitcherFlag() {
-  const { theme, toggleTheme } = useContext(ThemeContext);
+export function LanguageSwitcher() {
+  const { language, toggleLanguage } = useContext(AppContext);
   return (
     <ThemeSwitcherStylesFlag>
       <input
         type="checkbox"
-        id="switcher"
-        onChange={toggleTheme}
-        checked={theme === "dark"}
+        id="langSwitcher"
+        onChange={toggleLanguage}
+        checked={language === "id"}
       />
-      <label htmlFor="switcher">
+      <label htmlFor="langSwitcher">
         <div className="icon">
-          <img src={flagUk} alt="" srcset="" />
-          {/* <FiSun /> */}
+          <img src={flagUk} alt="UK Flag" />
         </div>
         <div className="icon">
-          <img src={flagIndo} alt="" srcset="" />
-
-          {/* <FiMoon /> */}
+          <img src={flagIndo} alt="Indo Flag" />
         </div>
       </label>
     </ThemeSwitcherStylesFlag>

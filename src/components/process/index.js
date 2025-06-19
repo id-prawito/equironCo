@@ -1,8 +1,9 @@
-import React, { useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 import { useAnimation, motion } from "framer-motion";
 import { ProcessSite } from "./ProcessElements";
 import { PROCESS_DATA_EQUIRON } from "../../config/Data";
+import AppContext from "../../config/AppContext";
 
 const Process = () => {
   const controls = useAnimation();
@@ -34,6 +35,9 @@ const Process = () => {
     },
   };
 
+  const { language } = useContext(AppContext);
+  const PPROCESS_DATA = PROCESS_DATA_EQUIRON[language];
+
   return (
     <ProcessSite id="process">
       {PROCESS_DATA_EQUIRON?.process_shape_mockup_data?.map((item, index) => (
@@ -59,10 +63,10 @@ const Process = () => {
             />
           </div>
           <div className="process-content-flow">
-            <div className="text">{PROCESS_DATA_EQUIRON?.process_text}</div>
-            <div className="title">{PROCESS_DATA_EQUIRON?.process_title}</div>
+            <div className="text">{PPROCESS_DATA?.process_text}</div>
+            <div className="title">{PPROCESS_DATA?.process_title}</div>
             <div className="process">
-              {PROCESS_DATA_EQUIRON?.process_data_works.map((item, index) => {
+              {PPROCESS_DATA?.process_data_works.map((item, index) => {
                 const Icon = item.icon;
                 return (
                   <motion.div

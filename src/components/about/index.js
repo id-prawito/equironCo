@@ -1,8 +1,9 @@
-import React, { useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 import { ABOUT_DATA_EQUIRON } from "../../config/Data";
 import { useAnimation, motion } from "framer-motion";
 import { AboutSite } from "./AboutElements";
+import AppContext from "../../config/AppContext";
 
 const About = () => {
   const controls = useAnimation();
@@ -34,6 +35,11 @@ const About = () => {
     },
   };
 
+  const { language } = useContext(AppContext);
+  const ABOUT_LANGUAGE_DATA = ABOUT_DATA_EQUIRON[language]; // ambil data sesuai bahasa
+
+  console.log(ABOUT_LANGUAGE_DATA);
+
   return (
     <AboutSite ref={ref} id="about">
       {ABOUT_DATA_EQUIRON?.about_shape_mockup_data?.map((item, index) => (
@@ -53,19 +59,19 @@ const About = () => {
       >
         <div className="about-content">
           <motion.div variants={item_nya} className="about-details">
-            <h1>{ABOUT_DATA_EQUIRON?.about_title}</h1>
+            <h1>{ABOUT_LANGUAGE_DATA?.about_title}</h1>
             <div
               className="big-heading-about"
               dangerouslySetInnerHTML={{
-                __html: ABOUT_DATA_EQUIRON?.about_heading,
+                __html: ABOUT_LANGUAGE_DATA?.about_heading,
               }}
             ></div>
             <p>
               <b className="title-equ">Equiron & Co. </b>{" "}
-              {ABOUT_DATA_EQUIRON?.about_desc}
+              {ABOUT_LANGUAGE_DATA?.about_desc}
             </p>
             <ul className="text-skill">
-              {ABOUT_DATA_EQUIRON?.about_skill_data?.map((item, i) => (
+              {ABOUT_LANGUAGE_DATA?.about_skill_data?.map((item, i) => (
                 <li key={i}>
                   <div className="icon">
                     <item.icon />
@@ -107,7 +113,7 @@ const About = () => {
           </motion.div>
         </div>
         <motion.div variants={item_nya} className="stats-container">
-          {ABOUT_DATA_EQUIRON?.about_stats_data?.map((s, idx) => (
+          {ABOUT_LANGUAGE_DATA?.about_stats_data?.map((s, idx) => (
             <React.Fragment key={idx}>
               <div className="test">
                 <div className="stat-item">

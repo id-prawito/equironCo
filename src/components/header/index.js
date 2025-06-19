@@ -6,10 +6,10 @@ import { MEDIA_SOSIAL, NAVLINKS } from "../../config/Data";
 import logoEquironHeaderBlack from "../../assets/img/law_stack/header_logo_black.png";
 import logoEquironHeaderWhite from "../../assets/img/law_stack/header_logo_white.png";
 import logoEquiron from "../../assets/img/law_stack/logoEquiron.png";
-import ThemeSwitcher, { ThemeSwitcherFlag } from "../../config/ThemeSwicter";
+import ThemeSwitcher, { LanguageSwitcher } from "../../config/ThemeSwicter";
 import { motion } from "framer-motion";
 import themeList from "../../config/themeList";
-import ThemeContext from "../../config/ThemeContext";
+import AppContext from "../../config/AppContext";
 
 const Header = () => {
   const headerRef = useRef(null);
@@ -76,7 +76,7 @@ const Header = () => {
     });
   }, []);
 
-  const { theme } = useContext(ThemeContext);
+  const { theme } = useContext(AppContext);
 
   return (
     <HeaderSite ref={headerRef}>
@@ -106,7 +106,7 @@ const Header = () => {
             <motion.div variants={item_nya}>
               <div className="button-switcher">
                 <ThemeSwitcher />
-                <ThemeSwitcherFlag />
+                <LanguageSwitcher />
               </div>
             </motion.div>
           </div>
