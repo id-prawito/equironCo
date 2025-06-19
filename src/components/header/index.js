@@ -125,14 +125,17 @@ const Header = () => {
           <div className="header__menu">
             <nav className={isMobile && isNavOpen ? "open" : undefined}>
               {isMobile && (
-                <div
-                  className="closeIcon"
-                  tabIndex="0"
-                  role="button"
-                  onKeyDown={() => setIsNavOpen(false)}
-                  onClick={() => setIsNavOpen(false)}
-                >
-                  <FiX />
+                <div className="nav-menu-close">
+                  <div className="test">MENU</div>
+                  <div
+                    className="closeIcon"
+                    tabIndex="0"
+                    role="button"
+                    onKeyDown={() => setIsNavOpen(false)}
+                    onClick={() => setIsNavOpen(false)}
+                  >
+                    <FiX />
+                  </div>
                 </div>
               )}
               <ul>
