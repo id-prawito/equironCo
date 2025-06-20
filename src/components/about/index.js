@@ -7,7 +7,8 @@ import AppContext from "../../config/AppContext";
 
 const About = () => {
   const controls = useAnimation();
-  const [ref, inView] = useInView({ threshold: 0.3 });
+
+  const [ref, inView] = useInView({ threshold: 0.1, triggerOnce: true });
 
   useEffect(() => {
     if (inView) {
@@ -37,8 +38,6 @@ const About = () => {
 
   const { language } = useContext(AppContext);
   const ABOUT_LANGUAGE_DATA = ABOUT_DATA_EQUIRON[language]; // ambil data sesuai bahasa
-
-  console.log(ABOUT_LANGUAGE_DATA);
 
   return (
     <AboutSite ref={ref} id="about">
@@ -115,7 +114,7 @@ const About = () => {
         <motion.div variants={item_nya} className="stats-container">
           {ABOUT_LANGUAGE_DATA?.about_stats_data?.map((s, idx) => (
             <React.Fragment key={idx}>
-              <div className="test">
+              <div className="stat-card">
                 <div className="stat-item">
                   <div className="icon">{s.icon}</div>
                   <div className="content">

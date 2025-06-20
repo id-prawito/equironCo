@@ -12,7 +12,7 @@ import AppContext from "../../config/AppContext";
 
 const Article = () => {
   const controls = useAnimation();
-  const [ref, inView] = useInView({ threshold: 0.2 });
+  const [ref, inView] = useInView({ threshold: 0.1, triggerOnce: true });
 
   useEffect(() => {
     if (inView) {

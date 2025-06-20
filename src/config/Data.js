@@ -743,9 +743,9 @@ export const CLIENTS_DATA_EQUIRON = {
 
   clients_data_client: [
     {
-      name: "AIMTOPINDO",
-      title: "aimtopindo_logo",
-      image: aimtopindo_logo,
+      name: "PSSI",
+      title: "pssi_logo",
+      image: pssi_logo,
     },
     {
       name: "Chakra Giri",
@@ -753,9 +753,9 @@ export const CLIENTS_DATA_EQUIRON = {
       image: chakra_giri_logo,
     },
     {
-      name: "Citra Harapan Jaya Permai",
-      title: "citra_harapan_jaya_permai_logo",
-      image: citra_harapan_jaya_permai_logo,
+      name: "Dana Paint",
+      title: "dana_paint_logo",
+      image: dana_paint_logo,
     },
     {
       name: "CLM",
@@ -763,24 +763,24 @@ export const CLIENTS_DATA_EQUIRON = {
       image: clm_logo,
     },
     {
-      name: "Dana Paint",
-      title: "dana_paint_logo",
-      image: dana_paint_logo,
-    },
-    {
-      name: "PSSI",
-      title: "pssi_logo",
-      image: pssi_logo,
-    },
-    {
       name: "Gaharu Pelayaran",
       title: "gaharu_pelayaran_logo",
       image: gaharu_pelayaran_logo,
     },
     {
+      name: "Citra Harapan Jaya Permai",
+      title: "citra_harapan_jaya_permai_logo",
+      image: citra_harapan_jaya_permai_logo,
+    },
+    {
       name: "Lliadi",
       title: "lliadi_logo",
       image: lliadi_logo,
+    },
+    {
+      name: "AIMTOPINDO",
+      title: "aimtopindo_logo",
+      image: aimtopindo_logo,
     },
     {
       name: "Indo Berkat",
@@ -910,7 +910,7 @@ export const CONTACT_DATA_EQUIRON = {
     contact_title_contact: "Contact Information",
     contact_title_address_data: [
       {
-        title: "Branch Office",
+        title: "Head Office",
         address:
           "Jalan Pengasinan No. 3 Jatimulya, Bekasi, West Java 17115, Indonesia",
         information: [
@@ -1013,7 +1013,7 @@ export const CONTACT_DATA_EQUIRON = {
     contact_title_contact: "Informasi Kontak",
     contact_title_address_data: [
       {
-        title: "Kantor Cabang",
+        title: "Kantor Pusat",
         address:
           "Jalan Pengasinan No. 3 Jatimulya, Bekasi, Jawa Barat 17115, Indonesia",
         information: [
