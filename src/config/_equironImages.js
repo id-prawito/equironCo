@@ -2,7 +2,7 @@ import about_jump_right from "../assets/img/law_stack/about1-right-bottom.png";
 import about_jump_left from "../assets/img/law_stack/process-1-shape.png";
 import images_about_1 from "../assets/img/law_stack/images_about_1.jpg";
 import images_about_2 from "../assets/img/law_stack/images_about_2.png";
-import images_about_3 from "../assets/img/law_stack/images_about_3.png";
+import images_about_3 from "../assets/img/law_stack/images_about_3.jpg";
 import service_card_1_1 from "../assets/img/law_stack/services/service_card_1_1.svg";
 import service_card_1_2 from "../assets/img/law_stack/services/service_card_1_2.svg";
 import service_card_1_3 from "../assets/img/law_stack/services/service_card_1_3.svg";
