@@ -41,6 +41,8 @@ import logo_equiron_white from "./../assets/img/law_stack/logo_white.png";
 import hero_background from "./../assets/img/law_stack/hero_background.jpg";
 import hero_overlay from "./../assets/img/law_stack/hero_overlay.png";
 import hero_about from "./../assets/img/law_stack/images_about_2.png";
+import background_og from "./../assets/img/background-og.png";
+import logo from "./../assets/img/logo.png";
 
 export {
   about_jump_right,
@@ -84,4 +86,6 @@ export {
   hero_background,
   hero_overlay,
   hero_about,
+  background_og,
+  logo,
 };
