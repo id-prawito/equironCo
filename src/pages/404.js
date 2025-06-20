@@ -5,6 +5,7 @@ import { Header404 } from "../components/header";
 import { devices } from "../assets/scss/_respondTo";
 import { Link } from "react-router-dom";
 import themeList from "../config/themeList";
+import { background_og, hero_background } from "../config/_equironImages";
 
 const NotFoundContainer = styled.div`
   display: flex;
@@ -61,13 +62,14 @@ const NotFoundContainer = styled.div`
       border: 0.2px solid var(--colorMain);
       background-color: transparent;
       color: var(--colorMain);
-      padding: 12px 20px;
+      padding: 16px 32px;
       border-radius: 6px;
       max-height: 100%;
       cursor: pointer;
       font-size: 14px;
       gap: 10px;
       transition: 0.3s all ease;
+      position: relative;
 
       ${devices.smartphone} {
         padding: 10px 15px;
@@ -82,8 +84,24 @@ const NotFoundContainer = styled.div`
       }
 
       .item_content {
+        position: relative;
+        z-index: 1;
         display: flex;
         gap: 10px;
+        font-size: 24px;
+        font-weight: 500;
+        padding: 10px;
+      }
+
+      .class-img-og {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.3;
       }
     }
   }
@@ -103,6 +121,9 @@ const NotFound = () => {
             <div className="item_content">
               <FaRegThumbsUp />
               <Link to="/">Back to Home</Link>
+            </div>
+            <div className="class-img-og">
+              <img src={background_og} alt="" srcset="" />
             </div>
           </div>
         </div>
