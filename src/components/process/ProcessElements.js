@@ -10,6 +10,7 @@ export const ProcessSite = styled.section`
   min-height: auto;
   max-width: 1650px;
   position: relative;
+  padding: 0px;
 
   ${devices.tablet} {
     padding: 80px 0px;
