@@ -10,6 +10,7 @@ import ThemeSwitcher, { LanguageSwitcher } from "../../config/ThemeSwicter";
 import { motion } from "framer-motion";
 import themeList from "../../config/themeList";
 import AppContext from "../../config/AppContext";
+import theme from "../../config/themeList";
 
 const Header = () => {
   const headerRef = useRef(null);
@@ -302,13 +303,16 @@ export const Header404 = () => {
           <div className="header__logo">
             <motion.div variants={item_nya}>
               <NavLinks to="home" smooth activeClass="active" spy={true}>
-                <div className="test">
+                <div className="header-text-logo">
                   <img
                     alt="logo_header"
-                    src={logoEquiron}
+                    src={
+                      theme === themeList.light
+                        ? logoEquironHeaderBlack
+                        : logoEquironHeaderWhite
+                    }
                     className="logo__img"
                   />
-                  <div className="text-logo">Equiron and Co.</div>
                 </div>
               </NavLinks>
             </motion.div>

@@ -2,12 +2,15 @@ import React from "react";
 import ReactDOM from "react-dom";
 import App from "./app/App";
 import { AppContextProvider } from "../src/config/AppContext";
+import { HelmetProvider } from "react-helmet-async";
 
 ReactDOM.render(
   <React.StrictMode>
-    <AppContextProvider>
-      <App />
-    </AppContextProvider>
+    <HelmetProvider>
+      <AppContextProvider>
+        <App />
+      </AppContextProvider>
+    </HelmetProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );
