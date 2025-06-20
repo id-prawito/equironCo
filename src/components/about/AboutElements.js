@@ -13,17 +13,24 @@ export const AboutSite = styled.section`
   position: relative;
 
   ${devices.smartphone} {
-    padding: 70px 0px;
+    padding: 40px 0px;
     min-height: 0px;
   }
 
   ${devices.ipads} {
     min-height: 0px;
+    padding: 40px 0px;
   }
 
   ${devices.laptop} {
     max-width: 950px;
-    min-height: 160vh;
+    min-height: 0px;
+    padding: 160px 0px;
+  }
+
+  ${devices.desktops} {
+    min-height: 0px;
+    padding: 160px 0px;
   }
 
   .shape-mockup {
@@ -89,11 +96,11 @@ export const AboutSite = styled.section`
     z-index: 2;
 
     ${devices.smartphone} {
-      padding: 120px 40px;
+      padding: 80px 40px;
     }
 
     ${devices.ipads} {
-      padding: 120px 40px;
+      padding: 80px 40px;
     }
 
     ${devices.tablet} {
