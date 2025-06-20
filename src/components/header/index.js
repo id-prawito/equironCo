@@ -5,7 +5,6 @@ import { FiMenu, FiX } from "react-icons/fi";
 import { NAVLINKS } from "../../config/Data";
 import logoEquironHeaderBlack from "../../assets/img/law_stack/header_logo_black.png";
 import logoEquironHeaderWhite from "../../assets/img/law_stack/header_logo_white.png";
-import logoEquiron from "../../assets/img/law_stack/logoEquiron.png";
 import ThemeSwitcher, { LanguageSwitcher } from "../../config/ThemeSwicter";
 import { motion } from "framer-motion";
 import themeList from "../../config/themeList";

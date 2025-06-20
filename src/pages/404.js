@@ -5,7 +5,8 @@ import { Header404 } from "../components/header";
 import { devices } from "../assets/scss/_respondTo";
 import { Link } from "react-router-dom";
 import themeList from "../config/themeList";
-import { background_og, hero_background } from "../config/_equironImages";
+import { background_og } from "../config/_equironImages";
+import { Helmet } from "react-helmet-async";
 
 const NotFoundContainer = styled.div`
   display: flex;
@@ -62,16 +63,27 @@ const NotFoundContainer = styled.div`
       border: 0.2px solid var(--colorMain);
       background-color: transparent;
       color: var(--colorMain);
-      padding: 16px 32px;
-      border-radius: 6px;
+      padding: 14px 32px;
+      border-radius: 14px;
       max-height: 100%;
       cursor: pointer;
       font-size: 14px;
       gap: 10px;
       transition: 0.3s all ease;
       position: relative;
+      overflow: hidden;
 
       ${devices.smartphone} {
+        padding: 10px 15px;
+        font-size: 12px;
+      }
+
+      ${devices.ipads} {
+        padding: 10px 15px;
+        font-size: 12px;
+      }
+
+      ${devices.tablet} {
         padding: 10px 15px;
         font-size: 12px;
       }
@@ -88,9 +100,24 @@ const NotFoundContainer = styled.div`
         z-index: 1;
         display: flex;
         gap: 10px;
-        font-size: 24px;
+        font-size: 18px;
         font-weight: 500;
-        padding: 10px;
+        padding: 8px;
+
+        ${devices.smartphone} {
+          padding: 8px 12px;
+          font-size: 14px;
+        }
+
+        ${devices.ipads} {
+          padding: 8px 12px;
+          font-size: 14px;
+        }
+
+        ${devices.tablet} {
+          padding: 8px 12px;
+          font-size: 14px;
+        }
       }
 
       .class-img-og {
@@ -110,6 +137,43 @@ const NotFoundContainer = styled.div`
 const NotFound = () => {
   return (
     <>
+      <Helmet>
+        <title>Home | Equiron and Co.</title>
+        <meta
+          name="description"
+          content="Selamat datang di website resmi Nama Perusahaan. Kami menyediakan layanan hukum, bisnis, dan konsultasi terpercaya."
+        />
+        <meta
+          name="keywords"
+          content="hukum, bisnis, konsultasi, pengacara, notaris"
+        />
+        <meta name="author" content="Equiron and Co." />
+
+        {/* Open Graph (untuk Facebook, LinkedIn, dll) */}
+        <meta property="og:title" content="Beranda | Nama Perusahaan" />
+        <meta
+          property="og:description"
+          content="Selamat datang di website resmi Nama Perusahaan. Kami menyediakan layanan hukum, bisnis, dan konsultasi terpercaya."
+        />
+        <meta
+          property="og:image"
+          content="https://equironandco.com/static/media/background-og.3fde3d841b7224d8add3.png"
+        />
+        <meta property="og:url" content="https://equironandco.com/" />
+        <meta property="og:type" content="website" />
+
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Home | Equiron and Co." />
+        <meta
+          name="twitter:description"
+          content="Selamat datang di website resmi Nama Perusahaan. Kami menyediakan layanan hukum, bisnis, dan konsultasi terpercaya."
+        />
+        <meta
+          name="twitter:image"
+          content="https://equironandco.com/static/media/background-og.3fde3d841b7224d8add3.png"
+        />
+      </Helmet>
       <Header404 />
       <NotFoundContainer>
         <div className="angka">

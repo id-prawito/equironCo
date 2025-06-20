@@ -34,7 +34,7 @@ const Home = () => {
         />
         <meta
           property="og:image"
-          content="https://www.namaperusahaan.com/images/og-home.jpg"
+          content="https://equironandco.com/static/media/background-og.3fde3d841b7224d8add3.png"
         />
         <meta property="og:url" content="https://equironandco.com/" />
         <meta property="og:type" content="website" />
@@ -48,7 +48,7 @@ const Home = () => {
         />
         <meta
           name="twitter:image"
-          content="https://www.namaperusahaan.com/images/og-home.jpg"
+          content="https://equironandco.com/static/media/background-og.3fde3d841b7224d8add3.png"
         />
       </Helmet>
 
