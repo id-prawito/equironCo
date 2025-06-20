@@ -377,6 +377,11 @@ export const HeaderContainer = styled.div`
           padding: 0px 34px;
           font-size: 20px;
           font-weight: 500;
+
+          color: ${({ theme: { theme } }) =>
+            theme === themeList.light
+              ? "var(--light-text-black)"
+              : "var(--dark-text-white)"};
         }
       }
 

@@ -9,10 +9,49 @@ import Process from "../components/process";
 import Teams from "../components/teams";
 import Article from "../components/article";
 import Clients from "../components/clients";
+import { Helmet } from "react-helmet-async";
 
 const Home = () => {
   return (
     <>
+      <Helmet>
+        <title>Home | Equiron and Co.</title>
+        <meta
+          name="description"
+          content="Selamat datang di website resmi Nama Perusahaan. Kami menyediakan layanan hukum, bisnis, dan konsultasi terpercaya."
+        />
+        <meta
+          name="keywords"
+          content="hukum, bisnis, konsultasi, pengacara, notaris"
+        />
+        <meta name="author" content="Equiron and Co." />
+
+        {/* Open Graph (untuk Facebook, LinkedIn, dll) */}
+        <meta property="og:title" content="Beranda | Nama Perusahaan" />
+        <meta
+          property="og:description"
+          content="Selamat datang di website resmi Nama Perusahaan. Kami menyediakan layanan hukum, bisnis, dan konsultasi terpercaya."
+        />
+        <meta
+          property="og:image"
+          content="https://www.namaperusahaan.com/images/og-home.jpg"
+        />
+        <meta property="og:url" content="https://equironandco.com/" />
+        <meta property="og:type" content="website" />
+
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Home | Equiron and Co." />
+        <meta
+          name="twitter:description"
+          content="Selamat datang di website resmi Nama Perusahaan. Kami menyediakan layanan hukum, bisnis, dan konsultasi terpercaya."
+        />
+        <meta
+          name="twitter:image"
+          content="https://www.namaperusahaan.com/images/og-home.jpg"
+        />
+      </Helmet>
+
       <Header />
       <Hero />
       <About />
