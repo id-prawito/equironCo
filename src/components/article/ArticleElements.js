@@ -150,6 +150,7 @@ export const ArticleSite = styled.section`
     .blog-img {
       border-radius: 24px;
       overflow: hidden;
+      max-height: 280px;
 
       a {
         color: #b68c5a;
