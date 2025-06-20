@@ -16,7 +16,7 @@ export const ServicesSite = styled.section`
   }
 
   .services-container {
-    padding: 180px 0px;
+    padding: 100px 0px;
     width: 100%;
 
     ${devices.smartphone} {

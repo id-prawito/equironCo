@@ -9,7 +9,7 @@ import AppContext from "../../config/AppContext";
 
 const Contact = () => {
   const controls = useAnimation();
-  const [ref, inView] = useInView({ threshold: 0.2 });
+  const [ref, inView] = useInView({ threshold: 0.1, triggerOnce: true });
 
   useEffect(() => {
     if (inView) {
@@ -101,24 +101,28 @@ Terima kasih.`;
   const CONTACT_DATA = CONTACT_DATA_EQUIRON[language];
 
   return (
-    <ContactSite id="contact">
-      <div className="hero-container">
-        <motion.div
-          variants={container}
-          initial="hidden"
-          animate={controls}
-          ref={ref}
-          className="contact-content"
-        >
+    <ContactSite ref={ref} id="contact">
+      <motion.div
+        variants={container}
+        initial="hidden"
+        animate={controls}
+        className="hero-container"
+      >
+        <motion.div variants={item_nya} className="contact-content">
           <motion.h1 variants={item_nya}>{CONTACT_DATA.contact_text}</motion.h1>
           <motion.div variants={item_nya} className="big-heading">
             {CONTACT_DATA.contact_title}
           </motion.div>
         </motion.div>
-      </div>
+      </motion.div>
 
-      <div className="contact-container">
-        <div className="content-form">
+      <motion.div
+        variants={container}
+        initial="hidden"
+        animate={controls}
+        className="contact-container"
+      >
+        <motion.div variants={item_nya} className="content-form">
           <FormContents>
             <motion.div
               variants={container}
@@ -233,9 +237,9 @@ Terima kasih.`;
               </div>
             </motion.div>
           </FormContents>
-        </div>
+        </motion.div>
 
-        <div className="content-info-new">
+        <motion.div variants={item_nya} className="content-info-new">
           <FormContents>
             <motion.div
               variants={container}
@@ -300,8 +304,8 @@ Terima kasih.`;
               </div>
             </motion.div>
           </FormContents>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </ContactSite>
   );
 };

@@ -41,6 +41,7 @@ export const AboutSite = styled.section`
       right: -50px;
       z-index: 1;
       pointer-events: none;
+      opacity: 0.6;
 
       ${devices.smartphone} {
         right: 100px;
@@ -317,10 +318,12 @@ export const AboutSite = styled.section`
         overflow: visible;
 
         ${devices.smartphone} {
+          border-radius: 60px 0 60px 60px;
           height: 100%;
         }
 
         ${devices.ipads} {
+          border-radius: 60px 0 60px 60px;
           height: 100%;
         }
 
@@ -332,6 +335,14 @@ export const AboutSite = styled.section`
           display: block;
           position: relative;
           z-index: 1;
+
+          ${devices.smartphone} {
+            border-radius: 60px 0 60px 60px;
+          }
+
+          ${devices.ipads} {
+            border-radius: 60px 0 60px 60px;
+          }
 
           &:hover {
             animation: shake 0.5s ease-in-out;

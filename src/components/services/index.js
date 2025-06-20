@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useRef } from "react";
+import React, { useContext, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 import { useAnimation, motion } from "framer-motion";
 import { ServicesSite } from "./ServicesElements";
@@ -6,10 +6,8 @@ import { SERVICES_DATA_EQUIRON } from "../../config/Data";
 import AppContext from "../../config/AppContext";
 
 const Services = () => {
-  const myRef = useRef(null);
-
   const controls = useAnimation();
-  const [ref, inView] = useInView({ threshold: 0.2 });
+  const [ref, inView] = useInView({ threshold: 0.1, triggerOnce: true });
 
   useEffect(() => {
     if (inView) {
@@ -30,7 +28,7 @@ const Services = () => {
   };
 
   const item_nya = {
-    hidden: { y: 20, opacity: 0 },
+    hidden: { y: -20, opacity: 0 },
     visible: {
       y: 0,
       opacity: 1,
@@ -42,13 +40,12 @@ const Services = () => {
   const SERVICES_DATA = SERVICES_DATA_EQUIRON[language];
 
   return (
-    <ServicesSite ref={myRef} id="services">
+    <ServicesSite ref={ref} id="services">
       <div className="services-container">
         <motion.div
           variants={container}
           initial="hidden"
           animate={controls}
-          ref={ref}
           className="services-content"
         >
           <motion.div variants={item_nya} className="content-title">

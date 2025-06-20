@@ -11,9 +11,9 @@ const Footer = () => {
     <FooterSite>
       <div className="footer-container">
         <div className="footer-services">
-          <div className="text">{FOOTER_DATA?.footer_text}</div>
+          <div className="footer-services-text">{FOOTER_DATA?.footer_text}</div>
 
-          <div className="test-flex">
+          <div className="footer-service-flex">
             {FOOTER_DATA?.footer_data_services.map((group, index) => (
               <div className="service" key={index}>
                 {group.map((item, subIndex) => (

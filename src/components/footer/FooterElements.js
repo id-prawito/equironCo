@@ -83,13 +83,13 @@ export const FooterSite = styled.footer`
       ${devices.smartphone} {
         grid-area: services;
         align-items: center;
-        margin-bottom: 30px;
+        gap: 8px;
       }
 
       ${devices.ipads} {
         grid-area: services;
         align-items: center;
-        margin-bottom: 30px;
+        gap: 8px;
       }
 
       ${devices.tablet} {
@@ -98,10 +98,11 @@ export const FooterSite = styled.footer`
         margin-bottom: 30px;
       }
 
-      .text {
+      .footer-services-text {
         font-size: 16px;
         font-weight: bold;
         text-align: left;
+        margin-bottom: 20px;
       }
 
       .service {
@@ -162,7 +163,7 @@ export const FooterSite = styled.footer`
       }
     }
 
-    .test-flex {
+    .footer-service-flex {
       display: flex;
       flex-direction: column;
       gap: 16px;

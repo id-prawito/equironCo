@@ -7,7 +7,7 @@ import AppContext from "../../config/AppContext";
 
 const Process = () => {
   const controls = useAnimation();
-  const [ref, inView] = useInView({ threshold: 0.2 });
+  const [ref, inView] = useInView({ threshold: 0.1, triggerOnce: true });
 
   useEffect(() => {
     if (inView) {
@@ -39,7 +39,7 @@ const Process = () => {
   const PPROCESS_DATA = PROCESS_DATA_EQUIRON[language];
 
   return (
-    <ProcessSite id="process">
+    <ProcessSite ref={ref} id="process">
       {PROCESS_DATA_EQUIRON?.process_shape_mockup_data?.map((item, index) => (
         <div
           key={index}
@@ -48,21 +48,23 @@ const Process = () => {
           <img src={item.tech_img} alt={item.alt} />
         </div>
       ))}
-      <motion.div
-        variants={container}
-        initial="hidden"
-        animate={controls}
-        ref={ref}
-        className="process-container"
-      >
-        <div className="process-content">
-          <div className="process-content-images">
-            <img
-              src={PROCESS_DATA_EQUIRON?.process_one_images?.title}
-              alt={PROCESS_DATA_EQUIRON?.process_one_images?.alt}
-            />
-          </div>
-          <div className="process-content-flow">
+      <div className="process-container">
+        <motion.div
+          variants={container}
+          initial="hidden"
+          animate={controls}
+          className="process-content"
+        >
+          <motion.div variants={item_nya}>
+            <div className="process-content-images">
+              <img
+                src={PROCESS_DATA_EQUIRON?.process_one_images?.title}
+                alt={PROCESS_DATA_EQUIRON?.process_one_images?.alt}
+              />
+            </div>
+          </motion.div>
+
+          <motion.div variants={item_nya} className="process-content-flow">
             <div className="text">{PPROCESS_DATA?.process_text}</div>
             <div className="title">{PPROCESS_DATA?.process_title}</div>
             <div className="process">
@@ -85,9 +87,9 @@ const Process = () => {
                 );
               })}
             </div>
-          </div>
-        </div>
-      </motion.div>
+          </motion.div>
+        </motion.div>
+      </div>
     </ProcessSite>
   );
 };
