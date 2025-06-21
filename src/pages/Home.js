@@ -27,7 +27,10 @@ const Home = () => {
         <meta name="author" content="Equiron and Co." />
 
         {/* Open Graph (untuk Facebook, LinkedIn, dll) */}
-        <meta property="og:title" content="Beranda | Nama Perusahaan" />
+        <meta
+          property="og:title"
+          content="Equiron and Co. | Trust - Commitment - Accesible"
+        />
         <meta
           property="og:description"
           content="Selamat datang di website resmi Nama Perusahaan. Kami menyediakan layanan hukum, bisnis, dan konsultasi terpercaya."
@@ -41,7 +44,10 @@ const Home = () => {
 
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Home | Equiron and Co." />
+        <meta
+          name="twitter:title"
+          content="Equiron and Co. | Trust - Commitment - Accesible"
+        />
         <meta
           name="twitter:description"
           content="Selamat datang di website resmi Nama Perusahaan. Kami menyediakan layanan hukum, bisnis, dan konsultasi terpercaya."
